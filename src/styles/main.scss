@@ -1,1 +1,23 @@
-h1 { color: magenta };
+a {
+		position: fixed;
+		line-height: 50px;
+		&:nth-child(1) {
+			top: 24vh;
+		}
+
+		&:nth-child(2) {
+			top: 36vh;
+		}
+
+		&:nth-child(3) {
+			top: 48vh;
+		}
+
+		&:nth-child(4) {
+			top: 60vh;
+		}
+
+		&:nth-child(5) {
+			top: 72vh;
+		}
+}

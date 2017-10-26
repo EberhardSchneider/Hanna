@@ -12,8 +12,7 @@ var gulp = require('gulp'),
 		babelify = require('babelify'),
 		reactify = require('reactify'),
 		source = require('vinyl-source-stream'),
-		buffer = require('vinyl-buffer'),
-		sourcemaps = require('gulp-sourcemaps'),
+		
 		connect = require('gulp-connect'),
 		open = require('gulp-open');
 
@@ -63,8 +62,9 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-	browserify(config.paths.mainJs) 
-		.transform(reactify)
+	browserify(config.paths.mainJs, { debug:true }) 
+		//.transform(reactify)
+		.transform(babelify.configure({presets: ['es2015', 'react']}))
 		.bundle()
 		.on('error', console.error.bind(console))
 		.pipe(source('bundle.js'))
@@ -78,19 +78,19 @@ gulp.task('images', function() {
 					.pipe( gulp.dest( 'dist/images/' ));
 });
 
-gulp.task('lint', function() {
-	return gulp.src(config.paths.js)
-							.pipe(lint({configFile: 'eslint.config.json'}))
-							.pipe(lint.format());
-});
+// gulp.task('lint', function() {
+// 	return gulp.src(config.paths.js)
+// 							.pipe(lint({configFile: 'eslint.config.json'}))
+// 							.pipe(lint.format());
+// });
 
 
 
 gulp.task('watch', function() {
 	gulp.watch(config.paths.html, ['html']);
-	gulp.watch(config.paths.js, ['js', 'lint']);
+	gulp.watch(config.paths.js, ['js']);
 	gulp.watch('src/styles/**/*.scss', ['css']);
 	gulp.watch('src/images/**/*', ['images']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'images', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'css', 'images', 'open', 'watch']);
