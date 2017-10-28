@@ -35,7 +35,7 @@ class MainMenu extends React.Component {
 		frames = calculateFrames();
 		this.animateMenu();
 
-		thiss.addAnimationListeners();
+		this.addAnimationListeners();
 
 		const self = this;
 		$(window).resize(self.animateMenu.bind(self));
@@ -86,7 +86,8 @@ class MainMenu extends React.Component {
 										2, 
 										{
 											transform: frame[index].translate,
-											fontSize: frame[index].fontSize
+											fontSize: frame[index].fontSize,
+											ease: Back.easeInOut
 										}
 			);
 		});
@@ -96,7 +97,8 @@ class MainMenu extends React.Component {
 											{
 												letterSpacing: frame[index].letterSpacing,
 												autoRound: false,
-												opacity: frame[index].opacity
+												opacity: frame[index].opacity,
+												ease: Back.easeInOut
 											}
 			);
 		});
@@ -131,6 +133,9 @@ class MainMenu extends React.Component {
 				$(this).click( function() {
 					self.changeCurrentPage( name.substring(1) );
 				})
+			});
+			$('.home-button').click( function() {
+				self.changeCurrentPage('home');
 			});
 		}
 

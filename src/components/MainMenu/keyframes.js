@@ -11,7 +11,7 @@ export default function calculateFrames() {
 	frames['home'] = [];
 	items.forEach( function( key, index ) {
 			frames['home'][index] = {
-				translate: 'translate(40vw, ' + (21+index*9) + 'vh)',
+				translate: 'translate(40vw, ' + (23+index*9) + 'vh)',
 				fontSize: '9vh',
 				letterSpacing: 2,
 				opacity: .1
@@ -24,14 +24,14 @@ export default function calculateFrames() {
 	let spacing = computeSpacing( 350 );
 	items.forEach( function( key, index ) {
 		frames['agenda'][index] = {
-			translate: 'translate(4vw, ' + (21+index*9) + 'vh)',
+			translate: 'translate(4vw, ' + (23+index*9) + 'vh)',
 			fontSize: '8vh',
 			letterSpacing: spacing[index],
 			opacity: .1
 		};
 	});
 	frames['agenda'][0] = {  // AGENDA is bigger and further to the right
-		translate: 'translate(14vw, 20vh)',
+		translate: 'translate(14vw, 22vh)',
 		fontSize: '9.5vh',
 		letterSpacing: 2,
 		opacity: 1
