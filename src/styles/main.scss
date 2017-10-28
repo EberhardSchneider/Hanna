@@ -1,23 +1,69 @@
-a {
-		position: fixed;
-		line-height: 50px;
-		&:nth-child(1) {
-			top: 24vh;
-		}
+// Base CSS
 
-		&:nth-child(2) {
-			top: 36vh;
-		}
+@import url(https://fonts.googleapis.com/css?famila=Raleway:800);
 
-		&:nth-child(3) {
-			top: 48vh;
-		}
+// Fonts
 
-		&:nth-child(4) {
-			top: 60vh;
-		}
-
-		&:nth-child(5) {
-			top: 72vh;
-		}
+body {
+	font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+	a {
+		font-family: 'Raleway', sans-serif;
+		font-weight: extra-bold;
+		user-select: none;
+	}
 }
+
+// menu animation
+
+.menu-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 0;
+	transform: translate(50vw, 50vh);
+
+	letter-spacing: 2px;
+	a {
+		text-decoration: none;
+		color: black;
+		letter-spacing: inherit;
+		opacity: 0;
+		&:hover {
+			opacity: 1 !important;
+		}
+	}
+}
+
+// menu decoration
+
+.menu-decoration {
+	position: absolute;
+	font-size: 0;
+	opacity: 0;
+
+
+
+	#sopran {
+
+	}
+}
+
+#hanna {
+		top: 18.5vh;
+		left: calc(40.5vw - 11vh);
+}
+
+#sopran {
+		top: 21.5vh;
+		left: calc(40.5vw - 11vh);
+}
+
+// put this diff off screen
+.width-measurement {
+	position: absolute;
+	top: -200px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: extra-bold;
+	font-size: 8vh;
+}
+
