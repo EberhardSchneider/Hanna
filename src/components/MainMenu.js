@@ -35,7 +35,7 @@ class MainMenu extends React.Component {
 		frames = calculateFrames();
 		this.animateMenu();
 
-		this.addAnimationListeners();
+		this.addListeners();
 
 		const self = this;
 		$(window).resize(self.animateMenu.bind(self));
@@ -63,12 +63,14 @@ class MainMenu extends React.Component {
 						{/* div off screen for length measuring of text elements */}
 						<div className="width-measurement"></div>	
 
-						<Route path="/" component={Home}/>
-						<Route path="/agenda" component={Agenda}/>
-						<Route path="/vita" component={Vita}/>
-						<Route path="/hoeren" component={Hoeren}/>
-						<Route path="/sehen" component={Sehen}/>
-						<Route path="/kontakt" component={Kontakt}/>
+						<div className="content">
+							<Route path="/" component={Home}/>
+							<Route path="/agenda" component={Agenda}/>
+							<Route path="/vita" component={Vita}/>
+							<Route path="/hoeren" component={Hoeren}/>
+							<Route path="/sehen" component={Sehen}/>
+							<Route path="/kontakt" component={Kontakt}/>
+						</div>
 					</div>
 				</Router>
 			);
@@ -126,7 +128,7 @@ class MainMenu extends React.Component {
 	}
 
 	// Helper/Modularizaton
-	addAnimationListeners() {
+	addListeners() {
 		const self = this;
 			$('.menu-item>a').each( function() {
 				let name = $(this).attr("href");
@@ -141,13 +143,6 @@ class MainMenu extends React.Component {
 
 } // class
 
-
-
-
-const renderVita = () =>  { console.log("AdjustMenus"); return <h1>Vita </h1>; }
-const renderHoeren = () =>  { console.log("AdjustMenus"); return <h1>Hoeren </h1>; }
-const renderSehen = () =>  { console.log("AdjustMenus"); return <h1>Sehen </h1>; }
-const renderKontakt = () =>  { console.log("AdjustMenus"); return <h1>Kontakt </h1>; }
 
 
 module.exports = {MainMenu};

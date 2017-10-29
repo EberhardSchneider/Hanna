@@ -1,3 +1,100 @@
+/**
+ * gemini-scrollbar
+ * @version 1.5.3
+ * @link http://noeldelgado.github.io/gemini-scrollbar/
+ * @license MIT
+ */
+/* disable selection while dragging */
+.gm-scrollbar-disable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* fallback for native floating scrollbars */
+.gm-prevented {
+  -webkit-overflow-scrolling: touch; }
+
+.gm-prevented > .gm-scrollbar {
+  display: none; }
+
+/* actual gemini-scrollbar styles */
+.gm-scrollbar-container {
+  position: relative;
+  overflow: hidden !important;
+  width: 100%;
+  height: 100%; }
+
+.gm-scrollbar {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  z-index: 1;
+  border-radius: 3px; }
+
+.gm-scrollbar.-vertical {
+  width: 6px;
+  top: 2px; }
+
+.gm-scrollbar.-horizontal {
+  height: 6px;
+  left: 2px; }
+
+.gm-scrollbar .thumb {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+.gm-scrollbar .thumb:hover,
+.gm-scrollbar .thumb:active {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.gm-scrollbar.-vertical .thumb {
+  width: 100%; }
+
+.gm-scrollbar.-horizontal .thumb {
+  height: 100%; }
+
+.gm-scrollbar-container .gm-scroll-view {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch; }
+
+/* @option: autoshow */
+.gm-scrollbar-container.gm-autoshow .gm-scrollbar {
+  opacity: 0;
+  -webkit-transition: opacity 120ms ease-out;
+  transition: opacity 120ms ease-out; }
+
+.gm-scrollbar-container.gm-autoshow:hover > .gm-scrollbar,
+.gm-scrollbar-container.gm-autoshow:active > .gm-scrollbar,
+.gm-scrollbar-container.gm-autoshow:focus > .gm-scrollbar {
+  opacity: 1;
+  -webkit-transition: opacity 340ms ease-out;
+  transition: opacity 340ms ease-out; }
+
+.gm-resize-trigger {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -441,14 +538,36 @@ body {
   font-weight: extra-bold;
   font-size: 8vh; }
 
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -255; }
+
 .agenda {
   position: absolute;
-  left: 20vw;
-  width: 1000%;
+  left: 15vw;
+  right: 1vw;
   top: 15vh;
-  height: 48vh;
+  height: 52vh;
   overflow: hidden;
   z-index: -255; }
+  .agenda .scroll-container {
+    width: 5000px;
+    height: 100%;
+    overflow: visible; }
+
+.fadeOutArea {
+  position: fixed;
+  display: block;
+  left: 15vw;
+  width: 20vw;
+  top: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
 
 .event {
   position: relative;
@@ -515,10 +634,25 @@ body {
 .event-bottom {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 30vh;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: -webkit-transform 1.2s ease-in-out;
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out; }
+
+.track-horizontal {
+  background-color: black;
+  height: 1px !important;
+  right: 1vw;
+  bottom: 0;
+  left: 10vw;
+  overflow: visible;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px); }
+
+.thumb-horizontal {
+  height: 10px !important;
+  background-color: black;
+  top: -5px; }

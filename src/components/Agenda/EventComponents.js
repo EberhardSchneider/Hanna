@@ -27,7 +27,11 @@ class EventDate extends React.Component {
 
 class EventBottom extends React.Component {
 	render() {
-		return (<div className="cast">CAST</div>);
+		return (
+			<div className="event-bottom">
+				<div className="cast">CAST</div>
+			</div>
+			);
 	}
 }
 

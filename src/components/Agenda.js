@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Scrollbars from 'react-custom-scrollbars';
 import Event from './Agenda/Event';
 
 class Agenda extends React.Component {
@@ -7,7 +7,6 @@ class Agenda extends React.Component {
 	componentDidMount() {
 
 	}
-
 
 	render() {
 		let eventData = { 
@@ -19,17 +18,31 @@ class Agenda extends React.Component {
 		};
 
 		return (
-			<div className="content">
+			
 				<div className="agenda">
-					
-						<Event data={eventData}/>
-						<Event data={eventData}/>
-						<Event data={eventData}/>
+						
+							
+							<Scrollbars style={{height: '47vh', width: '70vw'}}
+													renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
+													renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}>
+								<div className="scroll-container">
+									<Event data={eventData}/>
+									<Event data={eventData}/>
+									<Event data={eventData}/>
+									<Event data={eventData}/>
+									<Event data={eventData}/>
+									<Event data={eventData}/>
+								</div>
+								<div className="fadeOutArea"></div>
+							</Scrollbars>
+							
 					
 				</div>
-			</div>
+			
 			);
 	}
+
 }
+
 
 module.exports = Agenda;
