@@ -206,12 +206,10 @@ body {
 
 .track-horizontal {
 
-	background-color: black;
-	height: 1px !important;
-	right: 1vw;
+	background-color: #dedede;
+	left: 20%;
+	right: 0;
 	bottom: 0;
-	left: 10vw;
-	overflow: visible;
 	transform: translateY(-5px);
 }
 
@@ -219,4 +217,5 @@ body {
 	height: 10px !important;
 	background-color: black;
 	top: -5px;
+	width: 64px !important;
 }

@@ -1,11 +1,13 @@
 import React from 'react';
-import Scrollbars from 'react-custom-scrollbars';
+import SpringScrollbars from './SpringScrollbars';
 import Event from './Agenda/Event';
+import normalizeWheel from'normalize-wheel';
+
 
 class Agenda extends React.Component {
 
 	componentDidMount() {
-
+		this.maxWidth = this.refs.scrollbars.getScrollWidth() + 1000;
 	}
 
 	render() {
@@ -19,14 +21,14 @@ class Agenda extends React.Component {
 
 
 		return (
-			
 				<div className="agenda" onWheel={this.wheelHandler.bind(this)}>
 						
 							
-							<Scrollbars style={{height: '47vh', width: '70vw'}}
+							<SpringScrollbars style={{height: '47vh', width: '75vw'}}
 													renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
 													renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}
-													ref={(scrollbar)=>{this.scrollbar = scrollbar}}>
+												
+													ref="scrollbars">
 								<div className="scroll-container">
 									<Event data={eventData}/>
 									<Event data={eventData}/>
@@ -36,25 +38,30 @@ class Agenda extends React.Component {
 									<Event data={eventData}/>
 								</div>
 								<div className="fadeOutArea"></div>
-							</Scrollbars>
+							</SpringScrollbars>
 							
 					
 				</div>
-			
 			);
 	}
 
 
-
 		wheelHandler(e) {
-			let left = this.scrollbar.getScrollLeft();
-			let delta = e.deltaY;
-			let newLeft = left + delta * 60;
-			console.log(newLeft);
-			this.scrollbar.scrollLeft(newLeft);
+
+			let scrollbars = this.refs.scrollbars;
+			const normalized = normalizeWheel( e );
+			console.log( normalized );
+			let left = parseInt( scrollbars.getCurrentTarget() );
+			let delta = parseInt( normalized.pixelY, 10 );
+			let newLeft = left + delta ;
+			scrollbars.scrollLeft( newLeft );
+
+
 		}
 
 }
+
+
 
 
 module.exports = Agenda;

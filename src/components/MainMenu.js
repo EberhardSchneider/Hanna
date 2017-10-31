@@ -13,6 +13,7 @@ import { MenuElement } from './MainMenu/MenuElement';
 import { MenuDecoration } from './MainMenu/MenuDecoration';
 import { HomeButton } from './MainMenu/HomeButton';
 import calculateFrames from './MainMenu/keyframes'
+import ShowTheLocationWithRouter from './Test'
 
 import Home from './home';
 import Agenda from './agenda';
@@ -28,7 +29,7 @@ let frames = {};
 class MainMenu extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { currentPage: 'home' };
+		this.state = {currentPage: 'home'};
 	}
 
 	componentDidMount() {
@@ -39,6 +40,8 @@ class MainMenu extends React.Component {
 
 		const self = this;
 		$(window).resize(self.animateMenu.bind(self));
+
+		console.log(this.props.location);
 	}
 
 	componentDidUpdate() {
@@ -64,6 +67,7 @@ class MainMenu extends React.Component {
 						<div className="width-measurement"></div>	
 
 						<div className="content">
+						<ShowTheLocationWithRouter/>
 							<Route path="/" component={Home}/>
 							<Route path="/agenda" component={Agenda}/>
 							<Route path="/vita" component={Vita}/>
