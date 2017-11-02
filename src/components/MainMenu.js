@@ -68,8 +68,10 @@ class MainMenu extends React.Component {
 						<div className="width-measurement"></div>	
 
 						<div className="content">
+
   							<Route path="/" component={withRouter(Home)}/>
 							<Route path="/agenda" component={withRouter(Agenda)}/>
+
 							<Route path="/vita" component={Vita}/>
 							<Route path="/hoeren" component={Hoeren}/>
 							<Route path="/sehen" component={Sehen}/>

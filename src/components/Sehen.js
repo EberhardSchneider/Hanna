@@ -18,8 +18,7 @@ class Sehen extends React.Component {
 				imageUrls = data.filter( name => { return (name.slice(-7,-4) == "THB")});
 				let images = [];
 				imageUrls.forEach( function( obj, index) {
-					images[index] = { id: index, url: "hanna/dist/" + gulp
-					obj.slice(3) };
+					images[index] = { id: index, url: "hanna/dist/" + obj.slice(3) };
 				});
 				self.setState( { images } );
 			}

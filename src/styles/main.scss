@@ -96,7 +96,9 @@ body {
 		width: 5000px;
 		height: 100%;
 		overflow: visible;
+
 		transition: left 0.5s ease-in-out;
+
 	}
 }
 
@@ -210,6 +212,7 @@ body {
 	left: 20%;
 	right: 0;
 	bottom: 0;
+
 	transform: translateY(-5px);
 }
 
@@ -217,5 +220,7 @@ body {
 	height: 10px !important;
 	background-color: black;
 	top: -5px;
+
 	width: 64px !important;
+
 }

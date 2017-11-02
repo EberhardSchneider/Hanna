@@ -1,5 +1,7 @@
 import React from 'react';
+
 import SpringScrollbars from './SpringScrollbars';
+
 import Event from './Agenda/Event';
 import normalizeWheel from'normalize-wheel';
 
@@ -23,6 +25,7 @@ class Agenda extends React.Component {
 
 
 		return (
+
 				<div className="agenda" onWheel={this.wheelHandler.bind(this)}>
 						
 							
@@ -31,6 +34,7 @@ class Agenda extends React.Component {
 													renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}
 												
 													ref="scrollbars">
+
 								<div className="scroll-container">
 									<Event data={eventData}/>
 									<Event data={eventData}/>
@@ -40,6 +44,7 @@ class Agenda extends React.Component {
 									<Event data={eventData}/>
 								</div>
 								<div className="fadeOutArea"></div>
+
 							</SpringScrollbars>
 							
 					
@@ -62,6 +67,7 @@ class Agenda extends React.Component {
 		}
 
 }
+
 
 
 
