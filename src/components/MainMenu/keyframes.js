@@ -36,6 +36,24 @@ export default function calculateFrames() {
 		letterSpacing: 2,
 		opacity: 1
 	};
+
+	// Sehen frame
+	frames['sehen'] = [];
+	items.forEach( function( key, index ) {
+		frames['sehen'][index] = {
+			translate: 'translate(4vw, ' + (23+index*9) + 'vh)',
+			fontSize: '8vh',
+			letterSpacing: spacing[index],
+			opacity: .1
+		};
+	});
+	frames['sehen'][3] = {
+		translate: 'translate(24vw, ' + (23+3*9) + 'vh)',
+		fontSize: '9.5vh',
+		letterSpacing: 2,
+		opacity: 1
+	};
+
 	
 
 	return frames;

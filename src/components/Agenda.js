@@ -11,6 +11,8 @@ class Agenda extends React.Component {
 	}
 
 	render() {
+		console.log( this.
+			props.location.pathname);
 		let eventData = { 
 				composer: 'Mozart',
 				title: 'Zauberflöte',

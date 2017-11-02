@@ -1,11 +1,15 @@
 <?php
-$dir = "../images/*/";
+	
 
-$images = glob("" . $diectory . "*.jpg");
+	$dir = "../hanna/dist/images/";
 
-$imgs = '';
+	$images = glob("../images/*.*");
 
-foreach($images as $image) { $imgs[]="$image"; }
+	// $imgs = array();
+	// $index = 0;
+	// foreach($images as $image) { 
+	// 	$imgs[$index]=$url = str_replace("\/", "\\", $image); 
+	// 	$index++; }
 
-print json_encode( $imgs );
+	print json_encode( $images );
 ?>

@@ -6,14 +6,15 @@ import TweenMax from 'gsap'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  withRouter
 } from 'react-router-dom'
 
 import { MenuElement } from './MainMenu/MenuElement';
 import { MenuDecoration } from './MainMenu/MenuDecoration';
 import { HomeButton } from './MainMenu/HomeButton';
 import calculateFrames from './MainMenu/keyframes'
-import ShowTheLocationWithRouter from './Test'
+
 
 import Home from './home';
 import Agenda from './agenda';
@@ -67,9 +68,8 @@ class MainMenu extends React.Component {
 						<div className="width-measurement"></div>	
 
 						<div className="content">
-						<ShowTheLocationWithRouter/>
-							<Route path="/" component={Home}/>
-							<Route path="/agenda" component={Agenda}/>
+  							<Route path="/" component={withRouter(Home)}/>
+							<Route path="/agenda" component={withRouter(Agenda)}/>
 							<Route path="/vita" component={Vita}/>
 							<Route path="/hoeren" component={Hoeren}/>
 							<Route path="/sehen" component={Sehen}/>
