@@ -40,12 +40,16 @@ class MainMenu extends React.Component {
 		this.addListeners();
 
 		const self = this;
-		$(window).resize(self.animateMenu.bind(self));
+		$(window).resize(self.handleResize.bind(self));
 
-		console.log(this.props.location);
 	}
 
 	componentDidUpdate() {
+		this.animateMenu();
+	}
+
+	handleResize() {
+		frames = calculateFrames();
 		this.animateMenu();
 	}
 

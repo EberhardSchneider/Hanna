@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
+import $ from 'jquery'
 import { Scrollbars } from 'react-custom-scrollbars';
-import { SpringSystem, MathUtil } from 'rebound';
+import normalizeWheel from'normalize-wheel';
 
 export default class SpringScrollbars extends Component {
 
     constructor(props, ...rest) {
         super(props, ...rest);
-        this.handleSpringUpdate = this.handleSpringUpdate.bind(this);
-
+        this.wheelHandler=this.wheelHandler.bind(this);
         this.currentTarget = 0;
+
     }
 
     componentDidMount() {
-        this.springSystem = new SpringSystem();
-        this.spring = this.springSystem.createSpring(.1,.1);
-        this.spring.addListener({ onSpringUpdate: this.handleSpringUpdate });
+       $("<div class='rail-horizontal'></div>").appendTo(".track-horizontal");
     }
 
     componentWillUnmount() {
-        this.springSystem.deregisterSpring(this.spring);
-        this.springSystem.removeAllListeners();
-        this.springSystem = undefined;
-        this.spring.destroy();
-        this.spring = undefined;
     }
 
     getScrollLeft() {
@@ -46,8 +40,6 @@ export default class SpringScrollbars extends Component {
     }
 
     scrollLeft(left) {
-        
-
         const { scrollbars } = this.refs;
         const scrollLeft = scrollbars.getScrollLeft();
         const scrollWidth = scrollbars.getScrollWidth();
@@ -61,19 +53,15 @@ export default class SpringScrollbars extends Component {
         this.easingFunction( scrollLeft, left, .2 );
     }
 
-    handleSpringUpdate(spring) {
-        const { scrollbars } = this.refs;
-        let val = spring.getCurrentValue();
-        const scrollWidth = scrollbars.getScrollWidth();
-        val = val < 0 ? 0 : ( val > scrollWidth ? scrollWidth : val);
-        scrollbars.scrollLeft(val);
-    }
 
     render() {
         return (
             <Scrollbars
                 {...this.props}
-                ref="scrollbars"/>
+                onWheel={this.wheelHandler}
+                ref="scrollbars"
+                renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
+                renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}/>
         );
     }
 
@@ -102,4 +90,19 @@ export default class SpringScrollbars extends Component {
     testcallback( val ) {
         this.refs.scrollbars.scrollLeft( val );
     }
+
+    wheelHandler(e) {
+
+        let scrollbars = this.refs.scrollbars;
+        const normalized = normalizeWheel( e );
+        console.log( normalized );
+        let left = parseInt( this.getCurrentTarget() );
+        let delta = parseInt( normalized.pixelY, 10 );
+        let newLeft = left + delta ;
+        this.scrollLeft( newLeft );
+
+
+    }
+
+
 }

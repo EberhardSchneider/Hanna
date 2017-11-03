@@ -1,9 +1,9 @@
 <?php
 	
 
-	$dir = "../hanna/dist/images/";
+	$dir = "../hanna/dist/images/gallery/";
 
-	$images = glob("../images/*.*");
+	$images = glob("../images/". $_POST["directory"]. "/*.*");
 
 	// $imgs = array();
 	// $index = 0;

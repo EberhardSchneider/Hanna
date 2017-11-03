@@ -208,12 +208,18 @@ body {
 
 .track-horizontal {
 
-	background-color: #dedede;
 	left: 20%;
+	height: 20px;
 	right: 0;
 	bottom: 0;
-
 	transform: translateY(-5px);
+
+	.rail-horizontal {
+		height: 1px;
+		background-color: #000;
+		margin: auto;
+		transform: translateY(-10px);
+	}
 }
 
 .thumb-horizontal {
@@ -223,4 +229,63 @@ body {
 
 	width: 64px !important;
 
+}
+
+
+// ________________________________________ SEHEN ____________________________________________
+
+.image-wrapper {
+	position: absolute;
+	height: 90vh;
+	overflow: hidden;
+
+	.scene-images-container {
+		position: relative;
+		height: 45vh;
+		overflow: hidden;
+	
+		.scene-images {
+			height: 45vh;
+			overflow: hidden;
+				>div {
+			display: inline-block;
+			width: 20.6vh;
+			height: 20.6vh;
+			margin: 1.7vh;
+			overflow: hidden;
+		}
+
+		>img {
+			position: absolute;
+			width: auto;
+			height: auto;
+			&:hover {	
+				opacity: .7;
+				cursor: pointer;
+			}
+		}
+		}
+
+	}
+
+	.portrait-images-container {
+		position: relative;
+
+		margin-top: 11vh;
+		height: 25vh;
+		width: 100%;
+		overflow: hidden;
+		>div {
+			display: inline-block;
+			width: 22vh;
+			height: 22vh;
+			margin: 1.7vh;
+			overflow: hidden;
+		}
+
+		>img:hover {
+			opacity: .7;
+			cursor: pointer;
+		}
+	}
 }

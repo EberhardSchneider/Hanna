@@ -1,46 +1,21 @@
+"use strict";
 import React from 'react';
-import Image from './Sehen/Image.js'
+import Images from "./Sehen/Images.js";
+import HannaScrollbars from './HannaScrollbars.js';
 import $ from 'jquery';
 
 
 
 class Sehen extends React.Component {
-	constructor(props) {
-		super(props);
-		const self = this;
-		$.ajax({ 
-			url: "../hanna/dist/phpincludes/get_images.php",
-			type: 'POST',
-			dataType: 'json',
 
-			success: function( data ) {
-				let imageUrls = []; 
-				imageUrls = data.filter( name => { return (name.slice(-7,-4) == "THB")});
-				let images = [];
-				imageUrls.forEach( function( obj, index) {
-					images[index] = { id: index, url: "hanna/dist/" + obj.slice(3) };
-				});
-				self.setState( { images } );
-			}
-		});
-	}
-	
-	renderImage(id, url) {
-		return <Image id={id} url={url}/>;
-	}
-	
 	render() {
-		console.log( this.state );
-		let images;
-		if (this.state && this.state.images) {
-			images = this.state.images.map( function( image ) {
-				return <Image key={image.id} id={image.id} url={image.url}/>
-			});
-		}
-		else {
-			images = <div>Loading Images...</div>;
-		}
-		return (<div className="scene-images-container">{images}</div>);
+		return (
+		<HannaScrollbars style={{ width: '70vw', height: '90vh', left: '30vw', top: '4vh' }}>
+			<div className="image-wrapper">
+				<Images imageType='scene'/>
+				<Images imageType='portrait'/>
+			</div>
+		</HannaScrollbars>);
 	}
 	
 }

@@ -19,12 +19,14 @@ export default function calculateFrames() {
 	});
 
 
+
+	let spacing = computeSpacing( document.body.scrollWidth * 0.27 );
+	
 	//Agenda frame
 	frames['agenda'] = [];
-	let spacing = computeSpacing( 350 );
 	items.forEach( function( key, index ) {
 		frames['agenda'][index] = {
-			translate: 'translate(4vw, ' + (23+index*9) + 'vh)',
+			translate: 'translate(2vw, ' + (23+index*9) + 'vh)',
 			fontSize: '8vh',
 			letterSpacing: spacing[index],
 			opacity: .1
@@ -41,7 +43,7 @@ export default function calculateFrames() {
 	frames['sehen'] = [];
 	items.forEach( function( key, index ) {
 		frames['sehen'][index] = {
-			translate: 'translate(4vw, ' + (23+index*9) + 'vh)',
+			translate: 'translate(2vw, ' + (23+index*9) + 'vh)',
 			fontSize: '8vh',
 			letterSpacing: spacing[index],
 			opacity: .1

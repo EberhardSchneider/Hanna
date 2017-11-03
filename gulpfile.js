@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 		
 		connect = require('gulp-connect'),
 		open = require('gulp-open');
+		browserSync = require('browser-sync');
 
 var config = {
 	port: 3000, // port for the local server
@@ -29,21 +30,28 @@ var config = {
 	}
 }
 
-// start local server
-gulp.task('connect', function() {
-	connect.server({
-		root: ['dist'],
-		port: config.port,
-		base: config.devBaseUrl,
-		livereload: true
-	});
-});
+// // start local server
+// gulp.task('connect', function() {
+// 	connect.server({
+// 		root: ['dist'],
+// 		port: config.port,
+// 		base: config.devBaseUrl,
+// 		livereload: true
+// 	});
+// });
 
-gulp.task('open', 
-	// ['connect'],
-	 function() {
-	gulp.src('dist/index.html')
-			.pipe(open('', {url: config.devBaseUrl + ':' + config.port + '/'}));
+// gulp.task('open', 
+// 	// ['connect'],
+// 	 function() {
+// 	gulp.src('dist/index.html')
+// 			.pipe(open('', {url: config.devBaseUrl + ':' + config.port + '/'}));
+// });
+
+gulp.task('browser-sync', function() {
+	browserSync.init({
+		proxy: "localhost/hanna/dist",
+		port: 80
+	});
 });
 
 
@@ -51,7 +59,7 @@ gulp.task('open',
 gulp.task('html', function() {
 	gulp.src(config.paths.html)
 			.pipe(gulp.dest(config.paths.dist))
-			.pipe(connect.reload());
+			// .pipe(browserSync.reload);
 });
 
 gulp.task('css', function() {
@@ -62,7 +70,7 @@ gulp.task('css', function() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(cleancss())
 		.pipe(gulp.dest(config.paths.dist + '/styles'))
-		.pipe(connect.reload());;
+		// .pipe(browserSync.reload);;
 });
 
 gulp.task('js', function() {
@@ -73,8 +81,13 @@ gulp.task('js', function() {
 		.on('error', console.error.bind(console))
 		.pipe(source('bundle.js'))
 		.pipe(gulp.dest( config.paths.dist + '/scripts'))
-		.pipe(connect.reload());
+		// .pipe(browserSync.reload);
 });
+
+gulp.task('js-watch', ['js'], function(done) {
+	browserSync.reload();
+	done();
+})
 
 gulp.task('images', function() {
 	return gulp.src(config.paths.images)
@@ -92,9 +105,9 @@ gulp.task('images', function() {
 
 gulp.task('watch', function() {
 	gulp.watch(config.paths.html, ['html']);
-	gulp.watch(config.paths.js, ['js']);
+	gulp.watch(config.paths.js, ['js-watch']);
 	gulp.watch('src/styles/**/*.scss', ['css']);
 	gulp.watch(config.paths.images, ['images']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'images', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'css', 'images', 'browser-sync', 'watch']);
