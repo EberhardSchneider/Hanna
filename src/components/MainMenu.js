@@ -25,6 +25,48 @@ import Kontakt from './kontakt';
 
 let frames = {};
 
+const routes = [
+	{	path: '/',
+		exact: true,
+		name: 'HOME',
+	},
+	{	path: '/agenda',
+		name: 'AGENDA',
+		component: Agenda
+	},
+	{	path: 'vita',
+		name: 'VITA',
+		component: Vita
+	},
+	{	path: '/hoeren',
+		name: 'HÖREN',
+		component: Hoeren
+	},
+	{	path: '/sehen',
+		name: 'SEHEN',
+		component: Sehen
+	},
+	{	path: '/kontakt',
+		name: 'KONTAKT',
+		component: Kontakt
+	}
+];
+
+const menuElements = [
+	{ name: 'HOME',
+		link: '/'},
+	{ name: 'AGENDA',
+		link: '/agenda'},
+	{ name: 'VITA',
+		link: '/vita'},
+	{ name: 'HÖREN',
+		link: '/hoeren'},
+	{ name: 'SEHEN',
+		link: '/sehen'},
+	{ name: 'KONTAKT',
+		link: '/kontakt'}
+]
+
 
 
 class MainMenu extends React.Component {
@@ -58,35 +100,29 @@ class MainMenu extends React.Component {
 
 		return (
 				<Router>
-					<div>
+					<div className="content">
 						<MenuElement link="/agenda" name="AGENDA"/>
 						<MenuElement link="/vita" name="VITA"/>
 						<MenuElement link="/hoeren" name="HÖREN"/>
 						<MenuElement link="/sehen" name="SEHEN"/>
 						<MenuElement link="/kontakt" name="KONTAKT"/>
-
+					
 						<MenuDecoration/>
 						<Link to="/"><HomeButton/></Link>
 			
 						{/* div off screen for length measuring of text elements */}
-						<div className="width-measurement"></div>	
+						
 
 						<div className="content">
-
-  							<Route path="/" component={withRouter(Home)}/>
-							<Route path="/agenda" component={withRouter(Agenda)}/>
-
-							<Route path="/vita" component={Vita}/>
-							<Route path="/hoeren" component={Hoeren}/>
-							<Route path="/sehen" component={Sehen}/>
-							<Route path="/kontakt" component={Kontakt}/>
+							{routes.map( route => {
+								<Route path={route.path} component={route.component}/>
+							})}
 						</div>
 					</div>
 				</Router>
 			);
 	}
 
-	
 
 	animateMenu() {
 		let currentPage = this.state.currentPage;

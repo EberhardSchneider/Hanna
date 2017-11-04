@@ -63,66 +63,10 @@ export default function calculateFrames() {
 
 
 
-
-
-
-
-
-
-
-// // TODO
-
-
-
-
-// // VIEL ZU KOMPLIZIERT
-
-// // OBJEKTGEFLECHT VON HAND SCHREIBEN !!!
-// // EINFACH DAS OBJEKT IMPORTIEREN!!!!
-
-
-// class Frames {
-
-// 	constructor() {
-// 	
-// 	}
-
-// 	update() {
-// 		// home
-// 		let homeFrame = {};
-// 		this.items.key().forEach( function( key, index ) {
-// 			homeFrame[index] = {
-// 				translate: 'translate(40vw, ' + (21+index*9) + 'vh)',
-// 				fontSize: '9vh',
-// 				letterSpacing: 2
-// 			};
-// 		});
-// 		// agenda
-// 		let agendaFrame = {};
-// 		spacing = this.computeSpacing( 250 );
-// 		this.items.key().forEach( function( key, index ) {
-// 			homeFrame[index] = {
-// 				translate: 'translate(4vw, ' + (21+index*9) + 'vh)',
-// 				fontSize: '8vh',
-// 				letterSpacing: spacing[index] 
-// 			};
-// 		});
-// 		homeFrame[0] = {
-// 			fontSize: '10vh',
-// 			letterSpacing: 2
-// 		}
-// 		this.frames = {
-// 			'home': homeFrame,
-// 			'agenda': agendaFrame
-// 		}
-// 	}
-
-// 	get() {
-// 		return this.frames;
-// 	}
-
 function computeSpacing( width ) {
 	  let spacing = []; 
+	  $('div class="width-measurement"').appendTo( $(body) );
+	  $('width-measurement').attr('style','top: -9999; font-family: "Raleway", sans-serif; font-weight: extra-bold;	font-size: 8vh;');
 	  
 	  var fontSize = document.defaultView.getComputedStyle($('.width-measurement')[0], null).getPropertyValue('width');
 	  fontSize = parseFloat( fontSize, 10);
@@ -133,7 +77,7 @@ function computeSpacing( width ) {
 	    textLength = parseFloat( textLength, 10);
 	    spacing[index] = (width - textLength)/(length - 1);
 	  });
-
+		$('.width-measurement').remove();
 	  return spacing;
 }
 

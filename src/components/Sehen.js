@@ -15,6 +15,7 @@ class Sehen extends React.Component {
 				<Images imageType='scene'/>
 				<Images imageType='portrait'/>
 			</div>
+			<div className="fadeOutArea"></div>
 		</HannaScrollbars>);
 	}
 	
