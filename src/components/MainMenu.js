@@ -13,7 +13,8 @@ import {
 import { MenuElement } from './MainMenu/MenuElement';
 import { MenuDecoration } from './MainMenu/MenuDecoration';
 import { HomeButton } from './MainMenu/HomeButton';
-import calculateFrames from './MainMenu/keyframes'
+import calculateFrames from './MainMenu/keyframes';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 
 import Home from './home';
@@ -25,36 +26,36 @@ import Kontakt from './kontakt';
 
 let frames = {};
 
-const routes = [
-	{	path: '/',
+const routes = {
+	'home': {	path: '/',
 		exact: true,
 		name: 'HOME',
 	},
-	{	path: '/agenda',
+	'agenda': {	path: '/agenda',
 		name: 'AGENDA',
-		component: Agenda
+		component: <Agenda/>
 	},
-	{	path: 'vita',
+	'vita': {	path: '/vita',
 		name: 'VITA',
-		component: Vita
+		component: <Vita/>
 	},
-	{	path: '/hoeren',
+	'hoeren': {	path: '/hoeren',
 		name: 'HÖREN',
-		component: Hoeren
+		component: <Hoeren/>
 	},
-	{	path: '/sehen',
+	'sehen': {	path: '/sehen',
 		name: 'SEHEN',
-		component: Sehen
+		component: <Sehen/>
 	},
-	{	path: '/kontakt',
+	'kontakt': {	path: '/kontakt',
 		name: 'KONTAKT',
-		component: Kontakt
+		component: <Kontakt/>
 	}
-];
+};
+
+
 
 const menuElements = [
-	{ name: 'HOME',
-		link: '/'},
 	{ name: 'AGENDA',
 		link: '/agenda'},
 	{ name: 'VITA',
@@ -97,27 +98,26 @@ class MainMenu extends React.Component {
 
 
 	render() {
-
+		let content = routes[ this.state.currentPage ].component || <Home/>;
 		return (
 				<Router>
 					<div className="content">
-						<MenuElement link="/agenda" name="AGENDA"/>
-						<MenuElement link="/vita" name="VITA"/>
-						<MenuElement link="/hoeren" name="HÖREN"/>
-						<MenuElement link="/sehen" name="SEHEN"/>
-						<MenuElement link="/kontakt" name="KONTAKT"/>
-					
+						{menuElements.map(function(element) {
+							return <MenuElement key={element.name} 
+																	link={element.link} 
+																	name={element.name}/>
+						})}
 						<MenuDecoration/>
 						<Link to="/"><HomeButton/></Link>
-			
-						{/* div off screen for length measuring of text elements */}
-						
-
-						<div className="content">
-							{routes.map( route => {
-								<Route path={route.path} component={route.component}/>
-							})}
-						</div>
+							<div className="content">
+								{/*{routes.map( function(route) {
+									const c = route.component;
+									return <Route key={route.path} 
+																path={route.path} 
+																component={route.component}/>
+								})}*/}
+								{content}
+							</div>
 					</div>
 				</Router>
 			);
@@ -125,8 +125,7 @@ class MainMenu extends React.Component {
 
 
 	animateMenu() {
-		let currentPage = this.state.currentPage;
-		const frame = frames[currentPage];
+		const frame = frames[this.state.currentPage];
 
 		TweenMax.staggerTo(".menu-item", .6, {rotation: 360}, .2);
 		$('.menu-item').each( function(index) {
@@ -150,7 +149,7 @@ class MainMenu extends React.Component {
 											}
 			);
 		});
-		if (currentPage == 'home') {
+		if (this.state.currentPage == 'home') {
 			TweenMax.to( $('.menu-decoration'),
 										2,
 										{
