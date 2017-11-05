@@ -65,8 +65,10 @@ export default function calculateFrames() {
 
 function computeSpacing( width ) {
 	  let spacing = []; 
-	  $('div class="width-measurement"').appendTo( $(body) );
-	  $('width-measurement').attr('style','top: -9999; font-family: "Raleway", sans-serif; font-weight: extra-bold;	font-size: 8vh;');
+	  $('<div class="width-measurement"/>').appendTo( $('body') );
+	  $('width-measurement')
+	  .attr('style',
+	  	'position: absolute; top: -9999; font-family: "Raleway", sans-serif; font-weight: extra-bold;	font-size: 8vh;');
 	  
 	  var fontSize = document.defaultView.getComputedStyle($('.width-measurement')[0], null).getPropertyValue('width');
 	  fontSize = parseFloat( fontSize, 10);

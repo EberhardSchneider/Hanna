@@ -10,13 +10,18 @@ class Sehen extends React.Component {
 
 	render() {
 		return (
-		<HannaScrollbars style={{ width: '70vw', height: '90vh', left: '30vw', top: '4vh' }}>
+			<div className="sehen">
+		<HannaScrollbars style={{ width: '66vw', 
+															height: '90vh'}}>
+			
 			<div className="image-wrapper">
-				<Images imageType='scene'/>
-				<Images imageType='portrait'/>
+				<Images imageType='scene' rows={2}/>
+				<Images imageType='portrait' rows={1}/>
 			</div>
-			<div className="fadeOutArea"></div>
-		</HannaScrollbars>);
+			
+			<div className="fadeOutArea-2"></div>
+		</HannaScrollbars>
+		</div>);
 	}
 	
 }

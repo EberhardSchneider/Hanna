@@ -12,8 +12,7 @@ class Agenda extends React.Component {
 	}
 
 	render() {
-		console.log( this.
-			props.location.pathname);
+
 		let eventData = { 
 				composer: 'Mozart',
 				title: 'Zauberflöte',
@@ -27,7 +26,8 @@ class Agenda extends React.Component {
 
 				<div className="agenda">
 							
-							<HannaScrollbars style={{height: '47vh', width: '75vw'}}>
+							<HannaScrollbars style={{height: '47vh', 
+																			 width: '75vw'}}>
 
 								<div className="scroll-container">
 									<Event data={eventData}/>
