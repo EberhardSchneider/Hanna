@@ -48,7 +48,6 @@ class Images extends Component {
 	}
 
 	handleExitIconClick() {
-		
 		this.setState( {lightbox: false });
 	}
 
