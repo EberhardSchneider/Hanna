@@ -14,26 +14,25 @@ class Images extends Component {
 		this.handleExitIconClick = this.handleExitIconClick.bind(this);
 
 		this.state = { images: {}}
-		const imageType = this.props.imageType;
+
+
 		// get image filenames from ajax request
+		const imageType = this.props.imageType;
 		const self = this;
 		$.ajax({ 
-			url: "../dist/phpincludes/get_images.php",
+			url: "/hanna/dist/phpincludes/db_get_" + imageType + "_images.php",
 			type: 'POST',
 			data: { directory: self.props.imageType },
 			dataType: 'json',
 
 			success: function( data ) {
-				let imageUrls = []; 
-				imageUrls = data.filter( name => { return (name.slice(-7,-4) == "THB")});
 				let images = [];
-				imageUrls.forEach( function( obj, index) {
-					// CHANGE THIS LINE FOR PRODUCTION !!!!
-					images[index] = { id: index, url: "hanna/dist/" + obj.slice(3) }; 
-				});
+				images = Object.values( data );
+				console.log( images );
 				self.setState( { images } );
 			}
 		});
+	
 	}
 
 	componentDidUpdate() {
@@ -48,6 +47,7 @@ class Images extends Component {
 	}
 
 	handleExitIconClick() {
+		console.log("EXIT");
 		this.setState( {lightbox: false });
 	}
 
@@ -56,21 +56,25 @@ class Images extends Component {
 		if (this.state.lightbox) {
 			lightbox = ( 
 				<Lightbox images={this.state.images}
-									index={this.state.index}/>
+									index={this.state.index}
+									handleExitIconClick={this.handleExitIconClick}/>
 				);
 		}
 
 		const imageType = this.props.imageType;
 		const self = this;
+		let index = 0;
 		const images = (Object.keys(this.state.images).length == 0 ?
 			null :
 			this.state.images.map( function(image) {
-				return <Image key={image.id} 
-											id={image.id} 
-											url={image.url} 
+
+				return <Image key={image.ID} 
+											id={image.ID} 
+											url={"/images/" + image.thumb}
 											type={imageType}
-											handleClick={self.handleImageClick}
-											handleExitIconClick={self.handleExitIconClick}/>;
+											index={index++}
+											subtitle={image.comment}
+											handleClick={self.handleImageClick}/>;
 					})
 			);
 		

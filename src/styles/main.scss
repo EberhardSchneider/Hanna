@@ -23,6 +23,7 @@ body {
 	transform: translate(50vw, 50vh);
 	font-weight: bold;
 	letter-spacing: 2px;
+	z-index: 10;
 	a {
 		text-decoration: none;
 		color: black;
@@ -263,6 +264,8 @@ body {
 
 	.scene-images-container {
 		position: relative;
+		left: 7.5vw;
+		
 		height: 45vh;
 		overflow: hidden;
 	
@@ -292,6 +295,8 @@ body {
 
 	.portrait-images-container {
 		position: relative;
+		left: 7.5vw;
+
 
 		margin-top: 11vh;
 		height: 25vh;
@@ -335,7 +340,7 @@ body {
 		position: fixed;
 		width: 5vw;
 		height: 5vw;
-		bottom: 3vw;
+		bottom: 47.5vh;
 		left: 2vw;
 
 		transition: transform .2s ease-in-out;
@@ -347,7 +352,7 @@ body {
 		position: fixed;
 		width: 5vw;
 		height: 5vw;
-		bottom: 2vh;
+		bottom: 47.5vh;
 		right: 2vw;
 		transition: transform .2s ease-in-out;
 		&:hover {
@@ -364,15 +369,53 @@ body {
 		&:hover {
 			transform:  rotate(180deg);
 		}
+
 	}
 
-	.lightbox-image {
+
+		.image-subtitle {
+			position: absolute;
+			width: 80vw;
+			text-align: center;
+			color: white;
+			font-size: 120%;
+			bottom: 2vh;
+			left: 50vw;
+			transform: translateX(-50%);
+
+			z-index: 250;
+		}
+
+	.lightbox-image.landscape {
 		position: absolute;
+		z-index: 200;
+		
+		width: 80vw;
+		left: 10vw;
+		height: auto;
+		top: 50vh;
+		transform: translateY(-45%) scale(.8,.8);
+
+	}
+
+	.lightbox-image.portrait {
+		position: absolute;
+		z-index: 255;
+		
 		height: 80vh;
-		top: 5vh;
+		top: 10vh;
 		width: auto;
 		left: 50vw;
-		transform: translateX(-50%);
+		transform: translateX(-45%) scale(.8,.8);
+	
 	}
+		.zoom.portrait {
+			transform: translateX(-50%) scale(1,1) !important;
+			transition: transform 1s;
+		}
+		.zoom.landscape{
+			transform: translateY(-50%) scale(1,1) !important;
+			transition: transform 1s;
+		}
 
 }

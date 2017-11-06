@@ -39,6 +39,23 @@ export default function calculateFrames() {
 		opacity: 1
 	};
 
+	// vita frame
+	frames['vita'] = [];
+	items.forEach( function( key, index ) {
+		frames['vita'][index] = {
+			translate: 'translate(2vw, ' + (23+index*9) + 'vh)',
+			fontSize: '8vh',
+			letterSpacing: spacing[index],
+			opacity: .1
+		};
+	});
+	frames['vita'][1] = {
+		translate: 'translate(24vw, ' + 5 + 'vh)',
+		fontSize: '9.5vh',
+		letterSpacing: 2,
+		opacity: 1
+	};
+
 	// Sehen frame
 	frames['sehen'] = [];
 	items.forEach( function( key, index ) {
@@ -55,6 +72,8 @@ export default function calculateFrames() {
 		letterSpacing: 2,
 		opacity: 1
 	};
+
+
 
 	
 

@@ -509,7 +509,8 @@ body {
   -webkit-transform: translate(50vw, 50vh);
           transform: translate(50vw, 50vh);
   font-weight: bold;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  z-index: 10; }
   .menu-item a {
     text-decoration: none;
     color: black;
@@ -691,6 +692,7 @@ body {
   overflow: hidden; }
   .image-wrapper .scene-images-container {
     position: relative;
+    left: 7.5vw;
     height: 45vh;
     overflow: hidden; }
     .image-wrapper .scene-images-container .scene-images {
@@ -711,6 +713,7 @@ body {
           cursor: pointer; }
   .image-wrapper .portrait-images-container {
     position: relative;
+    left: 7.5vw;
     margin-top: 11vh;
     height: 25vh;
     width: 100%;
@@ -744,7 +747,7 @@ body {
     position: fixed;
     width: 5vw;
     height: 5vw;
-    bottom: 3vw;
+    bottom: 47.5vh;
     left: 2vw;
     -webkit-transition: -webkit-transform .2s ease-in-out;
     transition: -webkit-transform .2s ease-in-out;
@@ -757,7 +760,7 @@ body {
     position: fixed;
     width: 5vw;
     height: 5vw;
-    bottom: 2vh;
+    bottom: 47.5vh;
     right: 2vw;
     -webkit-transition: -webkit-transform .2s ease-in-out;
     transition: -webkit-transform .2s ease-in-out;
@@ -779,11 +782,46 @@ body {
     .lightbox .exit-icon:hover {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
-  .lightbox .lightbox-image {
+  .lightbox .image-subtitle {
     position: absolute;
-    height: 80vh;
-    top: 5vh;
-    width: auto;
+    width: 80vw;
+    text-align: center;
+    color: white;
+    font-size: 120%;
+    bottom: 2vh;
     left: 50vw;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
+            transform: translateX(-50%);
+    z-index: 250; }
+  .lightbox .lightbox-image.landscape {
+    position: absolute;
+    z-index: 200;
+    width: 80vw;
+    left: 10vw;
+    height: auto;
+    top: 50vh;
+    -webkit-transform: translateY(-45%) scale(0.8, 0.8);
+            transform: translateY(-45%) scale(0.8, 0.8); }
+  .lightbox .lightbox-image.portrait {
+    position: absolute;
+    z-index: 255;
+    height: 80vh;
+    top: 10vh;
+    width: auto;
+    left: 50vw;
+    -webkit-transform: translateX(-45%) scale(0.8, 0.8);
+            transform: translateX(-45%) scale(0.8, 0.8); }
+  .lightbox .zoom.portrait {
+    -webkit-transform: translateX(-50%) scale(1, 1) !important;
+            transform: translateX(-50%) scale(1, 1) !important;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
+  .lightbox .zoom.landscape {
+    -webkit-transform: translateY(-50%) scale(1, 1) !important;
+            transform: translateY(-50%) scale(1, 1) !important;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
