@@ -243,6 +243,25 @@ body {
 	width: 64px;
 }
 
+.thumb-vertical {
+	width: 10px;
+	background-color: #000;
+	height: 32px;
+	border-radius: 10px;
+}
+
+// _______________________________________ VITA ________________________________________
+
+.vita-image {
+	position: fixed;
+	top: 1vh;
+	left: 33vw;
+	height: 28vh;
+	width: 74.48vh;
+	background-image: url(/images/vita.jpg);
+	background-size: contain;
+}
+
 
 // ________________________________________ SEHEN ____________________________________________
 
@@ -394,7 +413,7 @@ body {
 		left: 10vw;
 		height: auto;
 		top: 50vh;
-		transform: translateY(-45%) scale(.8,.8);
+		transform: translateY(-50%);
 
 	}
 
@@ -406,16 +425,8 @@ body {
 		top: 10vh;
 		width: auto;
 		left: 50vw;
-		transform: translateX(-45%) scale(.8,.8);
+		transform: translateX(-50%);
 	
 	}
-		.zoom.portrait {
-			transform: translateX(-50%) scale(1,1) !important;
-			transition: transform 1s;
-		}
-		.zoom.landscape{
-			transform: translateY(-50%) scale(1,1) !important;
-			transition: transform 1s;
-		}
 
 }

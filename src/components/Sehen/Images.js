@@ -20,7 +20,7 @@ class Images extends Component {
 		const imageType = this.props.imageType;
 		const self = this;
 		$.ajax({ 
-			url: "/hanna/dist/phpincludes/db_get_" + imageType + "_images.php",
+			url: "/testsite/phpincludes/db_get_" + imageType + "_images.php",
 			type: 'POST',
 			data: { directory: self.props.imageType },
 			dataType: 'json',
@@ -37,9 +37,12 @@ class Images extends Component {
 
 	componentDidUpdate() {
 		// Adjust image container width
+		let containerWidth =  
+			Math.ceil(Object.keys( this.state.images ).length / this.props.rows )  
+					* window.innerHeight * 0.24;
+		containerWidth += 0.075 * window.innerWidth;
 			$('.' + this.props.imageType + '-images').
-					css("width", 
-						"" + ( Math.ceil(Object.keys( this.state.images ).length / this.props.rows ) * window.innerHeight * 0.24 ) );
+					css("width", "" + containerWidth);
 	}
 
 	handleImageClick( index ) {

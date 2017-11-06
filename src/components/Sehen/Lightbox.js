@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery'
 import { LeftArrow, RightArrow, ExitIcon } from './LightboxIcons.js';
+import Zoom from './Zoom.js'
 
 class Lightbox extends Component {
 	constructor(props) {
@@ -12,10 +13,6 @@ class Lightbox extends Component {
 		this.state = { index: this.props.index };
 	}
 
-	componentDidUpdate() {
-		$('.lightbox-image').removeClass('zoom').addClass('zoom');
-
-	}
 
 	componentDidMount() {
 		// workaround for the z-index of nested components
@@ -34,7 +31,10 @@ class Lightbox extends Component {
 					<LeftArrow handleClick={this.handleLeftArrowClick}/>
 					<RightArrow handleClick={this.handleRightArrowClick}/>
 					<ExitIcon handleClick={this.props.handleExitIconClick}/>
-					<img src={"/images/" + image.big} className={"lightbox-image " + image.orientation}/>
+					<Zoom>
+						<img 	src={"/images/" + image.big} 
+									className={"lightbox-image " + image.orientation }/>
+					</Zoom>
 					<div className="image-subtitle">{image.comment}</div>
 				</div>
 			);

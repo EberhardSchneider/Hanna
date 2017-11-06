@@ -677,6 +677,21 @@ body {
   top: -5px;
   width: 64px; }
 
+.thumb-vertical {
+  width: 10px;
+  background-color: #000;
+  height: 32px;
+  border-radius: 10px; }
+
+.vita-image {
+  position: fixed;
+  top: 1vh;
+  left: 33vw;
+  height: 28vh;
+  width: 74.48vh;
+  background-image: url(/images/vita.jpg);
+  background-size: contain; }
+
 .sehen {
   position: absolute;
   left: 30vw;
@@ -800,8 +815,8 @@ body {
     left: 10vw;
     height: auto;
     top: 50vh;
-    -webkit-transform: translateY(-45%) scale(0.8, 0.8);
-            transform: translateY(-45%) scale(0.8, 0.8); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .lightbox .lightbox-image.portrait {
     position: absolute;
     z-index: 255;
@@ -809,19 +824,5 @@ body {
     top: 10vh;
     width: auto;
     left: 50vw;
-    -webkit-transform: translateX(-45%) scale(0.8, 0.8);
-            transform: translateX(-45%) scale(0.8, 0.8); }
-  .lightbox .zoom.portrait {
-    -webkit-transform: translateX(-50%) scale(1, 1) !important;
-            transform: translateX(-50%) scale(1, 1) !important;
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s; }
-  .lightbox .zoom.landscape {
-    -webkit-transform: translateY(-50%) scale(1, 1) !important;
-            transform: translateY(-50%) scale(1, 1) !important;
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s; }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }

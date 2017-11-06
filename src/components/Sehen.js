@@ -1,7 +1,7 @@
 "use strict";
 import React from 'react';
 import Images from "./Sehen/Images.js";
-import HannaScrollbars from './HannaScrollbars.js';
+import HannaScrollbars from './HannaScrollbarsHorizontal.js';
 import $ from 'jquery';
 
 

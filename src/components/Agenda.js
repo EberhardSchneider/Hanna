@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import HannaScrollbars from './HannaScrollbars';
+import HannaScrollbars from './HannaScrollbarsHorizontal';
 import Event from './Agenda/Event';
 
 
@@ -27,7 +27,8 @@ class Agenda extends React.Component {
 				<div className="agenda">
 							
 							<HannaScrollbars style={{height: '47vh', 
-																			 width: '75vw'}}>
+																			 width: '75vw'}}
+																autoHide={true}>
 
 								<div className="scroll-container">
 									<Event data={eventData}/>
