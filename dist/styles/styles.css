@@ -826,3 +826,16 @@ body {
     left: 50vw;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+
+.audio {
+  position: absolute;
+  left: 30vw;
+  top: 30vh; }
+
+.audio-button {
+  height: 8vh;
+  width: 8vh; }
+
+.audio-track {
+  margin-bottom: 1vh;
+  font-size: 120%; }

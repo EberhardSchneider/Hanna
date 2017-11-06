@@ -72,6 +72,22 @@ export default function calculateFrames() {
 		letterSpacing: 2,
 		opacity: 1
 	};
+	// Hoeren frame
+	frames['hoeren'] = [];
+	items.forEach( function( key, index ) {
+		frames['hoeren'][index] = {
+			translate: 'translate(2vw, ' + (23+index*9) + 'vh)',
+			fontSize: '8vh',
+			letterSpacing: spacing[index],
+			opacity: .1
+		};
+	});
+	frames['hoeren'][2] = {
+		translate: 'translate(2vw, ' + (23+2*9) + 'vh)',
+		fontSize: '9.5vh',
+		letterSpacing: 2,
+		opacity: 1
+	};
 
 
 

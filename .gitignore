@@ -1,3 +1,8 @@
+audio
+icons_e
+dist/images
+dist/icon
+
 # Logs
 logs
 *.log
