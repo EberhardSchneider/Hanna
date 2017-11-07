@@ -492,7 +492,11 @@ template {
 
 @import url(https://fonts.googleapis.com/css?famila=Raleway:800);
 body {
-  font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; }
+  font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   body a {
     font-family: 'Raleway', sans-serif;
     font-weight: extra-bold;
@@ -830,12 +834,48 @@ body {
 .audio {
   position: absolute;
   left: 30vw;
-  top: 30vh; }
+  top: 50vh; }
 
 .audio-button {
+  position: fixed;
+  left: 2vw;
+  top: 41vh;
   height: 8vh;
   width: 8vh; }
 
 .audio-track {
   margin-bottom: 1vh;
-  font-size: 120%; }
+  font-size: 120%;
+  width: 69vw;
+  border-bottom: 1px rgba(0, 0, 0, 0) solid; }
+  .audio-track:hover {
+    cursor: pointer;
+    background-color: #f9fbff; }
+  .audio-track.active {
+    border-bottom: 1px black solid; }
+
+.audio-image {
+  position: fixed;
+  top: 1vh;
+  left: 33vw;
+  width: 81.8468vh;
+  bottom: 60vh;
+  background-image: url(/images/hoeren.jpg);
+  background-size: contain; }
+
+.audio-info-box {
+  position: absolute;
+  right: 2vw;
+  width: 25vw;
+  height: auto;
+  padding: 4px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 90%;
+  opacity: .8; }
+
+.time-box {
+  position: fixed;
+  top: 43vh;
+  font-size: 4vh;
+  right: 2vw; }

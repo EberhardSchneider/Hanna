@@ -29,10 +29,8 @@ const audioData = {
 		},
 		{
 			ort: "Tokio", jahr: "2012",
-			beschreibung: 'Livemitschnitt<br>"The Art of Coloratura"<br>Musashino Cultural Hall',
+			beschreibung: (<span>Livemitschnitt<br/>"The Art of Coloratura"<br/>Musashino Cultural Hall</span>),
 			besetzung: [ "Masahiro Saitoh - Klavier" ]
 		}
 	]
 };
-
-module.exports = { audioData };

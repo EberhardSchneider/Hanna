@@ -83,7 +83,7 @@ export default function calculateFrames() {
 		};
 	});
 	frames['hoeren'][2] = {
-		translate: 'translate(2vw, ' + (23+2*9) + 'vh)',
+		translate: 'translate(12vh, ' + (21.5+2*9) + 'vh)',
 		fontSize: '9.5vh',
 		letterSpacing: 2,
 		opacity: 1

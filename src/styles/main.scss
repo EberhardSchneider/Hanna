@@ -11,6 +11,7 @@ body {
 		font-weight: extra-bold;
 		user-select: none;
 	}
+	user-select: none;
 }
 
 // menu animation
@@ -430,17 +431,21 @@ body {
 	}
 }
 
+
 // ____________________________________HÖREN ________________________________
 
 
 .audio {
 	position: absolute;
 	left: 30vw;
-	top: 30vh;
+	top: 50vh;
 }
 
 
 .audio-button {
+	position: fixed;
+	left: 2vw;
+	top: 41vh;
 	height: 8vh;
 	width: 8vh;
 }
@@ -448,4 +453,45 @@ body {
 .audio-track {
 	margin-bottom: 1vh;
 	font-size: 120%;
+	width: 69vw;
+	border-bottom: 1px rgba(0,0,0,0) solid;
+	&:hover {
+
+		cursor: pointer;
+		background-color: #f9fbff;
+	}
+	&.active {
+		border-bottom: 1px black solid;
+	}
+}
+
+.audio-image {
+	position: fixed;
+	top: 1vh;
+	left: 33vw;
+	width: 81.8468vh;
+	bottom: 60vh;
+	background-image: url(/images/hoeren.jpg);
+	background-size: contain;
+}
+
+.audio-info-box {
+	position: absolute;
+	right: 2vw;
+	width: 25vw;
+	height: auto;
+	padding: 4px;
+
+	display: inline-block;
+	overflow: hidden;
+
+	font-size: 90%;
+	opacity: .8;
+}
+
+.time-box {
+	position: fixed;
+	top: 43vh;
+	font-size: 4vh;
+	right: 2vw;
 }
