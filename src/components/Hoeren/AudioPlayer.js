@@ -27,8 +27,10 @@ class AudioPlayer extends Component {
 	}
 
 	componentWillUnmount() {
-		this.audioElements[ this.state.activeTrack ].pause();
-		this.setState({ isAudioPlaying: false });
+		if (this.state.isAudioPlaying) {
+			this.audioElements[ this.state.activeTrack ].pause();
+			this.setState({ isAudioPlaying: false });
+		}
 	}
 
 
@@ -68,11 +70,9 @@ class AudioPlayer extends Component {
 
 		let activeTrack = this.state.activeTrack;
 		if (this.state.isAudioPlaying) {
-
-			
-	
+			this.audioElements[ activeTrack ].pause();
+			this.setState({isAudioPlaying: false});
 		} else {
-
 			if (activeTrack == -1) {
 				this.setState( { activeTrack: 0 });
 				activeTrack = 0;

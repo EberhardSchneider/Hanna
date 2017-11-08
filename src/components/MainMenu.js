@@ -14,7 +14,7 @@ import { MenuElement } from './MainMenu/MenuElement';
 import { MenuDecoration } from './MainMenu/MenuDecoration';
 import { HomeButton } from './MainMenu/HomeButton';
 import calculateFrames from './MainMenu/keyframes';
-import { CSSTransitionGroup } from 'react-transition-group';
+import { Motion, spring } from 'react-motion';
 
 
 import Home from './home';
@@ -78,7 +78,7 @@ class MainMenu extends React.Component {
 
 	componentDidMount() {
 		frames = calculateFrames();
-		this.animateMenu();
+		this.animateMenuTo('home');
 
 		this.addListeners();
 
@@ -88,12 +88,17 @@ class MainMenu extends React.Component {
 	}
 
 	componentDidUpdate() {
-		this.animateMenu();
+		TweenMax.to( $('.content'), 
+										.75, 
+										{ opacity: 1 }
+										
+									);
 	}
+
 
 	handleResize() {
 		frames = calculateFrames();
-		this.animateMenu();
+		this.animateMenu( this.state.currentPage );
 	}
 
 
@@ -101,7 +106,7 @@ class MainMenu extends React.Component {
 		let content = routes[ this.state.currentPage ].component || <Home/>;
 		return (
 				<Router>
-					<div className="content">
+					<div className="wrapper">
 						{menuElements.map(function(element) {
 							return <MenuElement key={element.name} 
 																	link={element.link} 
@@ -109,24 +114,16 @@ class MainMenu extends React.Component {
 						})}
 						<MenuDecoration/>
 						<Link to="/"><HomeButton/></Link>
-							<div className="content">
-								{/*{routes.map( function(route) {
-									const c = route.component;
-									return <Route key={route.path} 
-																path={route.path} 
-																component={route.component}/>
-								})}*/}
-								{content}
-							</div>
+								<div className="content">{content}</div>
 					</div>
 				</Router>
 			);
 	}
 
 
-	animateMenu() {
-		const frame = frames[this.state.currentPage];
+	animateMenuTo( page ) {
 
+		const frame = frames[page];
 		TweenMax.staggerTo(".menu-item", .6, {rotation: 360}, .2);
 		$('.menu-item').each( function(index) {
 			TweenMax.to( $(this), 
@@ -169,7 +166,19 @@ class MainMenu extends React.Component {
 	
 
 	changeCurrentPage( page ) {
-		this.setState( { currentPage: page });
+		if (this.state.currentPage !== page) {
+			this.animateMenuTo( page );
+			TweenMax.to( $('.content'), 
+										.75, 
+										{ opacity: 0, 
+											onComplete: () => { this._animationComplete(page) }
+										}
+									);
+		}
+	}
+
+	_animationComplete(page) {
+		this.setState({ currentPage: page });
 	}
 
 	// Helper/Modularizaton
