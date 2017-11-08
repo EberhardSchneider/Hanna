@@ -23,7 +23,7 @@ const audioData = {
 		},
 		{
 			ort: "Rathaussaal St. Veit, Kärnten", jahr: "2013",
-			beschreibung: (<span>)Livemitschnitt<br/>L´inatteso paesaggio della seconda prattica</span>),
+			beschreibung: (<span>Livemitschnitt<br/>L´inatteso paesaggio della seconda prattica</span>),
 			besetzung: [ "Franco Pavan - Theorbe, Leitung", "Ida Aldrian - Mezzosopran", "Trigonale 2013" ],
 			disclaimer: (<span>mit freundlicher Genehmigung von Stefan&nbsp;Schweiger</span>)
 		},

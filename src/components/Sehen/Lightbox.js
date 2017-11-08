@@ -20,6 +20,10 @@ class Lightbox extends Component {
 		$('.menu-item').css('z-index','-255');
 	}
 
+	componentDidUpdate() {
+		$('.lightbox-image').css("display","block");
+	}
+
 	componentWillUnmount() {
 		$('.menu-item').css('z-index',this.saveZIndex);
 	}
@@ -35,18 +39,20 @@ class Lightbox extends Component {
 						<img 	src={"/images/" + image.big} 
 									className={"lightbox-image " + image.orientation }/>
 					</Zoom>
-					<div className="image-subtitle">{image.comment}</div>
+					<div className="image-subtitle" dangerouslySetInnerHTML={{__html: image.comment}}/>
 				</div>
 			);
 	}
 	
 	handleLeftArrowClick() {
 		const newIndex = (this.state.index - 1 < 0) ? this.props.images.length - 1 : this.state.index - 1;
+		$('.lightbox-image').css("display","none");
 		this.setState( { index : newIndex });
 	}
 
 	handleRightArrowClick() {
 		const newIndex = (this.state.index + 1 >=  this.props.images.length ) ? 0 : this.state.index + 1;
+		$('.lightbox-image').css("display","none");
 		this.setState( { index : newIndex });
 	}
 

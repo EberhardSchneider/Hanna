@@ -7,7 +7,7 @@ class Vita extends Component {
 		return (
 		<div className="vita">
 			<div className="vita-image"></div>
-			<HannaScrollbars style={{top: '30vh', left: '33vw', width: '60vw', height: '65vh' }}>
+			<HannaScrollbars style={{top: '41vh', left: '33vw', width: '60vw', height: '57vh' }}>
 				<VitaText/>
 			</HannaScrollbars>
 		</div>

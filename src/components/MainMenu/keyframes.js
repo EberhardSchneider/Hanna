@@ -50,7 +50,7 @@ export default function calculateFrames() {
 		};
 	});
 	frames['vita'][1] = {
-		translate: 'translate(35vw, 4vh)',
+		translate: 'translate(32vw, 31vh)',
 		fontSize: '9.5vh',
 		letterSpacing: 2,
 		opacity: 1

@@ -89,7 +89,7 @@ class MainMenu extends React.Component {
 
 	componentDidUpdate() {
 		TweenMax.to( $('.content'), 
-										.75, 
+										1.25, 
 										{ opacity: 1 }
 										
 									);
@@ -146,20 +146,31 @@ class MainMenu extends React.Component {
 											}
 			);
 		});
-		if (this.state.currentPage == 'home') {
+		if (page == 'home') {
+			
+			TweenMax.to('.home-button',
+									2,
+									{
+										opacity: 0
+									});
 			TweenMax.to( $('.menu-decoration'),
 										2,
 										{
 											fontSize: '3.6vh',
 											opacity: 1
-										})
+										});
 		} else {
 			TweenMax.to( $('.menu-decoration'),
 										2,
 										{
 											fontSize: 0,
 											opacity: 0
-										})
+										});
+			TweenMax.to('.home-button',
+									2,
+									{
+										opacity: 1
+									});
 		}
 	}
 

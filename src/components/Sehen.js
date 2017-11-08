@@ -12,7 +12,8 @@ class Sehen extends React.Component {
 		return (
 			<div className="sehen">
 		<HannaScrollbars style={{ width: '66vw', 
-															height: '90vh'}}>
+															height: '90vh'}}
+											autoHide={true}>
 			
 			<div className="image-wrapper">
 				<Images imageType='scene' rows={2}/>

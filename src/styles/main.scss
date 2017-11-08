@@ -36,6 +36,18 @@ body {
 	}
 }
 
+.home-button { 
+	position: absolute;
+	height: 1vh;
+	width: 1vh;
+	top: 2vh;
+	left: 2vh;
+	img {
+		height: 10vh;
+		width: 10vh;
+	}
+}
+
 // menu decoration
 
 .menu-decoration {
@@ -51,12 +63,12 @@ body {
 }
 
 #hanna {
-		top: 18.5vh;
+		top: 20vh;
 		left: calc(40.5vw - 11vh);
 }
 
 #sopran {
-		top: 21.5vh;
+		top: 23vh;
 		left: calc(40.5vw - 11vh);
 }
 
@@ -225,8 +237,7 @@ body {
 	right: 0;
 	bottom: 0;
 	transform: translateY(-5px);
-	border-left: solid 1px black;
-	border-right: solid 1px black;
+
 
 	.rail-horizontal {
 		height: 1px;
@@ -240,7 +251,6 @@ body {
 	height: 10px !important;
 	background-color: black;
 	top: -5px;
-
 	width: 64px;
 }
 
@@ -483,15 +493,14 @@ body {
 	padding: 4px;
 
 	display: inline-block;
-	overflow: hidden;
 
 	font-size: 90%;
 	opacity: .8;
 }
 
 .time-box {
-	position: fixed;
-	top: 43vh;
-	font-size: 4vh;
-	right: 2vw;
+	position: absolute;
+	top: -3vh;
+	font-size: 2vh;
+	right: -2vw; // shift to the right, because of parent element audio-info-box 
 }

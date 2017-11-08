@@ -28,7 +28,6 @@ class Images extends Component {
 			success: function( data ) {
 				let images = [];
 				images = Object.values( data );
-				console.log( images );
 				self.setState( { images } );
 			}
 		});
@@ -50,7 +49,6 @@ class Images extends Component {
 	}
 
 	handleExitIconClick() {
-		console.log("EXIT");
 		this.setState( {lightbox: false });
 	}
 

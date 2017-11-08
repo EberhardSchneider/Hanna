@@ -12,6 +12,7 @@ class AudioInfoBox extends Component {
 				<div className="jahr">{audioInfo.jahr}</div>
 				<div className="beschreibung">{audioInfo.beschreibung}</div>
 				<div className="disclaimer">{audioInfo.disclaimer}</div>
+				<div className="time-box">{this.props.currentTime}</div>
 			</div>
 			);
 	}
