@@ -565,14 +565,14 @@ body {
   position: absolute;
   left: 15vw;
   right: 1vw;
-  top: 15vh;
-  height: 52vh;
+  top: 11vh;
+  height: 66vh;
   overflow: hidden;
   z-index: -255; }
   .agenda .scroll-container {
     width: 5000px;
     height: 100%;
-    overflow: visible;
+    overflow: hidden;
     -webkit-transition: left 0.5s ease-in-out;
     transition: left 0.5s ease-in-out; }
 
@@ -629,8 +629,7 @@ body {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 95%; }
+          transform: translateY(-50%); }
 
 .cast {
   position: relative;
@@ -651,16 +650,16 @@ body {
 
 .event-top {
   display: block;
-  height: 8vh; }
+  height: 12vh; }
 
 .event-date {
   display: block;
   height: 9vh;
-  width: 100%; }
+  width: 32vh; }
 
 .event-bottom {
   position: absolute;
-  width: 100%;
+  width: 32vh;
   height: 30vh;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -703,6 +702,10 @@ body {
   width: 74.48vh;
   background-image: url(/images/vita.jpg);
   background-size: contain; }
+
+.vita-text {
+  font-size: 1.7vh;
+  line-height: 1.5; }
 
 .sehen {
   position: absolute;

@@ -98,7 +98,7 @@ class MainMenu extends React.Component {
 
 	handleResize() {
 		frames = calculateFrames();
-		this.animateMenu( this.state.currentPage );
+		this.animateMenuTo( this.state.currentPage );
 	}
 
 
@@ -124,7 +124,7 @@ class MainMenu extends React.Component {
 	animateMenuTo( page ) {
 
 		const frame = frames[page];
-		TweenMax.staggerTo(".menu-item", .6, {rotation: 360}, .2);
+		TweenMax.staggerTo(".menu-item", .3, {rotation: 360}, .3);
 		$('.menu-item').each( function(index) {
 			TweenMax.to( $(this), 
 										2, 
