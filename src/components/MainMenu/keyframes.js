@@ -88,6 +88,22 @@ export default function calculateFrames() {
 		letterSpacing: 2,
 		opacity: 1
 	};
+	// Kontakt frame
+	frames['kontakt'] = [];
+	items.forEach( function( key, index ) {
+		frames['kontakt'][index] = {
+			translate: 'translate(2vw, ' + (23+index*9) + 'vh)',
+			fontSize: '8vh',
+			letterSpacing: spacing[index],
+			opacity: .1
+		};
+	});
+	frames['kontakt'][4] = {
+		translate: 'translate(32vw, 59vh)',
+		fontSize: '9.5vh',
+		letterSpacing: 2,
+		opacity: 1
+	};
 
 
 

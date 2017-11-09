@@ -12,6 +12,7 @@ body {
 		user-select: none;
 	}
 	user-select: none;
+	font-size: 1.3vh;
 }
 
 // menu animation
@@ -508,3 +509,51 @@ body {
 	font-size: 2vh;
 	right: -2vw; // shift to the right, because of parent element audio-info-box 
 }
+
+// ______________________________KONTAKT _________________________
+
+.kontakt {
+	position: absolute;
+	top: 0;
+	left: 30vw;
+	width: 85.763889vh;
+	bottom: 0;
+	padding: 5px;
+	background-image: url(/images/kontakt.jpg);
+	background-size: cover;
+
+	.kontakt-schablone {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 58vh;
+		height: 12vh;
+		z-index: 255;
+		background-color: #fff;
+	}
+
+	.kontakt-text {
+		position: absolute;
+		top: 70vh;
+		color: #000;
+		left: 0;
+		right: 0;
+		font-size: 1.8vh;
+		>div {
+			position: relative;
+			display: inline-block;
+			width: 40%;
+			height: 100%;
+			overflow: hidden;
+			float: left;
+			padding: 5%;
+
+			a {
+				color: #000;
+				font-decoration: none;
+
+			}
+		}
+	}
+}
+

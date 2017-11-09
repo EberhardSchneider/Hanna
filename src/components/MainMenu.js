@@ -18,36 +18,36 @@ import { Motion, spring } from 'react-motion';
 
 
 import Home from './home';
-import Agenda from './agenda';
-import Vita from './vita';
-import Hoeren from './hoeren';
-import Sehen from './sehen';
-import Kontakt from './kontakt';
+import Agenda from './Agenda/agenda';
+import Vita from './Vita/vita';
+import Hoeren from './Hoeren/hoeren';
+import Sehen from './Sehen/sehen';
+import Kontakt from './Kontakt/kontakt';
 
 let frames = {};
 
 const routes = {
-	'home': {	path: '/',
+	'home': {	path: '#',
 		exact: true,
 		name: 'HOME',
 	},
-	'agenda': {	path: '/agenda',
+	'agenda': {	path: '/#agenda',
 		name: 'AGENDA',
 		component: <Agenda/>
 	},
-	'vita': {	path: '/vita',
+	'vita': {	path: '/#vita',
 		name: 'VITA',
 		component: <Vita/>
 	},
-	'hoeren': {	path: '/hoeren',
+	'hoeren': {	path: '/#hoeren',
 		name: 'HÖREN',
 		component: <Hoeren/>
 	},
-	'sehen': {	path: '/sehen',
+	'sehen': {	path: '/#sehen',
 		name: 'SEHEN',
 		component: <Sehen/>
 	},
-	'kontakt': {	path: '/kontakt',
+	'kontakt': {	path: '/#kontakt',
 		name: 'KONTAKT',
 		component: <Kontakt/>
 	}
@@ -57,15 +57,15 @@ const routes = {
 
 const menuElements = [
 	{ name: 'AGENDA',
-		link: '/agenda'},
+		link: '/#agenda'},
 	{ name: 'VITA',
-		link: '/vita'},
+		link: '/#vita'},
 	{ name: 'HÖREN',
-		link: '/hoeren'},
+		link: '/#hoeren'},
 	{ name: 'SEHEN',
-		link: '/sehen'},
+		link: '/#sehen'},
 	{ name: 'KONTAKT',
-		link: '/kontakt'}
+		link: '/#kontakt'}
 ]
 
 
@@ -122,6 +122,7 @@ class MainMenu extends React.Component {
 
 
 	animateMenuTo( page ) {
+		console.log("Getting frames for " + page);
 
 		const frame = frames[page];
 		TweenMax.staggerTo(".menu-item", .3, {rotation: 360}, .3);
@@ -198,7 +199,7 @@ class MainMenu extends React.Component {
 			$('.menu-item>a').each( function() {
 				let name = $(this).attr("href");
 				$(this).click( function() {
-					self.changeCurrentPage( name.substring(1) );
+					self.changeCurrentPage( name.substring(2) );
 				})
 			});
 			$('.home-button').click( function() {

@@ -21,10 +21,26 @@ class EventDate extends React.Component {
 	render() {
 		return (
 			<div className="event-date">
-				<div className="date">EventData</div>
+			<div className="date">{this.getDateString( this.props.date)}</div>
 			</div>
 
 			);
+	}
+
+	getDateString( dateStr ) {
+		
+		const a=dateStr.split(" ");
+		const d=a[0].split("-");
+		const t=a[1].split(":");
+		const date = new Date(d[0],(d[1]-1),d[2],t[0],t[1],t[2]);
+		// check here if event is upcoming
+		if (date.getHours() == 0) {  // date and hour or just date
+					var options = { year: 'numeric', month: 'long', day: 'numeric' };
+				}
+				else {
+					var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+				}
+		return date.toLocaleDateString("de-De", options).replace(":", "h");
 	}
 }
 
