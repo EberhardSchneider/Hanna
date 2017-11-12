@@ -911,7 +911,7 @@ body {
   .kontakt .kontakt-text {
     position: absolute;
     top: 70vh;
-    color: #000;
+    color: #FFF;
     left: 0;
     right: 0;
     font-size: 1.8vh; }
@@ -924,5 +924,24 @@ body {
       float: left;
       padding: 5%; }
       .kontakt .kontakt-text > div a {
-        color: #000;
+        color: #FFF;
         font-decoration: none; }
+
+.impressum-overlay {
+  position: absolute;
+  z-index: 255;
+  top: 2%;
+  left: 2%;
+  bottom: 2%;
+  right: 2%;
+  background-color: rgba(0, 0, 0, 0.95); }
+  .impressum-overlay .close-icon {
+    position: absolute;
+    width: 48px;
+    right: 25px;
+    top: 25px;
+    z-index: 250; }
+    .impressum-overlay .close-icon img {
+      width: 48px; }
+    .impressum-overlay .close-icon:hover {
+      cursor: pointer; }

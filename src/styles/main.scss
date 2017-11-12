@@ -535,7 +535,7 @@ body {
 	.kontakt-text {
 		position: absolute;
 		top: 70vh;
-		color: #000;
+		color: #FFF;
 		left: 0;
 		right: 0;
 		font-size: 1.8vh;
@@ -549,7 +549,7 @@ body {
 			padding: 5%;
 
 			a {
-				color: #000;
+				color: #FFF;
 				font-decoration: none;
 
 			}
@@ -557,3 +557,32 @@ body {
 	}
 }
 
+// Impressum
+
+.impressum-overlay {
+	position: absolute;
+	z-index: 255;
+	top: 2%;
+	left: 2%;
+	bottom: 2%;
+	right: 2%;
+
+	background-color: rgba( 0, 0, 0, 0.95);
+
+	.close-icon {
+		position: absolute;
+		width: 48px;
+		right: 25px;
+		top: 25px;
+
+		img {
+			width: 48px;
+		}
+
+		&:hover {
+			cursor:pointer;
+		}
+
+		z-index: 250;
+	}
+}

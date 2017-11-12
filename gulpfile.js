@@ -80,9 +80,17 @@ gulp.task('js', function() {
 		.bundle()
 		.on('error', console.error.bind(console))
 		.pipe(source('bundle.js'))
+
 		.pipe(gulp.dest( config.paths.dist + '/scripts'))
 		// .pipe(browserSync.reload);
 });
+
+gulp.task('uglify', function() {
+	gulp.src( config.paths.dist + '/scripts/bundle.js')
+		.pipe(uglify())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest( config.paths.dist + '/scripts'));
+})
 
 gulp.task('js-watch', ['js'], function(done) {
 	browserSync.reload();

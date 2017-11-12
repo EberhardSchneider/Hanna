@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Impressum from './Impressum.js';
 
 const KontaktBox1 = () => {
 	return  <div className="kontakt-box-1">
-					<br/><br/><br/>HANNA<br/>
+					HANNA<br/>
 					<a href="mailto:hannaherfurtner@gmail.com">hannaherfurtner(at)gmail.com</a><br/><br/>
 
 					Um den aktuellen Newsletter zu erhalten, schreiben Sie mir einfach eine email.<br/>
