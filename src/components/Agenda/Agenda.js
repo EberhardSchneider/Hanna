@@ -47,7 +47,7 @@ class Agenda extends React.Component {
 		return (
 
 				<div className="agenda">
-							
+							<div className="fadeOutArea"></div>
 							<HannaScrollbars style={{height: '66vh', 
 																			 width: '75vw'}}
 																autoHide={true}>
@@ -57,7 +57,7 @@ class Agenda extends React.Component {
 										return <Event key={event.id} data={event}/>
 									}, this)}
 								</div>
-								<div className="fadeOutArea"></div>
+								
 
 							</HannaScrollbars>
 							

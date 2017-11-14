@@ -1,7 +1,7 @@
 // Base CSS
 
 @import url(https://fonts.googleapis.com/css?famila=Raleway:800);
-
+@import '../../node_modules/compass-mixins/lib/_compass.scss';
 // Fonts
 
 body {
@@ -11,7 +11,7 @@ body {
 		font-weight: extra-bold;
 		user-select: none;
 	}
-	user-select: none;
+	@include user-select(none);
 	font-size: 1.3vh;
 }
 
@@ -93,7 +93,7 @@ body {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	z-index: -255;
+	background-color: #fff;
 }
 // ----------- Agenda
 
@@ -104,8 +104,6 @@ body {
 	top: 11vh;
 	height: 66vh;
 	overflow:hidden;
-
-	z-index: -255;
 
 	.scroll-container {
 		width: 5000px;
@@ -118,25 +116,34 @@ body {
 }
 
 .fadeOutArea {
-	position: fixed;
-	display: block;
-	left:15vw;
-	width: 20vw;
-	top:0;
-	bottom: 0;
+	position: absolute;
+	display: inline-block;
 
-	background-image:(linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%));
+	left:0;
+	width: 16vw;
+	top:0;
+	height: 100vh;
+
+	z-index: 1;
+
+	@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
+	@include background-image(linear-gradient(to right, rgba(255,255,255,1) 0%,
+		rgba(255,255,255,0) 100%));
 }
 
 .fadeOutArea-2 {
-	position: fixed;
-	display: block;
-	left:30vw;
+	position: absolute;
+	display: inline-block;
+	left:0;
 	width: 7.5vw;
 	top:0;
-	bottom: 0;
+	height: 100vh;
 
-	background-image:(linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%));
+	z-index: 1;
+
+		@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
+	@include background-image(linear-gradient(to right, rgba(255,255,255,1) 0%,
+		rgba(255,255,255,0) 100%));
 }
 
 
@@ -289,8 +296,6 @@ body {
 	top: 4vh;
 	height: 90vh;
 	overflow:hidden;
-
-	z-index: -255;
 }
 .image-wrapper {
 	position: absolute;

@@ -11,6 +11,7 @@ class Sehen extends React.Component {
 	render() {
 		return (
 			<div className="sehen">
+			<div className="fadeOutArea-2"></div>
 		<HannaScrollbars style={{ width: '66vw', 
 															height: '90vh'}}
 											autoHide={true}>
@@ -20,7 +21,7 @@ class Sehen extends React.Component {
 				<Images imageType='portrait' rows={1}/>
 			</div>
 			
-			<div className="fadeOutArea-2"></div>
+			
 		</HannaScrollbars>
 		</div>);
 	}
