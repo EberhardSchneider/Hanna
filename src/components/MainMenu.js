@@ -82,8 +82,7 @@ class MainMenu extends React.Component {
 
 		this.addListeners();
 
-		const self = this;
-		$(window).resize(self.handleResize.bind(self));
+		window.addEventListener('resize', this.handleResize.bind(this), true);
 
 	}
 
@@ -122,11 +121,10 @@ class MainMenu extends React.Component {
 
 
 	animateMenuTo( page ) {
-		console.log("Getting frames for " + page);
 
 		const frame = frames[page];
-		TweenMax.staggerTo(".menu-item", .3, {rotation: 360}, .3);
-		$('.menu-item').each( function(index) {
+
+		$('.menu-item').each( function(index) {  // all menu elements
 			TweenMax.to( $(this), 
 										2, 
 										{
@@ -136,18 +134,18 @@ class MainMenu extends React.Component {
 										}
 			);
 		});
-		$('.menu-item > a').each(function(index) {
+		$('.menu-item > a').each(function(index) { // and the links in the elements
 				TweenMax.to( $(this), 
 											2, 
 											{
 												letterSpacing: frame[index].letterSpacing,
 												autoRound: false,
-												opacity: frame[index].opacity,
-												ease: Back.easeInOut
+												opacity: frame[index].opacity
 											}
 			);
 		});
-		if (page == 'home') {
+
+		if (page == 'home') {  // now the home button and the menu decoration elements
 			
 			TweenMax.to('.home-button',
 									2,
@@ -178,15 +176,14 @@ class MainMenu extends React.Component {
 	
 
 	changeCurrentPage( page ) {
-		if (this.state.currentPage !== page) {
-			this.animateMenuTo( page );
-			TweenMax.to( $('.content'), 
-										.75, 
-										{ opacity: 0, 
-											onComplete: () => { this._animationComplete(page) }
-										}
-									);
-		}
+		
+		this.animateMenuTo( page );
+		TweenMax.to( $('.content'), 
+									.75, 
+									{ opacity: 0, 
+										onComplete: () => { this._animationComplete(page) }
+									}
+								);
 	}
 
 	_animationComplete(page) {
@@ -199,7 +196,9 @@ class MainMenu extends React.Component {
 			$('.menu-item>a').each( function() {
 				let name = $(this).attr("href");
 				$(this).click( function() {
-					self.changeCurrentPage( name.substring(2) );
+					if (name !== self.state.currentPage) {
+						self.changeCurrentPage( name.substring(2) );
+					}
 				})
 			});
 			$('.home-button').click( function() {

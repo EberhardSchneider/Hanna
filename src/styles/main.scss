@@ -43,6 +43,10 @@ body {
 	width: 1vh;
 	top: 2vh;
 	left: 2vh;
+
+	z-index: 10;
+
+	opacity: 0;
 	img {
 		height: 10vh;
 		width: 10vh;
@@ -55,12 +59,8 @@ body {
 	position: absolute;
 	font-size: 0;
 	opacity: 0;
-
-
-
-	#sopran {
-
-	}
+	
+	z-index: 10;
 }
 
 #hanna {
@@ -457,7 +457,7 @@ body {
 
 .audio {
 	position: absolute;
-	left: 30vw;
+	left: 33vw;
 	top: 50vh;
 }
 
@@ -512,7 +512,7 @@ body {
 	position: absolute;
 	top: -3vh;
 	font-size: 2vh;
-	right: -2vw; // shift to the right, because of parent element audio-info-box 
+	right: 1vw; 
 }
 
 // ______________________________KONTAKT _________________________
@@ -533,14 +533,14 @@ body {
 		right: 0;
 		top: 58vh;
 		height: 12vh;
-		z-index: 255;
+		z-index: 1;
 		background-color: #fff;
 	}
 
 	.kontakt-text {
 		position: absolute;
 		top: 70vh;
-		color: #FFF;
+		color: #fff;
 		left: 0;
 		right: 0;
 		font-size: 1.8vh;
@@ -554,7 +554,7 @@ body {
 			padding: 5%;
 
 			a {
-				color: #FFF;
+				color: #fff;
 				font-decoration: none;
 
 			}

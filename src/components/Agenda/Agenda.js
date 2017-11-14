@@ -49,7 +49,7 @@ class Agenda extends React.Component {
 				<div className="agenda">
 							<div className="fadeOutArea"></div>
 							<HannaScrollbars style={{height: '66vh', 
-																			 width: '75vw'}}
+																			 width: '80vw'}}
 																autoHide={true}>
 
 								<div className="scroll-container">
