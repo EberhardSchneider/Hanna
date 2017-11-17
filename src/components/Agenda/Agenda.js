@@ -28,6 +28,12 @@ class Agenda extends React.Component {
 
 	}
 
+	componentDidMount() {
+		const fadeOutDiv = document.createElement('div');
+		fadeOutDiv.className = "fadeOutArea";
+		document.body.insertBefore( fadeOutDiv, document.getElementById('app') );
+	}
+
 
 	componentDidUpdate() {
 		$('<div class="event width-event" style="position: absolute; top: -9999"/>').appendTo( $('body' ));
@@ -40,6 +46,10 @@ class Agenda extends React.Component {
 		$('.scroll-container').css("width", timelineLength+"px");
 	}
 
+	componentWillUnmount() {
+		document.getElementsByClassName('fadeOutArea')[0].remove();
+	}
+
 	render() {
 
 
@@ -47,10 +57,10 @@ class Agenda extends React.Component {
 		return (
 
 				<div className="agenda">
-							<div className="fadeOutArea"></div>
-							<HannaScrollbars style={{height: '66vh', 
+							{/*<div className="fadeOutArea"></div>*/}
+						{/*	<HannaScrollbars style={{height: '66vh', 
 																			 width: '80vw'}}
-																autoHide={true}>
+																autoHide={true}>*/}
 
 								<div className="scroll-container">
 									{this.state.eventData.map( function( event ) {
@@ -59,7 +69,7 @@ class Agenda extends React.Component {
 								</div>
 								
 
-							</HannaScrollbars>
+							{/* </HannaScrollbars> */}
 							
 					
 				</div>

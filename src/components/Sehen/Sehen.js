@@ -8,10 +8,20 @@ import $ from 'jquery';
 
 class Sehen extends React.Component {
 
+	componentDidMount() {
+		const fadeOutDiv = document.createElement('div');
+		fadeOutDiv.className = "fadeOutArea-2";
+		document.body.insertBefore( fadeOutDiv, document.getElementById('app') );
+	}
+
+		componentWillUnmount() {
+		document.getElementsByClassName('fadeOutArea-2')[0].remove();
+	}
+
 	render() {
 		return (
 			<div className="sehen">
-			<div className="fadeOutArea-2"></div>
+			{/*<div className="fadeOutArea-2"></div>*/}
 		<HannaScrollbars style={{ width: '66vw', 
 															height: '90vh'}}
 											autoHide={true}>

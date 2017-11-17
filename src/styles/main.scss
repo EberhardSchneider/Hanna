@@ -89,11 +89,14 @@ body {
 
 .content {
 	position: absolute;
+	display: block;
 	top:0;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	background-color: #fff;
+
+	z-index: -255;
 }
 // ----------- Agenda
 
@@ -103,14 +106,15 @@ body {
 	right: 1vw;
 	top: 11vh;
 	height: 66vh;
-	overflow:hidden;
+	overflow: hidden;
 
 	.scroll-container {
 		width: 5000px;
 		height: 100%;
-		overflow: hidden;
 
 		transition: left 0.5s ease-in-out;
+
+		-webkit-transform: translate3d(0,0,0); // Fix IPad Bug ??
 
 	}
 }
@@ -119,12 +123,10 @@ body {
 	position: absolute;
 	display: inline-block;
 
-	left:0;
+	left:15vw;
 	width: 16vw;
 	top:0;
 	height: 100vh;
-
-	z-index: 1;
 
 	@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
 	@include background-image(linear-gradient(to right, rgba(255,255,255,1) 0%,
@@ -134,14 +136,12 @@ body {
 .fadeOutArea-2 {
 	position: absolute;
 	display: inline-block;
-	left:0;
+	left:30vw;
 	width: 7.5vw;
 	top:0;
 	height: 100vh;
 
-	z-index: 1;
-
-		@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
+	@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
 	@include background-image(linear-gradient(to right, rgba(255,255,255,1) 0%,
 		rgba(255,255,255,0) 100%));
 }
@@ -296,11 +296,15 @@ body {
 	top: 4vh;
 	height: 90vh;
 	overflow:hidden;
+
+	z-index: 255;
 }
 .image-wrapper {
 	position: absolute;
 	height: 90vh;
 	overflow: hidden;
+
+	z-index: 255;
 
 	.scene-images-container {
 		position: relative;
@@ -492,7 +496,7 @@ body {
 	width: 81.8468vh;
 	bottom: 60vh;
 	background-image: url(/images/hoeren.jpg);
-	background-size: contain;
+	background-size: cover;
 }
 
 .audio-info-box {
@@ -564,15 +568,39 @@ body {
 
 // Impressum
 
+
 .impressum-overlay {
-	position: absolute;
+	position: fixed;
 	z-index: 255;
 	top: 2%;
 	left: 2%;
 	bottom: 2%;
 	right: 2%;
 
+	padding-left: 5vw;
+	padding-right: 5vw;
+
+	font-size: 1.4vh;
+
 	background-color: rgba( 0, 0, 0, 0.95);
+	color: #fff;
+
+	h1 {
+		left: 25%;
+		width: 50%;
+		margin: auto;
+		text-align: center;
+		font-size: 120%;
+		border-bottom: solid 2px;
+		margin-top: 2%;
+		margin-bottom: 25px;
+	}
+
+	h2 {
+		font-size: 110%;
+		margin-top: 10px;
+		margin-bottom: 3px;
+	}
 
 	.close-icon {
 		position: absolute;
@@ -585,9 +613,11 @@ body {
 		}
 
 		&:hover {
-			cursor:pointer;
+			cursor: pointer;
 		}
 
 		z-index: 250;
 	}
+
+
 }

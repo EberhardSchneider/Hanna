@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import Impressum from './Impressum.js';
 
-const KontaktBox1 = () => {
-	return  <div className="kontakt-box-1">
-					HANNA<br/>
-					<a href="mailto:hannaherfurtner@gmail.com">hannaherfurtner(at)gmail.com</a><br/><br/>
+class KontaktBox1 extends Component {
+	render() {
+		return  <div className="kontakt-box-1">
+						HANNA<br/>
+						<a href="mailto:hannaherfurtner@gmail.com">hannaherfurtner(at)gmail.com</a><br/><br/>
 
-					Um den aktuellen Newsletter zu erhalten, schreiben Sie mir einfach eine email.<br/>
+						Um den aktuellen Newsletter zu erhalten, schreiben Sie mir einfach eine email.<br/>
 
-					<div className="impressum-link">Impressum</div>
+						<div className="impressum-link" onClick={this.props.clickHandler}>Impressum</div>
 
-				</div>
+					</div>
+	}
 }
 
 const KontaktBox2 = () => {
@@ -29,16 +31,27 @@ const KontaktBox2 = () => {
 
 class Kontakt extends Component {
 
-	render() {
+	constructor(props) {
+		super(props);
+		// TODO make component stateless
+		this.state = { showOverlay: false };
 
-		
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	render() {
 		return <div className="kontakt"> {/*wrapper*/}
+			{this.state.showOverlay ? <Impressum clickHandler={this.handleClick}/> : null}
 			<div className="kontakt-schablone"/> {/*styled by css*/}
 			<div className="kontakt-text">
-				<KontaktBox1/>
+				<KontaktBox1 clickHandler={this.handleClick}/>
 				<KontaktBox2/>
 			</div>
 		</div>
+	}
+
+	handleClick() {
+		this.setState( { showOverlay: !this.state.showOverlay });
 	}
 
 }

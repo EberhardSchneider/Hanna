@@ -462,11 +462,13 @@ body {
 
 .content {
   position: absolute;
+  display: block;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: -255; }
 
 .agenda {
   position: absolute;
@@ -478,18 +480,17 @@ body {
   .agenda .scroll-container {
     width: 5000px;
     height: 100%;
-    overflow: hidden;
     -webkit-transition: left 0.5s ease-in-out;
-    transition: left 0.5s ease-in-out; }
+    transition: left 0.5s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0); }
 
 .fadeOutArea {
   position: absolute;
   display: inline-block;
-  left: 0;
+  left: 15vw;
   width: 16vw;
   top: 0;
   height: 100vh;
-  z-index: 1;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FF00FFFF');
   background-image: -owg-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -499,11 +500,10 @@ body {
 .fadeOutArea-2 {
   position: absolute;
   display: inline-block;
-  left: 0;
+  left: 30vw;
   width: 7.5vw;
   top: 0;
   height: 100vh;
-  z-index: 1;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FF00FFFF');
   background-image: -owg-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -627,12 +627,14 @@ body {
   right: 1vw;
   top: 4vh;
   height: 90vh;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 255; }
 
 .image-wrapper {
   position: absolute;
   height: 90vh;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 255; }
   .image-wrapper .scene-images-container {
     position: relative;
     left: 7.5vw;
@@ -785,7 +787,7 @@ body {
   width: 81.8468vh;
   bottom: 60vh;
   background-image: url(/images/hoeren.jpg);
-  background-size: contain; }
+  background-size: cover; }
 
 .audio-info-box {
   position: absolute;
@@ -840,13 +842,30 @@ body {
         font-decoration: none; }
 
 .impressum-overlay {
-  position: absolute;
+  position: fixed;
   z-index: 255;
   top: 2%;
   left: 2%;
   bottom: 2%;
   right: 2%;
-  background-color: rgba(0, 0, 0, 0.95); }
+  padding-left: 5vw;
+  padding-right: 5vw;
+  font-size: 1.4vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff; }
+  .impressum-overlay h1 {
+    left: 25%;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 120%;
+    border-bottom: solid 2px;
+    margin-top: 2%;
+    margin-bottom: 25px; }
+  .impressum-overlay h2 {
+    font-size: 110%;
+    margin-top: 10px;
+    margin-bottom: 3px; }
   .impressum-overlay .close-icon {
     position: absolute;
     width: 48px;
