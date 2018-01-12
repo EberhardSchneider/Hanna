@@ -22,6 +22,6 @@ function encode_items(&$item, $key) // Umlaute behandeln
 }
 array_walk_recursive($bilder, 'encode_items');
 
-print json_encode( $bilder );
+echo json_encode($bilder);
 
 mysqli_close( $db );?>

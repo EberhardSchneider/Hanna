@@ -2,6 +2,7 @@ audio
 icons_e
 dist/images
 dist/icon
+.sass-cache
 
 # Logs
 logs

@@ -17,6 +17,7 @@
     "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.5.0",
+    "compass-mixins": "^0.12.10",
     "gsap": "^1.20.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",

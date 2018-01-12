@@ -8,63 +8,61 @@ import Event from './Event';
 
 class Agenda extends React.Component {
 
-	constructor( props ) {
-		super(props);
-		this.state = { eventData: [] };
-	
-		// get events data
-		$.ajax({
+    constructor( props ) {
+        super(props);
+        this.state = { eventData: [] };
 
-			url: "/testsite/phpincludes/db_events.php",
-			type: 'POST',
+        // get events data
+        $.ajax({
 
-			dataType: 'json',
-			context: this,
-			success: function(data) {
-				const events = Object.values(data);
-				this.setState( { eventData: events });
-			}
-		}); // ajax call
+            url: "/testsite/phpincludes/db_events.php",
+            type: 'POST',
 
-	}
+            context: this,
+            success: function(data) {
+                const events = JSON.parse(data);
+                this.setState( { eventData: events });
+            }
+        }); // ajax call
 
-
-	componentDidUpdate() {
-		$('<div class="event width-event" style="position: absolute; top: -9999"/>').appendTo( $('body' ));
-		const eventWidth = $('.event').outerWidth( true );
-		$('.width-event').remove();
-		console.log("EventWidth: " + eventWidth );
-		const numberOfEvents = this.state.eventData.length;
-		const timelineLength = numberOfEvents * eventWidth + 10;
-	
-		$('.scroll-container').css("width", timelineLength+"px");
-	}
-
-	render() {
+    }
 
 
+    componentDidUpdate() {
+        $('<div class="event width-event" style="position: absolute; top: -9999"/>').appendTo( $('body' ));
+        const eventWidth = $('.event').outerWidth( true );
+        $('.width-event').remove();
+        console.log("EventWidth: " + eventWidth );
+        const numberOfEvents = this.state.eventData.length;
+        const timelineLength = numberOfEvents * eventWidth + 10;
 
-		return (
+        $('.scroll-container').css("width", timelineLength+"px");
+    }
 
-				<div className="agenda">
-							<div className="fadeOutArea"></div>
-							<HannaScrollbars style={{height: '66vh', 
-																			 width: '80vw'}}
-																autoHide={true}>
+    render() {
 
-								<div className="scroll-container">
-									{this.state.eventData.map( function( event ) {
-										return <Event key={event.id} data={event}/>
-									}, this)}
-								</div>
-								
 
-							</HannaScrollbars>
-							
-					
-				</div>
-			);
-	}
+
+        return (
+
+                <div className="agenda">
+                            <div className="fadeOutArea"></div>
+                            <HannaScrollbars style={{height: '72vh',width: '80vw'}}
+                                             autoHide={true}>
+
+                                <div className="scroll-container">
+                                    {this.state.eventData.map( function( event ) {
+                                        return <Event key={event.id} data={event}/>
+                                    }, this)}
+                                </div>
+                                
+
+                            </HannaScrollbars>
+                            
+                    
+                </div>
+            );
+    }
 
 }
 

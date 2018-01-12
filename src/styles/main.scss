@@ -102,7 +102,7 @@ body {
 	left: 15vw;
 	right: 1vw;
 	top: 11vh;
-	height: 66vh;
+	height: 72vh;
 	overflow:hidden;
 
 	.scroll-container {
@@ -163,21 +163,36 @@ body {
 .composer {
 	font-size: 2vh;
 	text-align: center;
+	height: 2.5vh;
+
+}
+
+.title-centerer {
+	display: table;
+	height: 6vh;
+	width: 100%;
 }
 
 .title {
+	display: table-cell;
 	font-size: 2.2vh;
 	text-align: center;
 	font-weight: bold;
 	padding-bottom: 2px;
 	border-bottom: solid black 2px;
+	
+	vertical-align: middle;
+
 }
 
 .location {
+
 	font-size: 1.8vh;
 	opacity: .6;
 	text-align: center;
 	padding-top: 2px;
+	height: 3.5vh;
+
 }
 
 .date {
@@ -218,7 +233,6 @@ body {
 }
 
 .event-top {
-		display: block;
 		height: 12vh;
 	}
 
@@ -565,7 +579,7 @@ body {
 // Impressum
 
 .impressum-overlay {
-	position: absolute;
+	position: fixed;
 	z-index: 255;
 	top: 2%;
 	left: 2%;
@@ -589,5 +603,11 @@ body {
 		}
 
 		z-index: 250;
+	}
+
+	.impressum-text {
+		color: #fff;
+		font-size: 1.8vh;
+		margin: 5%;
 	}
 }

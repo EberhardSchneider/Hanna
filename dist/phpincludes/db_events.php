@@ -25,6 +25,6 @@ function encode_items(&$item, $key) // Umlaute behandeln
 }
 array_walk_recursive($events, 'encode_items');
 
-print json_encode( $events );
+echo $events;
 
 mysqli_close( $db );?>

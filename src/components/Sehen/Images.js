@@ -23,11 +23,10 @@ class Images extends Component {
 			url: "/testsite/phpincludes/db_get_" + imageType + "_images.php",
 			type: 'POST',
 			data: { directory: self.props.imageType },
-			dataType: 'json',
-
+			
 			success: function( data ) {
 				let images = [];
-				images = Object.values( data );
+				images = JSON.parse(data);
 				self.setState( { images } );
 			}
 		});
