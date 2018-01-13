@@ -9,4 +9,3 @@ ReactDOM.render(
 	<MainMenu/>,
 	document.getElementById('app')
 	);
-

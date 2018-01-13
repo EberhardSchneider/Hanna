@@ -1,4 +1,4 @@
-import React from 'react'; sdfsdfsd
+import React from 'react';
 import $ from 'jquery';
 
 import HannaScrollbars from '../HannaScrollbarsHorizontal';
@@ -36,10 +36,11 @@ class Agenda extends React.Component {
 
 
 	componentDidUpdate() {
+		// calculate width of event containers
 		$('<div class="event width-event" style="position: absolute; top: -9999"/>').appendTo( $('body' ));
 		const eventWidth = $('.event').outerWidth( true );
 		$('.width-event').remove();
-		console.log("EventWidth: " + eventWidth );
+		// calculate width of complete timeline
 		const numberOfEvents = this.state.eventData.length;
 		const timelineLength = numberOfEvents * eventWidth + 10;
 

@@ -26,18 +26,23 @@ body {
 	font-weight: bold;
 	letter-spacing: 2px;
 	z-index: 10;
-	a {
+	div {
 		text-decoration: none;
 		color: black;
 		letter-spacing: inherit;
-		opacity: 0;
+		opacity: .3;
+
+		font-family: 'Raleway', sans-serif;
+		font-weight: extra-bold;
+		user-select: none;
+
 		&:hover {
 			opacity: 1 !important;
 		}
 	}
 }
 
-.home-button { 
+.home-button {
 	position: absolute;
 	height: 1vh;
 	width: 1vh;
@@ -59,7 +64,7 @@ body {
 	position: absolute;
 	font-size: 0;
 	opacity: 0;
-	
+
 	z-index: 10;
 }
 
@@ -309,10 +314,10 @@ body {
 	.scene-images-container {
 		position: relative;
 		left: 7.5vw;
-		
+
 		height: 45vh;
 		overflow: hidden;
-	
+
 		.scene-images {
 			height: 45vh;
 			overflow: hidden;
@@ -328,7 +333,7 @@ body {
 			position: absolute;
 			width: 80%;
 			height: 80%;
-			&:hover {	
+			&:hover {
 				opacity: .7;
 				cursor: pointer;
 			}
@@ -433,7 +438,7 @@ body {
 	.lightbox-image.landscape {
 		position: absolute;
 		z-index: 200;
-		
+
 		width: 80vw;
 		left: 10vw;
 		height: auto;
@@ -445,13 +450,13 @@ body {
 	.lightbox-image.portrait {
 		position: absolute;
 		z-index: 255;
-		
+
 		height: 80vh;
 		top: 10vh;
 		width: auto;
 		left: 50vw;
 		transform: translateX(-50%);
-	
+
 	}
 }
 
@@ -516,7 +521,7 @@ body {
 	position: absolute;
 	top: -3vh;
 	font-size: 2vh;
-	right: 1vw; 
+	right: 1vw;
 }
 
 // ______________________________KONTAKT _________________________
