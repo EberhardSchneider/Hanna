@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class Impressum extends Component {
+
+	componentDidMount() {
+		// workaround for the z-index of nested components
+		this.saveZIndexMenuItems = $('.menu-item').css('z-index');
+		$('.menu-item').css('z-index','-255');
+		this.saveZIndexHomeButton = $('.home-button').css('z-index');
+		$('.home-button').css('z-index','-255');
+	}
+
+	componentWillUnmount() {
+		$('.menu-item').css('z-index', this.saveZIndexMenuItems );
+		$('.home-button').css('z-index', this.saveZIndexHomeButton);
+	}
+
 render() {
 
 	return ( <div className="impressum-overlay" onClick={this.props.clickHandler} >

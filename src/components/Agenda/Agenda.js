@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; sdfsdfsd
 import $ from 'jquery';
 
 import HannaScrollbars from '../HannaScrollbarsHorizontal';
@@ -11,7 +11,7 @@ class Agenda extends React.Component {
 	constructor( props ) {
 		super(props);
 		this.state = { eventData: [] };
-	
+
 		// get events data
 		$.ajax({
 
@@ -42,7 +42,7 @@ class Agenda extends React.Component {
 		console.log("EventWidth: " + eventWidth );
 		const numberOfEvents = this.state.eventData.length;
 		const timelineLength = numberOfEvents * eventWidth + 10;
-	
+
 		$('.scroll-container').css("width", timelineLength+"px");
 	}
 
@@ -58,20 +58,20 @@ class Agenda extends React.Component {
 
 				<div className="agenda">
 							{/*<div className="fadeOutArea"></div>*/}
-						{/*	<HannaScrollbars style={{height: '66vh', 
+							<HannaScrollbars style={{height: '66vh',
 																			 width: '80vw'}}
-																autoHide={true}>*/}
+																autoHide={true}>
 
 								<div className="scroll-container">
 									{this.state.eventData.map( function( event ) {
 										return <Event key={event.id} data={event}/>
 									}, this)}
 								</div>
-								
 
-							{/* </HannaScrollbars> */}
-							
-					
+
+							 </HannaScrollbars>
+
+
 				</div>
 			);
 	}

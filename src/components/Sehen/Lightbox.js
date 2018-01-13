@@ -18,6 +18,7 @@ class Lightbox extends Component {
 		// workaround for the z-index of nested components
 		this.saveZIndex = $('.menu-item').css('z-index');
 		$('.menu-item').css('z-index','-255');
+		$('.fadeOutArea-2').css('z-index','-255');
 	}
 
 	componentDidUpdate() {
@@ -28,6 +29,7 @@ class Lightbox extends Component {
 
 	componentWillUnmount() {
 		$('.menu-item').css('z-index',this.saveZIndex);
+		$('.fadeOutArea-2').css('z-index','0');
 	}
 
 	render() {

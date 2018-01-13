@@ -106,14 +106,17 @@ class MainMenu extends React.Component {
 		return (
 				<Router>
 					<div className="wrapper">
+
+						<div className="content">{content}</div>
+
+						<Link to="/"><HomeButton/></Link>
 						{menuElements.map(function(element) {
 							return <MenuElement key={element.name} 
 																	link={element.link} 
 																	name={element.name}/>
 						})}
 						<MenuDecoration/>
-						<Link to="/"><HomeButton/></Link>
-								<div className="content">{content}</div>
+
 					</div>
 				</Router>
 			);

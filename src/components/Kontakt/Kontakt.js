@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Impressum from './Impressum.js';
 
 class KontaktBox1 extends Component {
@@ -40,13 +41,17 @@ class Kontakt extends Component {
 	}
 
 	render() {
+
+		const kontaktText = (<div><div className="kontakt-schablone"/> 
+					<div className="kontakt-text">
+						<KontaktBox1 clickHandler={this.handleClick}/>
+						<KontaktBox2/>
+					</div></div>);
 		return <div className="kontakt"> {/*wrapper*/}
-			{this.state.showOverlay ? <Impressum clickHandler={this.handleClick}/> : null}
-			<div className="kontakt-schablone"/> {/*styled by css*/}
-			<div className="kontakt-text">
-				<KontaktBox1 clickHandler={this.handleClick}/>
-				<KontaktBox2/>
-			</div>
+			{this.state.showOverlay ? 
+				<Impressum clickHandler={this.handleClick}/> : kontaktText }
+			
+
 		</div>
 	}
 
