@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { Scrollbars } from 'react-custom-scrollbars';
-import normalizeWheel from'normalize-wheel';
+import normalizeWheel from 'normalize-wheel';
+import { SpringSystem, MathUtil } from 'rebound';
 
 export default class HannaScrollbars extends Component {
 
     constructor(props, ...rest) {
         super(props, ...rest);
         this.wheelHandler=this.wheelHandler.bind(this);
+        this.scrollLeft=this.scrollLeft.bind(this);
         this.currentTarget = 0;
-
+        this.handleSpringUpdate = this.handleSpringUpdate.bind(this);
     }
 
     componentDidMount() {
        $("<div class='rail-horizontal'></div>").appendTo(".track-horizontal");
+       this.springSystem = new SpringSystem();
+       this.spring = this.springSystem.createSpring();
+       this.spring.addListener({ onSpringUpdate: this.handleSpringUpdate });
     }
 
     componentWillUnmount() {
+      this.springSystem.deregisterSpring(this.spring);
+      this.springSystem.removeAllListeners();
+      this.springSystem = undefined;
+      this.spring.destroy();
+      this.spring = undefined;
     }
 
     getScrollLeft() {
@@ -43,14 +53,19 @@ export default class HannaScrollbars extends Component {
         const { scrollbars } = this.refs;
         const scrollLeft = scrollbars.getScrollLeft();
         const scrollWidth = scrollbars.getScrollWidth();
-        // const val = MathUtil.mapValueInRange(left, 0, scrollWidth, scrollWidth * 0.2, scrollWidth * 0.8);
+        const val = MathUtil.mapValueInRange(left, 0, scrollWidth, scrollWidth * 0.2, scrollWidth * 0.8);
 
-        // this.spring.setCurrentValue(scrollLeft).setAtRest();
-        
-        // this.spring.setEndValue(val);
-        left = left < 0 ? 0 : ( left > scrollWidth ? scrollWidth : left);
-        this.currentTarget = left;
-        this.easingFunction( scrollLeft, left, .2 );
+        this.spring.setCurrentValue(scrollLeft).setAtRest();
+
+        this.spring.setEndValue(val);
+
+        // this.easingFunction( scrollLeft, left, .2 );
+    }
+
+    handleSpringUpdate(spring) {
+      const { scrollbars } = this.refs;
+      const val = spring.getCurrentValue();
+      scrollbars.scrollLeft(val);
     }
 
 
@@ -99,6 +114,7 @@ export default class HannaScrollbars extends Component {
         let left = parseInt( this.getCurrentTarget() );
         let delta = parseInt( normalized.pixelY, 10 );
         let newLeft = left + delta ;
+        this.currentTarget = newLeft;
         this.scrollLeft( newLeft );
 
 
