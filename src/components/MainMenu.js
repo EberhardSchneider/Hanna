@@ -77,15 +77,16 @@ const menuElements = [
 class MainMenu extends React.Component {
 	constructor(props) {
 
-		super(props);
+	super(props);
 
-      const self = this;
-		this.state = {currentPage: 'home'};
-    window.onpopstate = function(event) {
+  const self = this;
+	this.state = {currentPage: 'home'};
 
-      const page = event.state ? event.state.page : "home";
+  window.onpopstate = function(event) {
 
-      self.changeCurrentPage( page );
+  const page = event.state ? event.state.page : "home";
+
+  self.changeCurrentPage( page );
     };
 	}
 
@@ -195,7 +196,8 @@ class MainMenu extends React.Component {
 
 
 	changeCurrentPage( page ) {
-    console.log("Page: " + page);
+    if (page == this.state.currentPage)
+      return;
 		this.animateMenuTo( page );
     history.pushState( { page: page}, page, page );
 		TweenMax.to( $('.content'),
