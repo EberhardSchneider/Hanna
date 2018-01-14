@@ -21,7 +21,7 @@ export default function calculateFrames() {
 
 
 	let spacing = computeSpacing( document.body.scrollWidth * 0.27 );
-	
+
 	//Agenda frame
 	frames['agenda'] = [];
 	items.forEach( function( key, index ) {
@@ -107,7 +107,7 @@ export default function calculateFrames() {
 
 
 
-	
+
 
 	return frames;
 }
@@ -115,12 +115,12 @@ export default function calculateFrames() {
 
 
 function computeSpacing( width ) {
-	  let spacing = []; 
+	  let spacing = [];
 	  $('<div class="width-measurement"/>').appendTo( $('body') );
 	  $('width-measurement')
 	  .attr('style',
 	  	'position: absolute; top: -9999; font-family: "Raleway", sans-serif; font-weight: extra-bold;	font-size: 8vh;');
-	  
+
 	  var fontSize = document.defaultView.getComputedStyle($('.width-measurement')[0], null).getPropertyValue('width');
 	  fontSize = parseFloat( fontSize, 10);
 	  $('.menu-item').each(function(index) {

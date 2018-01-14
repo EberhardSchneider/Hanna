@@ -55,12 +55,10 @@ export default class HannaScrollbars extends Component {
         const { scrollbars } = this.refs;
         const scrollLeft = scrollbars.getScrollLeft();
         const scrollWidth = scrollbars.getScrollWidth();
-<<<<<<< HEAD
         const val = MathUtil.mapValueInRange(left, 0, scrollWidth,
           scrollWidth * 0.05, scrollWidth * 0.95);
-=======
-        const val = MathUtil.mapValueInRange(left, 0, scrollWidth, scrollWidth * 0.2, scrollWidth * 0.8);
->>>>>>> 251a54af80463d8d01de30e76dd3d14e56daae12
+      
+
 
         this.spring.setCurrentValue(scrollLeft).setAtRest();
 
@@ -127,11 +125,8 @@ export default class HannaScrollbars extends Component {
         let left = parseInt( this.getCurrentTarget() );
         let delta = parseInt( normalized.pixelY, 10 );
         let newLeft = left + delta ;
-<<<<<<< HEAD
-
-=======
         this.currentTarget = newLeft;
->>>>>>> 251a54af80463d8d01de30e76dd3d14e56daae12
+
         this.scrollLeft( newLeft );
 
 
