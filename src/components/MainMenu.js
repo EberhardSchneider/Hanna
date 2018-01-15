@@ -77,30 +77,31 @@ const menuElements = [
 class MainMenu extends React.Component {
 	constructor(props) {
 
-	super(props);
+    	super(props);
+      this.checkIfMobile = this.checkIfMobile.bind(this);
+      this.addMobileProp = this.addMobileProp.bind(this);
+      const self = this;
+    	this.state = {currentPage: 'home'};
 
-  const self = this;
-	this.state = {currentPage: 'home'};
+      window.onpopstate = function(event) {
 
-  window.onpopstate = function(event) {
+      const page = event.state ? event.state.page : "home";
 
-  const page = event.state ? event.state.page : "home";
-
-  self.changeCurrentPage( page );
+      self.changeCurrentPage( page );
     };
 	}
 
 	componentDidMount() {
 
-		frames = calculateFrames();
+
+    this.checkIfMobile();
+
+		frames = calculateFrames(this.isMobile);
 		this.animateMenuTo('home');
 
+
 		this.addListeners();
-
 		window.addEventListener('resize', this.handleResize.bind(this), true);
-
-
-
 	}
 
 	componentDidUpdate() {
@@ -113,19 +114,23 @@ class MainMenu extends React.Component {
 
 
 	handleResize() {
-		frames = calculateFrames();
+
+    this.checkIfMobile();
+		frames = calculateFrames(this.isMobile);
+
 		this.animateMenuTo( this.state.currentPage );
 	}
 
 
 	render() {
-    console.log( history );
-		let content = routes[ this.state.currentPage ].component || <Home/>;
-		return (
+
+    let content = routes[ this.state.currentPage ].component || <Home/>;
+
+  return (
 
 					<div className="wrapper">
 
-						<div className="content">{content}</div>
+						<div className="content">{this.addMobileProp(content)}</div>
 
 						<HomeButton/>
 						{menuElements.map(function(element) {
@@ -139,6 +144,12 @@ class MainMenu extends React.Component {
 
 			);
 	}
+
+  addMobileProp( element ) {
+
+		return React.cloneElement(element, { isMobile: this.isMobile });
+
+  }
 
 
 	animateMenuTo( page ) {
@@ -230,6 +241,11 @@ class MainMenu extends React.Component {
 				self.changeCurrentPage('home');
 			});
 		}
+
+    checkIfMobile() {
+      const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+      this.isMobile = (width < 768) ;
+    }
 
 } // class
 

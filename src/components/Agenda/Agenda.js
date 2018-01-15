@@ -8,7 +8,7 @@ import Event from './Event';
 
 class Agenda extends React.Component {
 
-	constructor( props ) {
+  constructor( props ) {
 		super(props);
 		this.state = { eventData: [] };
 
@@ -26,6 +26,7 @@ class Agenda extends React.Component {
 
 
 				this.setState( { eventData: events });
+
 			}
 		}); // ajax call
 
@@ -40,7 +41,8 @@ class Agenda extends React.Component {
 
 	componentDidUpdate() {
 		// calculate width of event containers
-		$('<div class="event width-event" style="position: absolute; top: -9999"/>').appendTo( $('body' ));
+		$('<div class="event width-event" style="position: absolute; top: -9999"/>')
+      .appendTo( $('body' ));
 		const eventWidth = $('.event').outerWidth( true );
 		// store width event
 		this.eventWidth = eventWidth;
@@ -83,8 +85,9 @@ class Agenda extends React.Component {
 
 				<div className="agenda">
 							{/*<div className="fadeOutArea"></div>*/}
-							<HannaScrollbars style={{height: '66vh',
-																			 width: '80vw'}}
+							<HannaScrollbars style={{height: '70vh',
+																			 width: '80vw',
+                                        overflowY: 'hidden' }}
 																ref="scrollbars"
 																autoHide={true}>
 

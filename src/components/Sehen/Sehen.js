@@ -19,23 +19,26 @@ class Sehen extends React.Component {
 	}
 
 	render() {
+    const style = this.props.isMobile ?
+        { width: '98vw', height: '90vh'} :
+        { width: '66vw', height: '90vh'};
+
 		return (
 			<div className="sehen">
 			{/*<div className="fadeOutArea-2"></div>*/}
-		<HannaScrollbars style={{ width: '66vw', 
-															height: '90vh'}}
+		<HannaScrollbars style={style}
 											autoHide={true}>
-			
+
 			<div className="image-wrapper">
 				<Images imageType='scene' rows={2}/>
 				<Images imageType='portrait' rows={1}/>
 			</div>
-			
-			
+
+
 		</HannaScrollbars>
 		</div>);
 	}
-	
+
 }
 
 module.exports = Sehen;
