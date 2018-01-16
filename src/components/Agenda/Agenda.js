@@ -22,24 +22,26 @@ class Agenda extends React.Component {
 			context: this,
 			success: function(data) {
 				const events = Object.values(data);
-
-
-
 				this.setState( { eventData: events });
 
 			}
-		}); // ajax call
+		});
 
 	}
 
 	componentDidMount() {
+
 		const fadeOutDiv = document.createElement('div');
 		fadeOutDiv.className = "fadeOutArea";
 		document.body.insertBefore( fadeOutDiv, document.getElementById('app') );
+
+
+
 	}
 
 
 	componentDidUpdate() {
+
 		// calculate width of event containers
 		$('<div class="event width-event" style="position: absolute; top: -9999"/>')
       .appendTo( $('body' ));
@@ -64,6 +66,10 @@ class Agenda extends React.Component {
 		console.log(upcoming);
 
 		this.refs.scrollbars.scrollLeft( upcoming * eventWidth );
+
+    $(".flippable").click( function() {
+    $("div", this).toggleClass("flipped");
+  } );
 	}
 
 	componentWillUnmount() {
@@ -77,8 +83,7 @@ class Agenda extends React.Component {
 		if (this.state.upcomingEvent&&this.eventWidth) {
 			left = this.state.upcomingEvent * this.eventWidth;
 		}
-		console.log("Upcoming: " + this.state.upcomingEvent);
-		console.log("Event WIdth:" + this.eventWidth );
+
 
 
 		return (
