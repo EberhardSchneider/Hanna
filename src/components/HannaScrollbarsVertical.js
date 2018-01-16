@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { Scrollbars } from 'react-custom-scrollbars';
-import normalizeWheel from'normalize-wheel';
+import normalizeWheel from 'normalize-wheel';
 
 export default class HannaScrollbars extends Component {
 
@@ -46,7 +46,7 @@ export default class HannaScrollbars extends Component {
         // const val = MathUtil.mapValueInRange(left, 0, scrollWidth, scrollWidth * 0.2, scrollWidth * 0.8);
 
         // this.spring.setCurrentValue(scrollLeft).setAtRest();
-        
+
         // this.spring.setEndValue(val);
         left = left < 0 ? 0 : ( left > scrollWidth ? scrollWidth : left);
         this.currentTarget = left;

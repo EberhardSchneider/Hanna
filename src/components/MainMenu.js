@@ -3,13 +3,6 @@
 import $ from 'jquery';
 import React from 'react';
 import TweenMax from 'gsap'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  withRouter
-} from 'react-router-dom'
-
 
 
 import { MenuElement } from './MainMenu/MenuElement';
