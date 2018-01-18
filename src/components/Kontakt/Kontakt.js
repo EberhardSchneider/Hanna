@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import Impressum from './Impressum.js';
 
 class KontaktBox1 extends Component {
+<<<<<<< HEAD
 
     render() {
         return  <div className="kontakt-box-1">
@@ -14,6 +16,19 @@ class KontaktBox1 extends Component {
 
                     </div>
         }
+=======
+	render() {
+		return  <div className="kontakt-box-1">
+						HANNA<br/>
+						<a href="mailto:hannaherfurtner@gmail.com">hannaherfurtner(at)gmail.com</a><br/><br/>
+
+						Um den aktuellen Newsletter zu erhalten, schreiben Sie mir einfach eine email.<br/>
+
+						<div className="impressum-link" onClick={this.props.clickHandler}>Impressum</div>
+
+					</div>
+	}
+>>>>>>> 20dbb4c1c72ce85278fcc5d446f8bcdde50e15f5
 }
 
 const KontaktBox2 = () => {
@@ -32,25 +47,33 @@ const KontaktBox2 = () => {
 
 class Kontakt extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { showImpressum: false };
-    }
 
-    toggleImpressum() {
-        this.setState( {showImpressum: !this.state.showImpressum});
-    }
-    render() {
+	constructor(props) {
+		super(props);
+		// TODO make component stateless
+		this.state = { showOverlay: false };
 
-        return <div className="kontakt"> {/*wrapper*/}
-            {this.state.showImpressum ? <Impressum close={this.toggleImpressum.bind(this)} /> : null}
-            <div className="kontakt-schablone"/> {/*styled by css*/}
-            <div className="kontakt-text">
-                <KontaktBox1 showImpressum={this.toggleImpressum.bind(this)}/>
-                <KontaktBox2/>
-            </div>
-        </div>
-    }
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	render() {
+
+		const kontaktText = (<div><div className="kontakt-schablone"/> 
+					<div className="kontakt-text">
+						<KontaktBox1 clickHandler={this.handleClick}/>
+						<KontaktBox2/>
+					</div></div>);
+		return <div className="kontakt"> {/*wrapper*/}
+			{this.state.showOverlay ? 
+				<Impressum clickHandler={this.handleClick}/> : kontaktText }
+			
+
+		</div>
+	}
+
+	handleClick() {
+		this.setState( { showOverlay: !this.state.showOverlay });
+	}
 
 }
 

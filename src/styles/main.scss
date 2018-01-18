@@ -1,3 +1,4 @@
+
 // Base CSS
 
 @import url(https://fonts.googleapis.com/css?famila=Raleway:800);
@@ -26,28 +27,38 @@ body {
 	font-weight: bold;
 	letter-spacing: 2px;
 	z-index: 10;
-	a {
+	div {
 		text-decoration: none;
 		color: black;
 		letter-spacing: inherit;
-		opacity: 0;
+		opacity: .3;
+
+		font-family: 'Raleway', sans-serif;
+		font-weight: extra-bold;
+		user-select: none;
+
 		&:hover {
 			opacity: 1 !important;
 		}
 	}
 }
 
-.home-button { 
+.home-button {
 	position: absolute;
-	height: 1vh;
-	width: 1vh;
+	height: 10vh;
+	width: 12vh;
 	top: 2vh;
 	left: 2vh;
+  border-radius: 10px;
 
+  @include background-image(radial-gradient(circle at center, rgba(255,255,255,1) 0%,
+		rgba(255,255,255,0) 100%));
 	z-index: 10;
 
 	opacity: 0;
 	img {
+    position: relative;
+    left: .9vh;
 		height: 10vh;
 		width: 10vh;
 	}
@@ -59,18 +70,27 @@ body {
 	position: absolute;
 	font-size: 0;
 	opacity: 0;
-	
+
 	z-index: 10;
 }
 
 #hanna {
 		top: 20vh;
 		left: calc(40.5vw - 11vh);
+    @media (max-width: 768px) {
+      top: 14vh;
+      left: 12vw;
+    }
+
 }
 
 #sopran {
 		top: 23vh;
 		left: calc(40.5vw - 11vh);
+    @media (max-width: 768px) {
+      top: 17vh;
+      left: 12vw;
+    }
 }
 
 // put this diff off screen
@@ -89,11 +109,14 @@ body {
 
 .content {
 	position: absolute;
+	display: block;
 	top:0;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	background-color: #fff;
+
+	z-index: -50;
 }
 // ----------- Agenda
 
@@ -102,15 +125,21 @@ body {
 	left: 15vw;
 	right: 1vw;
 	top: 11vh;
-	height: 72vh;
-	overflow:hidden;
+	height: 66vh;
+	// overflow: hidden;
+
+  @media (max-width: 768px) {
+    left: 10vw;
+    top: 22vh;
+  }
 
 	.scroll-container {
 		width: 5000px;
-		height: 100%;
-		overflow: hidden;
+		height: 99%;
 
 		transition: left 0.5s ease-in-out;
+
+		-webkit-transform: translate3d(0,0,0); // Fix IPad Bug ??
 
 	}
 }
@@ -119,31 +148,35 @@ body {
 	position: absolute;
 	display: inline-block;
 
-	left:0;
+	left:15vw;
 	width: 16vw;
 	top:0;
 	height: 100vh;
 
-	z-index: 1;
-
 	@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
 	@include background-image(linear-gradient(to right, rgba(255,255,255,1) 0%,
 		rgba(255,255,255,0) 100%));
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .fadeOutArea-2 {
 	position: absolute;
 	display: inline-block;
-	left:0;
+	left:30vw;
 	width: 7.5vw;
 	top:0;
 	height: 100vh;
 
-	z-index: 1;
-
-		@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
+	@include filter-gradient(#ffffff, #00ffff, vertical); // IE6-9
 	@include background-image(linear-gradient(to right, rgba(255,255,255,1) 0%,
 		rgba(255,255,255,0) 100%));
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 
@@ -158,41 +191,28 @@ body {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-right: 28px;
+
+	perspective: 4000px;
 }
 
 .composer {
 	font-size: 2vh;
 	text-align: center;
-	height: 2.5vh;
-
-}
-
-.title-centerer {
-	display: table;
-	height: 6vh;
-	width: 100%;
 }
 
 .title {
-	display: table-cell;
 	font-size: 2.2vh;
 	text-align: center;
 	font-weight: bold;
 	padding-bottom: 2px;
 	border-bottom: solid black 2px;
-	
-	vertical-align: middle;
-
 }
 
 .location {
-
 	font-size: 1.8vh;
 	opacity: .6;
 	text-align: center;
 	padding-top: 2px;
-	height: 3.5vh;
-
 }
 
 .date {
@@ -233,22 +253,73 @@ body {
 }
 
 .event-top {
+		display: block;
 		height: 12vh;
 	}
 
-	.event-date {
-		display: block;
-		height: 9vh;
-		width: 32vh;
-	}
+.event-date {
+	display: block;
+	height: 9vh;
+	width: 32vh;
+}
 
-	.event-bottom {
-		position: absolute;
-		width: 32vh;
-		height: 30vh;
+.event-bottom {
+	position: absolute;
+	width: 32vh;
+	height: 30vh;
+	backface-visibility: hidden;
+	transition: transform 1.2s ease-in-out;
+
+}
+
+.event-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+
+	backface-visibility: hidden;
+	transition: transform 1.2s ease-in-out;
+
+
+	img {
+		width: 100%;
 		backface-visibility: hidden;
-		transition: transform 1.2s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+
+		}
+		@include user-select(none);
+
 	}
+	&.scroll-out {
+		opacity: 0;
+	}
+}
+
+.card {
+		position: relative;
+		display: block;
+		height: 50%;
+		width: 100%;
+		transform-origin: right center;
+}
+
+.flippable {
+	transform-style: preserve-3d;
+	cursor: pointer;
+}
+
+
+
+.event-bottom.flipped {
+	transform: rotateY(-180deg) translateX(-100%);
+}
+
+.event-image.flipped {
+	transform: rotateY(180deg) translateX(-100%);
+}
 
 
 .track-horizontal {
@@ -292,6 +363,15 @@ body {
 	width: 74.48vh;
 	background-image: url(/images/vita.jpg);
 	background-size: contain;
+
+
+  @media (max-width: 768px) {
+    left: 0vw;
+    height: 22.4vh;
+    width:  59.584vh;
+    overflow: hidden;
+
+  }
 }
 
 .vita-text {
@@ -310,19 +390,27 @@ body {
 	top: 4vh;
 	height: 90vh;
 	overflow:hidden;
+
+	z-index: 255;
+
+  @media (max-width: 768px) {
+    left: 0;
+  }
 }
 .image-wrapper {
 	position: absolute;
 	height: 90vh;
 	overflow: hidden;
 
+	z-index: 255;
+
 	.scene-images-container {
 		position: relative;
 		left: 7.5vw;
-		
+
 		height: 45vh;
 		overflow: hidden;
-	
+
 		.scene-images {
 			height: 45vh;
 			overflow: hidden;
@@ -338,7 +426,7 @@ body {
 			position: absolute;
 			width: 80%;
 			height: 80%;
-			&:hover {	
+			&:hover {
 				opacity: .7;
 				cursor: pointer;
 			}
@@ -397,10 +485,17 @@ body {
 		bottom: 47.5vh;
 		left: 2vw;
 
+    z-index: 255;
+
 		transition: transform .2s ease-in-out;
 		&:hover {
 			transform: scale(2,2);
 		}
+
+    @media (max-width: 768px) {
+      width: 10vw;
+      height: 10vw
+    }
 	}
 	.arrow-right {
 		position: fixed;
@@ -408,10 +503,18 @@ body {
 		height: 5vw;
 		bottom: 47.5vh;
 		right: 2vw;
+
+    z-index: 255;
+
 		transition: transform .2s ease-in-out;
 		&:hover {
 			transform: scale(2,2);
 		}
+
+    @media (max-width: 768px) {
+      width: 10vw;
+      height: 10vw
+    }
 	}
 	.exit-icon {
 		position: fixed;
@@ -438,12 +541,16 @@ body {
 			transform: translateX(-50%);
 
 			z-index: 250;
+
+        @media (max-width: 768px) {
+          font-size: 160%;
+        }
 		}
 
 	.lightbox-image.landscape {
 		position: absolute;
 		z-index: 200;
-		
+
 		width: 80vw;
 		left: 10vw;
 		height: auto;
@@ -455,13 +562,13 @@ body {
 	.lightbox-image.portrait {
 		position: absolute;
 		z-index: 255;
-		
+
 		height: 80vh;
 		top: 10vh;
 		width: auto;
 		left: 50vw;
 		transform: translateX(-50%);
-	
+
 	}
 }
 
@@ -473,6 +580,10 @@ body {
 	position: absolute;
 	left: 33vw;
 	top: 50vh;
+
+  @media (max-width: 768px) {
+    left: 5vw;
+  }
 }
 
 
@@ -503,10 +614,16 @@ body {
 	position: fixed;
 	top: 1vh;
 	left: 33vw;
-	width: 81.8468vh;
-	bottom: 60vh;
+	width: 73.66212vh;
+	bottom: 63.9vh;
 	background-image: url(/images/hoeren.jpg);
-	background-size: contain;
+	background-size: cover;
+
+  @media (max-width: 768px) {
+    left: 0;
+
+  }
+
 }
 
 .audio-info-box {
@@ -526,7 +643,7 @@ body {
 	position: absolute;
 	top: -3vh;
 	font-size: 2vh;
-	right: 1vw; 
+	right: 1vw;
 }
 
 // ______________________________KONTAKT _________________________
@@ -536,10 +653,17 @@ body {
 	top: 0;
 	left: 30vw;
 	width: 85.763889vh;
+  max-width: 100vw;
 	bottom: 0;
 	padding: 5px;
 	background-image: url(/images/kontakt.jpg);
 	background-size: cover;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 100vw;
+  }
 
 	.kontakt-schablone {
 		position: absolute;
@@ -574,9 +698,26 @@ body {
 			}
 		}
 	}
+
+  @media (max-width: 768px) {
+    .kontakt-box-1 {
+      font-size: 90%;
+      display: block;
+      width: 100vw !important;
+      height: 5vh !important;
+      padding: 0;
+      margin: 0;
+    }
+    .kontakt-box-2 {
+      font-size: 90%;
+      width: 100vw !important;
+      display: block;
+    }
+  }
 }
 
 // Impressum
+
 
 .impressum-overlay {
 	position: fixed;
@@ -586,7 +727,30 @@ body {
 	bottom: 2%;
 	right: 2%;
 
+	padding-left: 5vw;
+	padding-right: 5vw;
+
+	font-size: 1.4vh;
+
 	background-color: rgba( 0, 0, 0, 0.95);
+	color: #fff;
+
+	h1 {
+		left: 25%;
+		width: 50%;
+		margin: auto;
+		text-align: center;
+		font-size: 120%;
+		border-bottom: solid 2px;
+		margin-top: 2%;
+		margin-bottom: 25px;
+	}
+
+	h2 {
+		font-size: 110%;
+		margin-top: 10px;
+		margin-bottom: 3px;
+	}
 
 	.close-icon {
 		position: absolute;
@@ -599,15 +763,12 @@ body {
 		}
 
 		&:hover {
-			cursor:pointer;
+			cursor: pointer;
 		}
 
 		z-index: 250;
 	}
 
-	.impressum-text {
-		color: #fff;
-		font-size: 1.8vh;
-		margin: 5%;
-	}
+
 }
+

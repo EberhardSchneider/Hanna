@@ -18,6 +18,8 @@ class Lightbox extends Component {
 		// workaround for the z-index of nested components
 		this.saveZIndex = $('.menu-item').css('z-index');
 		$('.menu-item').css('z-index','-255');
+    $('.home-button').css('opacity', '0');
+		$('.fadeOutArea-2').css('z-index','-255');
 	}
 
 	componentDidUpdate() {
@@ -28,27 +30,29 @@ class Lightbox extends Component {
 
 	componentWillUnmount() {
 		$('.menu-item').css('z-index',this.saveZIndex);
+		$('.fadeOutArea-2').css('z-index','0');
+    $('.home-button').css('opacity', '1');
 	}
 
 	render() {
-		
+
 		const image = this.props.images[this.state.index];
-	
+
 		return (
 				<div className="lightbox">
 					<LeftArrow handleClick={this.handleLeftArrowClick}/>
 					<RightArrow handleClick={this.handleRightArrowClick}/>
 					<ExitIcon handleClick={this.props.handleExitIconClick}/>
 					<Zoom ref="zoom">
-						<img 	src={"/images/" + image.big} 
+						<img 	src={"/images/" + image.big}
 									className={"lightbox-image " + image.orientation }/>
 					</Zoom>
 					<div className="image-subtitle" dangerouslySetInnerHTML={{__html: image.comment}}/>
 				</div>
 			);
-	
+
 	}
-	
+
 	handleLeftArrowClick() {
 		const newIndex = (this.state.index - 1 < 0) ? this.props.images.length - 1 : this.state.index - 1;
 		$('.lightbox-image').css({opacity: 0});

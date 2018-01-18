@@ -1,20 +1,21 @@
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cleancss = require('gulp-clean-css'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    lint = require('gulp-eslint'),
-    imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache'),
-    browserify = require('browserify'),
-    babelify = require('babelify'),
-    reactify = require('reactify'),
-    source = require('vinyl-source-stream'),
-    
-    open = require('gulp-open');
-    browserSync = require('browser-sync');
+        sass = require('gulp-ruby-sass'),
+        autoprefixer = require('gulp-autoprefixer'),
+        cleancss = require('gulp-clean-css'),
+        rename = require('gulp-rename'),
+        concat = require('gulp-concat'),
+        uglify = require('gulp-uglify'),
+        lint = require('gulp-eslint'),
+        imagemin = require('gulp-imagemin'),
+        cache = require('gulp-cache'),
+        browserify = require('browserify'),
+        babelify = require('babelify'),
+        reactify = require('reactify'),
+        source = require('vinyl-source-stream'),
+
+        connect = require('gulp-connect'),
+        open = require('gulp-open');
+        browserSync = require('browser-sync');
 
 var config = {
     port: 3000, // port for the local server
@@ -22,12 +23,12 @@ var config = {
     paths: {
         html: './src/*.html',
         js: './src/**/*.js',
-        images: './src/images/*',
+        images: './src/images/newportraits/*',
         css: './src/styles/**/*.scss',
         dist: './dist',
         mainJs: './src/main.js'
     }
-};
+}
 
 // // start local server
 // gulp.task('connect', function() {
@@ -39,7 +40,8 @@ var config = {
 //  });
 // });
 
-// gulp.task('open', 
+
+// gulp.task('open',
 //  // ['connect'],
 //   function() {
 //  gulp.src('dist/index.html')
@@ -73,7 +75,8 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-    browserify(config.paths.mainJs, { debug:true }) 
+
+    browserify(config.paths.mainJs, { debug:true })
         //.transform(reactify)
         .transform(babelify.configure({presets: ['es2015', 'react']}))
         .bundle()
@@ -97,9 +100,10 @@ gulp.task('js-watch', ['js'], function(done) {
 })
 
 gulp.task('images', function() {
+
     return gulp.src(config.paths.images)
                     .pipe( imagemin({ optimizationLevel: 5, progressive: true, interlaced: true} ))
-                    .pipe( gulp.dest( 'dist/images/' ));
+                    .pipe( gulp.dest( 'dist/images/newportraits/' ));
 });
 
 // gulp.task('lint', function() {
@@ -107,6 +111,7 @@ gulp.task('images', function() {
 //                          .pipe(lint({configFile: 'eslint.config.json'}))
 //                          .pipe(lint.format());
 // });
+
 
 
 
