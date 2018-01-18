@@ -3,12 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import TweenMax from 'gsap'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  withRouter
-} from 'react-router-dom'
+
 
 import { MenuElement } from './MainMenu/MenuElement';
 import { MenuDecoration } from './MainMenu/MenuDecoration';
@@ -27,27 +22,27 @@ import Kontakt from './Kontakt/kontakt';
 let frames = {};
 
 const routes = {
-	'home': {	path: '#',
+	'home': {	path: '/',
 		exact: true,
 		name: 'HOME',
 	},
-	'agenda': {	path: '/#agenda',
+	'agenda': {	path: '/agenda',
 		name: 'AGENDA',
 		component: <Agenda/>
 	},
-	'vita': {	path: '/#vita',
+	'vita': {	path: '/vita',
 		name: 'VITA',
 		component: <Vita/>
 	},
-	'hoeren': {	path: '/#hoeren',
+	'hoeren': {	path: '/hoeren',
 		name: 'HÖREN',
 		component: <Hoeren/>
 	},
-	'sehen': {	path: '/#sehen',
+	'sehen': {	path: '/sehen',
 		name: 'SEHEN',
 		component: <Sehen/>
 	},
-	'kontakt': {	path: '/#kontakt',
+	'kontakt': {	path: '/kontakt',
 		name: 'KONTAKT',
 		component: <Kontakt/>
 	}
@@ -57,76 +52,105 @@ const routes = {
 
 const menuElements = [
 	{ name: 'AGENDA',
-		link: '/#agenda'},
+		link: '/agenda'},
 	{ name: 'VITA',
-		link: '/#vita'},
+		link: '/vita'},
 	{ name: 'HÖREN',
-		link: '/#hoeren'},
+		link: '/hoeren'},
 	{ name: 'SEHEN',
-		link: '/#sehen'},
+		link: '/sehen'},
 	{ name: 'KONTAKT',
-		link: '/#kontakt'}
+		link: '/kontakt'}
 ]
+
+
 
 
 
 class MainMenu extends React.Component {
 	constructor(props) {
-		super(props);
-		this.state = {currentPage: 'home'};
+
+    	super(props);
+      this.checkIfMobile = this.checkIfMobile.bind(this);
+      this.addMobileProp = this.addMobileProp.bind(this);
+      const self = this;
+    	this.state = {currentPage: 'home'};
+
+      window.onpopstate = function(event) {
+
+      const page = event.state ? event.state.page : "home";
+
+      self.changeCurrentPage( page );
+    };
 	}
 
 	componentDidMount() {
-		frames = calculateFrames();
+
+
+    this.checkIfMobile();
+
+		frames = calculateFrames(this.isMobile);
 		this.animateMenuTo('home');
 
+
 		this.addListeners();
-
 		window.addEventListener('resize', this.handleResize.bind(this), true);
-
 	}
 
 	componentDidUpdate() {
-		TweenMax.to( $('.content'), 
-										1.25, 
+		TweenMax.to( $('.content'),
+										1.25,
 										{ opacity: 1 }
-										
+
 									);
 	}
 
 
 	handleResize() {
-		frames = calculateFrames();
+
+    this.checkIfMobile();
+		frames = calculateFrames(this.isMobile);
+
 		this.animateMenuTo( this.state.currentPage );
 	}
 
 
 	render() {
-		let content = routes[ this.state.currentPage ].component || <Home/>;
-		return (
-				<Router>
+
+    let content = routes[ this.state.currentPage ].component || <Home/>;
+
+  return (
+
 					<div className="wrapper">
+
+						<div className="content">{this.addMobileProp(content)}</div>
+
+						<HomeButton/>
 						{menuElements.map(function(element) {
-							return <MenuElement key={element.name} 
-																	link={element.link} 
+							return <MenuElement key={element.name}
+																	link={element.link}
 																	name={element.name}/>
 						})}
 						<MenuDecoration/>
-						<Link to="/"><HomeButton/></Link>
-								<div className="content">{content}</div>
+
 					</div>
-				</Router>
+
 			);
 	}
 
+  addMobileProp( element ) {
+
+		return React.cloneElement(element, { isMobile: this.isMobile });
+
+  }
+
 
 	animateMenuTo( page ) {
-
 		const frame = frames[page];
 
 		$('.menu-item').each( function(index) {  // all menu elements
-			TweenMax.to( $(this), 
-										2, 
+			TweenMax.to( $(this),
+										2,
 										{
 											transform: frame[index].translate,
 											fontSize: frame[index].fontSize,
@@ -134,9 +158,9 @@ class MainMenu extends React.Component {
 										}
 			);
 		});
-		$('.menu-item > a').each(function(index) { // and the links in the elements
-				TweenMax.to( $(this), 
-											2, 
+		$('.menu-item >  div').each(function(index) { // and the links in the elements
+				TweenMax.to( $(this),
+											2,
 											{
 												letterSpacing: frame[index].letterSpacing,
 												autoRound: false,
@@ -146,7 +170,7 @@ class MainMenu extends React.Component {
 		});
 
 		if (page == 'home') {  // now the home button and the menu decoration elements
-			
+
 			TweenMax.to('.home-button',
 									2,
 									{
@@ -173,14 +197,16 @@ class MainMenu extends React.Component {
 		}
 	}
 
-	
+
 
 	changeCurrentPage( page ) {
-		
+    if (page == this.state.currentPage)
+      return;
 		this.animateMenuTo( page );
-		TweenMax.to( $('.content'), 
-									.75, 
-									{ opacity: 0, 
+    history.pushState( { page: page}, page, page );
+		TweenMax.to( $('.content'),
+									.75,
+									{ opacity: 0,
 										onComplete: () => { this._animationComplete(page) }
 									}
 								);
@@ -190,14 +216,17 @@ class MainMenu extends React.Component {
 		this.setState({ currentPage: page });
 	}
 
-	// Helper/Modularizaton
+	// Helper
+
+  // add click listeners to menu items and home button
 	addListeners() {
 		const self = this;
-			$('.menu-item>a').each( function() {
-				let name = $(this).attr("href");
+			$('.menu-item>div').each( function() {
+				let name = $(this).attr("link");
+        name = (name == "") ? "/home" : name;
 				$(this).click( function() {
 					if (name !== self.state.currentPage) {
-						self.changeCurrentPage( name.substring(2) );
+						self.changeCurrentPage( name.substring(1) );
 					}
 				})
 			});
@@ -206,9 +235,13 @@ class MainMenu extends React.Component {
 			});
 		}
 
+    checkIfMobile() {
+      const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+      this.isMobile = (width < 768) ;
+    }
+
 } // class
 
 
 
 module.exports = {MainMenu};
-

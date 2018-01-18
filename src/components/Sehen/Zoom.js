@@ -16,13 +16,13 @@ class Zoom extends Component {
 	}
 
 	componentDidUpdate() {
-		
+
 	}
 
 	componentWillUpdate() {
 
 	}
-	
+
 	onLoadHandler() {
 		$('.zoom').attr('style','transition: opacity 0s, transform 0s; transform: scale(.98,.98);opacity: .6');
 		setTimeout( () => { $('.zoom').attr('style','transition: opacity 1s, transform 1s ease-in-out; transform: scale(1,1); opacity: 1') }, 150 );
@@ -36,7 +36,7 @@ class Zoom extends Component {
 			opacity: 0
 		};
 
-	
+
 
 		return <div  className="zoom" style={style}>
 							{this.renderChildren()}
