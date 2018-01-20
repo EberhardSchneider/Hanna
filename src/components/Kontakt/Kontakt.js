@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Impressum from './Impressum.js';
 
 class KontaktBox1 extends Component {
-<<<<<<< HEAD
 
     render() {
         return  <div className="kontakt-box-1">
@@ -16,19 +15,7 @@ class KontaktBox1 extends Component {
 
                     </div>
         }
-=======
-	render() {
-		return  <div className="kontakt-box-1">
-						HANNA<br/>
-						<a href="mailto:hannaherfurtner@gmail.com">hannaherfurtner(at)gmail.com</a><br/><br/>
 
-						Um den aktuellen Newsletter zu erhalten, schreiben Sie mir einfach eine email.<br/>
-
-						<div className="impressum-link" onClick={this.props.clickHandler}>Impressum</div>
-
-					</div>
-	}
->>>>>>> 20dbb4c1c72ce85278fcc5d446f8bcdde50e15f5
 }
 
 const KontaktBox2 = () => {
