@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery'
 import { LeftArrow, RightArrow, ExitIcon } from './LightboxIcons.js';
-import Zoom from './Zoom.js'
+import SpinnerImage from './SpinnerImage.js';
+
 
 class Lightbox extends Component {
     constructor(props) {
@@ -9,9 +10,9 @@ class Lightbox extends Component {
 
         this.handleLeftArrowClick = this.handleLeftArrowClick.bind(this);
         this.handleRightArrowClick = this.handleRightArrowClick.bind(this);
-        this.onLoadHandler = this.onLoadHandler.bind(this);
+        
 
-        this.state = { index: this.props.index, status: "loading" };
+        this.state = { index: this.props.index };
     }
 
 
@@ -34,27 +35,22 @@ class Lightbox extends Component {
     $('.home-button').css('opacity', '1');
     }
 
-    onLoadHandler() {
-        this.setState( { status: "loaded" });
-    }
+   
 
     render() {
-        const imgStyle = this.state.status == "loading" ? { opacity: .1 } : {opacity: 1};
-        const Spinner = () => ( <div className="spinner" style={{ position: "fixed", top: "50%", left: "50%", fontSize: "3em", zIndex: 255, color: "#fff"}}>
-                        Loading...
-                    </div>);
+        
         const image = this.props.images[this.state.index];
         return (
                 <div className="lightbox">
                     <LeftArrow handleClick={this.handleLeftArrowClick}/>
                     <RightArrow handleClick={this.handleRightArrowClick}/>
                     <ExitIcon handleClick={this.props.handleExitIconClick}/>
-                    {this.state.status == "loading" ? <Spinner /> : null}
-                    <img ref={(image) => { this.image = image }}
+                   
+                    <SpinnerImage ref={(image) => { this.image = image }}
                           src={"../images/"+image.big}
-                          style={imgStyle}
-                          className={"lightbox-image " + image.orientation} 
-                          onLoad={this.onLoadHandler}/>
+                          
+                          className={"lightbox-image " + image.orientation} />
+                          
                    
                      
                     <div className="image-subtitle" dangerouslySetInnerHTML={{__html: image.comment}}/>

@@ -56,7 +56,7 @@ class EventBottom extends React.Component {
 		const cast = $.parseJSON( this.props.cast );
 		const keys = Object.keys( cast );
     const imageUrl = this.props.imageUrl;
-
+    console.log(imageUrl);
     let card = (imageUrl == '') ?
                           'card' : 'card flippable';
     let eventBottom = (imageUrl =='') ?
@@ -86,8 +86,7 @@ class EventBottom extends React.Component {
 			   }, this)}
         </div>
         </div>
-      {imageUrl == '' ? null :
-          <div className="event-image"> <img src={imageUrl}/> </div>}
+        <div className="event-image"> <img src={imageUrl}/> </div>
 
 
         </div>
