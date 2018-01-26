@@ -4,10 +4,11 @@ import $ from 'jquery';
 class Zoom extends Component {
 
     constructor(props) {
+        console.log("Constructor...");
         super(props);
         this._imageStyle = { transition: 'opacity 0s', opacity: 0};
+        this._imageLoading = false;
         this._imageLoaded = false;
-        this._imageReady = false;
 
         this.preloadImage = this.preloadImage.bind(this);
 
@@ -30,44 +31,58 @@ class Zoom extends Component {
     }
 
     componentWillUpdate() {
-        this.preloadImage();
+        if (this._newImage) {
+            this._newImage = false;
+            this.preloadImage();
+        }
+    }
+
+    componentWillReceiveProps(newProps) {
+        if (newProps.src != this.props.src)
+           this._newImage = true;
+
     }
 
 
     componentWillUnmount() {
+        console.log("Destructor...");
     }
 
     preloadImage() {
-         if (this._imageReady) {
-            this._imageLoaded = true;
+        this._imageLoaded = false;
+
+         if (this._imageLoading) {
+            this._imageLoading = false;
             this._image.load = null;
             this._image = null;
-            this._imageReady = false;
-            return;
          }
 
-         if (this._image) {
-            this._image.load = null;
-         }
+         // if (this._image) {
+         //    this._image.load = null;
+         // }
+
         this._image = new Image();
 
         const self = this;
         this._image.onload = function() {
-            self._imageReady = true;
+            self._imageLoaded = true;
+            self._imageLoading = false;
             self.forceUpdate();
         };
 
+        this._imageLoading = true;
         this._image.src = this.props.src;
-        this._imageLoaded = false;
+
     }
 
     render() {
-        console.log("Zoom renders");
         const style = {
             transition: 'opacity 0s, transform 0s',
             transform: 'scale(.90,.90)',
             opacity: 0
         };
+
+        console.log(this._imageLoaded ? "Rendering Image" : "Rendering Spinner");
 
 
 
