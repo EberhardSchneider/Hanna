@@ -63,9 +63,8 @@ class Agenda extends React.Component {
             if (new Date(event.datum) < today)
                 upcoming = index;
         })
-        console.log(upcoming);
 
-        this.refs.scrollbars.scrollLeft( upcoming * eventWidth );
+        this.refs.scrollbars.scrollLeft( (upcoming+2) * eventWidth );
 
     $(".flippable").click( function() {
     $("div", this).toggleClass("flipped");

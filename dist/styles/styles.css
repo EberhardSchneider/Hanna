@@ -451,7 +451,7 @@ body {
             transform: translateY(-50%); }
   .lightbox .lightbox-image.portrait {
     position: absolute;
-    z-index: 255;
+    z-index: 200;
     height: 80vh;
     top: 10vh;
     width: auto;
