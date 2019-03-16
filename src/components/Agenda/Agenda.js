@@ -8,24 +8,38 @@ import Event from './Event';
 
 class Agenda extends React.Component {
 
-  constructor( props ) {
+    constructor(props) {
         super(props);
         this.state = { eventData: [] };
 
         // get events data
+        // $.ajax({
+
+        //     url: "/testsite/phpincludes/db_events.php",
+        //     type: 'POST',
+
+        //     dataType: 'json',
+        //     context: this,
+        //     success: function (data) {
+        //         const events = Object.values(data);
+        //         this.setState({ eventData: events });
+
+        //     }
+        // });
         $.ajax({
 
-            url: "/testsite/phpincludes/db_events.php",
-            type: 'POST',
+            url: "/events.json",
+            type: 'GET',
 
             dataType: 'json',
             context: this,
-            success: function(data) {
+            success: function (data) {
                 const events = Object.values(data);
-                this.setState( { eventData: events });
+                this.setState({ eventData: events });
 
             }
         });
+        
 
     }
 
@@ -33,7 +47,7 @@ class Agenda extends React.Component {
 
         const fadeOutDiv = document.createElement('div');
         fadeOutDiv.className = "fadeOutArea";
-        document.body.insertBefore( fadeOutDiv, document.getElementById('app') );
+        document.body.insertBefore(fadeOutDiv, document.getElementById('app'));
 
 
 
@@ -44,31 +58,31 @@ class Agenda extends React.Component {
 
         // calculate width of event containers
         $('<div class="event width-event" style="position: absolute; top: -9999"/>')
-      .appendTo( $('body' ));
-        const eventWidth = $('.event').outerWidth( true );
+            .appendTo($('body'));
+        const eventWidth = $('.event').outerWidth(true);
         // store width event
         this.eventWidth = eventWidth;
-        console.log( this.eventWidth );
+        console.log(this.eventWidth);
         $('.width-event').remove();
         // calculate width of complete timeline
         const numberOfEvents = this.state.eventData.length;
         const timelineLength = numberOfEvents * eventWidth + 10;
 
-        $('.scroll-container').css("width", timelineLength+"px");
+        $('.scroll-container').css("width", timelineLength + "px");
 
         const today = new Date();
         let upcoming;
         // calculate upcoming event
-        this.state.eventData.map(function(event, index) {
+        this.state.eventData.map(function (event, index) {
             if (new Date(event.datum) < today)
                 upcoming = index;
         })
 
-        this.refs.scrollbars.scrollLeft( (upcoming+2) * eventWidth );
+        this.refs.scrollbars.scrollLeft((upcoming + 2) * eventWidth);
 
-    $(".flippable").click( function() {
-    $("div", this).toggleClass("flipped");
-  } );
+        $(".flippable").click(function () {
+            $("div", this).toggleClass("flipped");
+        });
     }
 
     componentWillUnmount() {
@@ -79,7 +93,7 @@ class Agenda extends React.Component {
 
         let left = 0;
 
-        if (this.state.upcomingEvent&&this.eventWidth) {
+        if (this.state.upcomingEvent && this.eventWidth) {
             left = this.state.upcomingEvent * this.eventWidth;
         }
 
@@ -87,26 +101,28 @@ class Agenda extends React.Component {
 
         return (
 
-                <div className="agenda">
-                            {/*<div className="fadeOutArea"></div>*/}
-                            <HannaScrollbars style={{height: '70vh',
-                                                                             width: '80vw',
-                                        overflowY: 'hidden' }}
-                                                                ref="scrollbars"
-                                                                autoHide={true}>
+            <div className="agenda">
+                {/*<div className="fadeOutArea"></div>*/}
+                <HannaScrollbars style={{
+                    height: '70vh',
+                    width: '80vw',
+                    overflowY: 'hidden'
+                }}
+                    ref="scrollbars"
+                    autoHide={true}>
 
-                                <div className="scroll-container">
-                                    {this.state.eventData.map( function( event ) {
-                                        return <Event key={event.id} data={event}/>
-                                    }, this)}
-                                </div>
+                    <div className="scroll-container">
+                        {this.state.eventData.map(function (event) {
+                            return <Event key={event.id} data={event} />
+                        }, this)}
+                    </div>
 
 
-                             </HannaScrollbars>
+                </HannaScrollbars>
 
 
-                </div>
-            );
+            </div>
+        );
     }
 
 }
@@ -116,4 +132,3 @@ class Agenda extends React.Component {
 
 
 module.exports = Agenda;
-    

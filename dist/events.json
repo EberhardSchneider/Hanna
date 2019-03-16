@@ -1,0 +1,1032 @@
+[
+    {
+        "id": "4",
+        "title": "DAS TAGEBUCH DER ANNE FRANK",
+        "komponist": "Fried",
+        "ort": "Schauburg, M\u00fcnchen",
+        "datum": "2016-01-27 00:00:00",
+        "besetzung": "{ \t\t\"Regie\":\t\"Winni Victor\", \t\t\"Anne Frank\":\t\"Hanna Herfurtner\", \t\t\"Piano\":\t\"stefanpaul\", \t\t\"Kontrabass\": \"Dietmar Gr\u00e4ther\", \t\t\"Schlagwerk\":\t\"Kasia Kadlubowksa\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "5",
+        "title": "DAS TAGEBUCH DER ANNE FRANK",
+        "komponist": "Fried",
+        "ort": "Schauburg, M\u00fcnchen",
+        "datum": "2016-01-28 00:00:00",
+        "besetzung": "{ \t\t\"Regie\":\t\"Winni Victor\", \t\t\"Anne Frank\":\t\"Hanna Herfurtner\", \t\t\"Piano\":\t\"stefanpaul\", \t\t\"Kontrabass\": \"Dietmar Gr\u00e4ther\", \t\t\"Schlagwerk\":\t\"Kasia Kadlubowksa\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "6",
+        "title": "SING-ON-STAGE &bdquo;MATTH\u00c4USPASSION&ldquo;",
+        "komponist": "Bach",
+        "ort": "Konzerthaus, Wien",
+        "datum": "2016-03-06 00:00:00",
+        "besetzung": "{\n\t\t\"Dirigat\":\t\"Heinz Ferlesch\",\n\t\t\"Evangelist\":\t\"Daniel Johannsen\",\n\t\t\"Jesus\":\t\"Daniel Ochoa\",\n\t\t\"Sopran\": \"Hanna Herfurtner\",\n\t\t\"Alt\":\t\"Ida Aldrian\",\n\t\t\"Tenor\":\t\"Tobias Hunger\",\n\t\t\"Bass\":\t\t\"Josef Wagner\",\n\t\t\"-1\":\t\t\t\t\"Barucco\",\n\t\t\"-2\":\t\t\t\t\"Wiener Singakademie, Chor\"\n\t\t} ",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "8",
+        "title": "HIMMLISCHES<br>JERUSALEM",
+        "komponist": "Rossi\/de Victoria\/de Sumaya",
+        "ort": "Friedenskirche, K\u00f6ln Ehrenfeld",
+        "datum": "2016-03-10 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Michael Alexander Willens\", \t\t \t\t\"-1\":\t\t\t\"K\u00f6lner Akademie\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "9",
+        "title": "MESSIAH",
+        "komponist": "<br>H\u00e4ndel",
+        "ort": "Kloster Neuburg",
+        "datum": "2016-03-19 00:00:00",
+        "besetzung": "{ \"Dirigat\": \"Rub\u00e9n Dubrovsky\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Gaia Patrone\",\"Tenor\": \"Michael Schade\",\"Bariton\": \"Christian Immler\",\"-1\": \"Salzburger Bachchor\",\"-2\": \"Bachconsort Wien\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "10",
+        "title": "JOHANNESPASSION",
+        "komponist": "<br>Bach",
+        "ort": "St. Johannes, M\u00fcnchen",
+        "datum": "2016-03-25 14:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Andreas Hantke\", \t\t\"Sopran\":\t\t\"Hanna Herfurtner\", \t\t\"Alt\":\t\t\t\"Franziska Rabl\", \t\t\"Tenor\":\t\t\"Maximilian Kiener\", \t\t\"Bass I\":\t\t\t\"Manuel Kundinger\", \t\t\"Bass II\":\t\"Daniel Hinterberger\", \t\t\"-1\":\t\t\t\t\"Seraphin-Ensemble M\u00fcnchen\", \t\t\"-2\":\t\t\t\t\"Kantatenchor M\u00fcnchen\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "11",
+        "title": "JOHANNESPASSION",
+        "komponist": "<br>Bach",
+        "ort": "St. Johannes, M\u00fcnchen",
+        "datum": "2016-03-25 16:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Andreas Hantke\", \t\t\"Sopran\":\t\t\"Hanna Herfurtner\", \t\t\"Alt\":\t\t\t\"Franziska Rabl\", \t\t\"Tenor\":\t\t\"Maximilian Kiener\", \t\t\"Bass I\":\t\t\t\"Manuel Kundinger\", \t\t\"Bass II\":\t\"Daniel Hinterberger\", \t\t\"-1\":\t\t\t\t\"Seraphin-Ensemble M\u00fcnchen\", \t\t\"-2\":\t\t\t\t\"Kantatenchor M\u00fcnchen\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "13",
+        "title": "IL TRIONFO DEL TEMPO",
+        "komponist": "<br>H\u00e4ndel",
+        "ort": "Annenkirche, Dresden",
+        "datum": "2016-04-10 00:00:00",
+        "besetzung": "{ \t\t\"Musikalische Leitung\":\t\"J\u00f6rn Andresen\", \t\t\"Bellezza\":\t\"Tanya Aspelmeier\", \t\t\"Piacere\":\t\t\"Hanna Herfurtner\", \t\t\"Disinganno\":\t\"Yosemeh Adjei\", \t\t\"Tempo\":\t\"Robert Sellier\", \t\t\"-1\":\t\t\t\"Batzdorfer Hofkapelle\", \t\t\"-2\":\t\t\t\"Sinfonieorchester Dresden\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "12",
+        "title": "MESSIAH",
+        "komponist": "<br>H\u00e4ndel",
+        "ort": "Heilig Kreuz, Augsburg",
+        "datum": "2016-04-23 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Alfons Brandl\", \t\t\"Sopran\":\t\"Hanna Herfurtner\", \t\t\"Altus\":\t\t\"Johannes Euler\", \t\t\"Tenor\":\t\"Daniel Thomas\", \t\t\"Bass\":\t\"Christian Schnmidt\", \t\t\"-1\":\t\t\t\"Augsburger Vokalensemble\", \t\t\"-2\":\t\t\t\"Oberbayrisches Barockorchester\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "14",
+        "title": "DIE WALK\u00dcRE",
+        "komponist": "<br>Wagner",
+        "ort": "Oper Frankfurt",
+        "datum": "2016-05-08 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Sebastian Weigle\", \t\t\"Regie\":\t\"Vera Nemirova\", \t\t\"Sigmund\":\t\"Vincent Wolfensteiner\", \t\t\"Hunding\": \"Ain Ager\", \t\t\"Wotan\":\t\"James Rutherford\", \t\t\"Siegline\":\t\"Amber Wagner\", \t\t\"Br\u00fcnhilde\":\t\"Rebecca Teem\", \t\t\"Fricka\":\t\"Claudia Mahnke\", \t\t\"Gerhilde\":\t\"Karen Vuong\", \t\t\"Ortlinde\":\t\"Britta Stallmeister\", \t\t\"Waltraute\":\t\"Jenny Carlstedt\", \t\t\"Schwertleite\":\t\"Bernadett Fodor\", \t\t\"Helmwige\":\t\"Hanna Herfurtner\", \t\t\"Siegrune\":\t\"Jessica Strong\", \t\t\"Grimgerde\":\t\"Maria Pantiukhova\", \t\t\"Rosswei\u00dfe\":\t\"Judita Nagyov\u00e1\", \t\t\"-1\":\t\"Frankfurter Opern- und Museumsorchester\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "15",
+        "title": "MAGNIFICAT, JAUCHZET GOTT",
+        "komponist": "<br>Bach",
+        "ort": "St. Sebald N\u00fcrnberg",
+        "datum": "2016-05-15 00:00:00",
+        "besetzung": "{ \"Dirigat\": \"Bernhard Buttmann\",\"Sopran\": \"Hanna Herfurtner\",\"Altus\": \"Regina P\u00e4tzer\",\"Tenor\": \"Martin Platz\",\"Bass\": \"Thomas Gropper\",\"-1\": \"Sebalder Kantorei\",\"-2\": \"N\u00fcrnberger Bach-Orchester\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "16",
+        "title": "IL RITORNO DI TOBIA",
+        "komponist": "<br>Haydn",
+        "ort": "St. Elisabethkirche, Berlin",
+        "datum": "2016-06-04 00:00:00",
+        "besetzung": "{ \t\t\"Musikalische Leitung\":\t\"Kai-Uwe Jirka\", \t\t \t\t \t\t\"-1\":\t\t\t\"Sing-Akademie Berlin\", \t\t\"-2\":\t\t\t\"Kammerakademie Potsdam\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "17",
+        "title": "MAUERSCHAU (UA)",
+        "komponist": "<br>Berheide",
+        "ort": "Reithalle, M\u00fcnchen",
+        "datum": "2016-06-29 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Oksana Lyniv\", \t\t\"Regie\/Libretto\": \"Amy Stebbins\", \t\t\"Penthesilea\": \"Adriana Bastidas-Gamboa\", \t\t\"Penthesileas hoher Schatten\": \"Leela Subramaniam\", \t\t\"Penthesileas tiefer Schatten\": \"Hanna Herfurtner\", \t\t\"Achill\": \"Edwin Crossley-Mercer\", \t\t\"Achills hoher Schatten\": \"Joshua Owen Mills\", \t\t\"Achills tiefer Schatten\": \"Frederic Jost\", \t\t\"Botin\": \"Hildegard Schmahl\", \t\t \t\t \t\t\"-1\":\t\t\t\"Bayerisches Staatsorchester\", \t\t\"-2\":\t\t\t\"Extrachor der Bayerischen Staatsoper\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "18",
+        "title": "MAUERSCHAU",
+        "komponist": "<br>Berheide",
+        "ort": "Reithalle, M\u00fcnchen",
+        "datum": "2016-06-30 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Oksana Lyniv\", \t\t\"Regie\/Libretto\": \"Amy Stebbins\", \t\t\"Penthesilea\": \"Adriana Bastidas-Gamboa\", \t\t\"Penthesileas hoher Schatten\": \"Leela Subramaniam\", \t\t\"Penthesileas tiefer Schatten\": \"Hanna Herfurtner\", \t\t\"Achill\": \"Edwin Crossley-Mercer\", \t\t\"Achills hoher Schatten\": \"Joshua Owen Mills\", \t\t\"Achills tiefer Schatten\": \"Frederic Jost\", \t\t\"Botin\": \"Hildegard Schmahl\", \t\t \t\t \t\t\"-1\":\t\t\t\"Bayerisches Staatsorchester\", \t\t\"-2\":\t\t\t\"Extrachor der Bayerischen Staatsoper\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "19",
+        "title": "MAUERSCHAU",
+        "komponist": "<br>Berheide",
+        "ort": "Reithalle, M\u00fcnchen",
+        "datum": "2016-07-01 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Oksana Lyniv\", \t\t\"Regie\/Libretto\": \"Amy Stebbins\", \t\t\"Penthesilea\": \"Adriana Bastidas-Gamboa\", \t\t\"Penthesileas hoher Schatten\": \"Leela Subramaniam\", \t\t\"Penthesileas tiefer Schatten\": \"Hanna Herfurtner\", \t\t\"Achill\": \"Edwin Crossley-Mercer\", \t\t\"Achills hoher Schatten\": \"Joshua Owen Mills\", \t\t\"Achills tiefer Schatten\": \"Frederic Jost\", \t\t\"Botin\": \"Hildegard Schmahl\", \t\t \t\t \t\t\"-1\":\t\t\t\"Bayerisches Staatsorchester\", \t\t\"-2\":\t\t\t\"Extrachor der Bayerischen Staatsoper\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "20",
+        "title": "MAUERSCHAU",
+        "komponist": "<br>Berheide",
+        "ort": "Reithalle, M\u00fcnchen",
+        "datum": "2016-07-03 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Oksana Lyniv\", \t\t\"Regie\/Libretto\": \"Amy Stebbins\", \t\t\"Penthesilea\": \"Adriana Bastidas-Gamboa\", \t\t\"Penthesileas hoher Schatten\": \"Leela Subramaniam\", \t\t\"Penthesileas tiefer Schatten\": \"Hanna Herfurtner\", \t\t\"Achill\": \"Edwin Crossley-Mercer\", \t\t\"Achills hoher Schatten\": \"Joshua Owen Mills\", \t\t\"Achills tiefer Schatten\": \"Frederic Jost\", \t\t\"Botin\": \"Hildegard Schmahl\", \t\t \t\t \t\t\"-1\":\t\t\t\"Bayerisches Staatsorchester\", \t\t\"-2\":\t\t\t\"Extrachor der Bayerischen Staatsoper\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "21",
+        "title": "\u0084UNGEFROREN IST DIE ERDE\u0093 (UA)\/ 7. SYMPHONIE",
+        "komponist": "Osplad\/Mahler",
+        "ort": "Moritzkirche, Coburg",
+        "datum": "2016-07-04 00:00:00",
+        "besetzung": "{ \"Dirigat\": \"GMD Roland Kluttig\",\"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Philharmonisches Orchester Landestheater Coburg\" }",
+        "imageUrl": "",
+        "active": "0"
+    },
+    {
+        "id": "22",
+        "title": "\u0084UNGEFROREN IST DIE ERDE\u0093 (UA)\/ 7. SYMPHONIE",
+        "komponist": "Osplad\/Mahler",
+        "ort": "Moritzkirche, Coburg",
+        "datum": "2016-07-04 00:00:00",
+        "besetzung": "{ \"Dirigat\": \"GMD Roland Kluttig\",\"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Philharmonisches Orchester Landestheater Coburg\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "23",
+        "title": "DIE WALK\u00dcRE",
+        "komponist": "<br>Wagner ",
+        "ort": "Oper Frankfurt",
+        "datum": "2016-07-10 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Sebastian Weigle\", \t\t\"Regie\":\t\"Vera Nemirova\", \t\t\"Sigmund\":\t\"Vincent Wolfensteiner\", \t\t\"Hunding\": \"Ain Ager\", \t\t\"Wotan\":\t\"James Rutherford\", \t\t\"Siegline\":\t\"Amber Wagner\", \t\t\"Br\u00fcnhilde\":\t\"Rebecca Teem\", \t\t\"Fricka\":\t\"Claudia Mahnke\", \t\t\"Gerhilde\":\t\"Karen Vuong\", \t\t\"Ortlinde\":\t\"Britta Stallmeister\", \t\t\"Waltraute\":\t\"Jenny Carlstedt\", \t\t\"Schwertleite\":\t\"Bernadett Fodor\", \t\t\"Helmwige\":\t\"Hanna Herfurtner\", \t\t\"Siegrune\":\t\"Jessica Strong\", \t\t\"Grimgerde\":\t\"Maria Pantiukhova\", \t\t\"Rosswei\u00dfe\":\t\"Judita Nagyov\u00e1\", \t\t\"-1\":\t\"Frankfurter Opern- und Museumsorchester\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "26",
+        "title": "MATTH\u00c4USPASSION",
+        "komponist": "Meder",
+        "ort": "Ko&#347;ci&oacute;&#322; &#346;wi&#281;tej Tr&oacute;jcy, Gdansk",
+        "datum": "2016-08-28 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Michael Willens\",  \"Sopran I\": \"Hanna Herfurtner\",  \"Sopran II\": \"Bethany Seymour\", \"Alt\":  \"Pauline Schulenburg\", \"Tenor, Evangelist\": \"Lothar Blum\", \"Bass, Jesus\": \"Raimonds Spogis\",   \"-1\": \"K\u00f6lner Akademie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "28",
+        "title": "ADVENTURES",
+        "komponist": "Monteverdi\/ Ligeti",
+        "ort": "Oratorium Marianum, Wroclaw",
+        "datum": "2016-09-10 00:00:00",
+        "besetzung": "{ \"Dirigat\": \"Hartmut Rohde\",\"Sopran\": \"Hanna Herfurtner\",\"-1\": \"(Tancredi e Clorinda\/ Mysteries of the Macabre)\",\"-2\": \"Leopoldinum Chamber Orchestra\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "24",
+        "title": "HYMNEN AN DIE NACHT",
+        "komponist": "<br>Kirsch",
+        "ort": "Paul-Gerhard-Kirche, M\u00fcnchen",
+        "datum": "2016-10-23 00:00:00",
+        "besetzung": "{ \t\t\"Dirigat\":\t\"Ilse Kr\u00fcger-Kreile\", \t\t \t\t\"-1\":\t\t\t\"Paul-Gerhard-Chor M\u00fcnchen\" \t\t}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "29",
+        "title": "DAS TAGEBUCH DER ANNE FRANK",
+        "komponist": "Fried",
+        "ort": "Stadttheater, Lindau",
+        "datum": "2016-10-27 00:00:00",
+        "besetzung": "{ \"Regie\": \"Winni Victor\",  \"Anne Frank\": \"Hanna Herfurtner\",  \"Piano\": \"stefanpaul\",  \"Kontrabass\": \"Dietmar Gr\u00e4ther\",  \"Schlagwerk\": \"Kasia Kadlubowska\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "30",
+        "title": "REQUIEM\/ DE PROFUNDIS",
+        "komponist": "<br>Mozart\/Dupr\u00e9",
+        "ort": "Christuskirche,M\u00fcnchen",
+        "datum": "2016-11-13 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Andreas Hantke\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"N.N.\",\"Tenor\": \"N.N.\",\"Bass\": \"N.N.\",\"-1\": \"Seraphin-Ensemble\",\"-2\": \"Chor der Christuskirche\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "31",
+        "title": "J.S. BACH MARIENKANTATEN",
+        "komponist": "<br>Bach\/Monteverdi\/Strawinsky",
+        "ort": "St. Maria im Kapitol, K\u00f6ln",
+        "datum": "2016-12-04 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Peter Neumann\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Elvira Bill\",\"Tenor\": \"Patrick Grahl\",\"Bass\": \"Marks Flaig\",\"-1\": \"K\u00f6lner Kammerchor\",\"-2\": \"Collegium Cartusianum\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "32",
+        "title": "NUN SINGET UND SEID FROH!",
+        "komponist": "<br>Praetorius u.a.",
+        "ort": "Berliner Dom, Berlin",
+        "datum": "2016-12-10 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Kai-Uwe Jirka\",\"Sopran\": \"Hanna Herfurtner\",\"Barockharfe\": \"Loredana Gintoli\",\"-1\": \"Bl\u00e4serensemble\",\"-2\": \"Staats- und Domchor Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "34",
+        "title": "NUN SINGET UND SEID FROH!",
+        "komponist": "<br>Praetorius u.a.",
+        "ort": "Pauluskirche, Berlin-Zehlendorf",
+        "datum": "2016-12-11 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Kai-Uwe Jirka\",\"Sopran\": \"Hanna Herfurtner\",\"Barockharfe\": \"Loredana Gintoli\",\"-1\": \"Bl\u00e4serensemble\",\"-2\": \"Staats- und Domchor Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "35",
+        "title": "VESPERA DI NATALE <br> ein Pasticcio",
+        "komponist": "Monteverdi",
+        "ort": "Dreik\u00f6nigskirche, Frankfurt",
+        "datum": "2016-12-17 00:00:00",
+        "besetzung": "{ \"Leitung\/ Pasticcio\": \"Christian Kabitz\",  \"Sopran I\": \"Hanna Herfurtner\",  \"Sopran II\": \"Maria Bernius\",  \"Altus\": \"Christian Rohrbach\",  \"Tenor I\": \"Maximilian Argmann\",  \"Tenor II\": \"Christian Heidecker\"  ,\"Bass\": \"Michael Albert\",  \"-1\": \"C\u00e4cilienchor Frankfurt\", \"-2\":  \"Neue Frankfurter Hofkapelle\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "36",
+        "title": "JAUCHZET, FROHLOCKET!",
+        "komponist": "<br>Bach",
+        "ort": "Konzerthaus, Berlin",
+        "datum": "2016-12-21 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Poel\",\"Tenor\": \"Benjamin Glaubitz\",\"Bass\": \"Simon Schnorr\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Vintage Keyboards\": \"Michael Petermann\",\"Trompete\": \"Markus Schwind\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "37",
+        "title": "JAUCHZET, FROHLOCKET!",
+        "komponist": "<br>Bach",
+        "ort": "Konzerthaus, Berlin",
+        "datum": "2016-12-22 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Poel\",\"Tenor\": \"Benjamin Glaubitz\",\"Bass\": \"Simon Schnorr\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Vintage Keyboards\": \"Michael Petermann\",\"Trompete\": \"Markus Schwind\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "38",
+        "title": "NUN SINGET UND SEID FROH!",
+        "komponist": "<br>Praetorius u.a.",
+        "ort": "Gethsemanekirche, Berlin",
+        "datum": "2016-12-26 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Kai-Uwe Jirka\",\"Sopran\": \"Hanna Herfurtner\",\"Barockharfe\": \"Loredana Gintoli\",\"-1\": \"Bl\u00e4serensemble\",\"-2\": \"Staats- und Domchor Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "39",
+        "title": "WEIHNACHTSORATORIUM I-III,VI",
+        "komponist": "<br>Bach",
+        "ort": "Johanneskirche, M\u00fcnchen",
+        "datum": "2016-12-31 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Andreas Hantke\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"N.N.\",\"Tenor\": \"N.N.\",\"Bass\": \"N.N.\",\"-1\": \"Kantatenchor M\u00fcnchen\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "25",
+        "title": "WEIHNACHTSORATORIUM IV-VI",
+        "komponist": "<br>Bach",
+        "ort": "Kreuzkirche Dresden",
+        "datum": "2017-01-07 00:00:00",
+        "besetzung": "{ \"Dirigat\": \"Roderich Kreile\",\"-1\": \"Dresdner Kreuzchor\",\"-2\": \"Dresdner Philharmonie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "42",
+        "title": "PHA\u00cbTON",
+        "komponist": "<br>Lully",
+        "ort": "Annenkirche, Dresden",
+        "datum": "2017-01-28 00:00:00",
+        "besetzung": "{ \"Leitung\": \"J\u00f6rn-Hinnerk Andresen\",\"Sopran\": \"Constanze Backes\",\"Haut-Contre\": \"Yosemeh Adjei\",\"Tenor\": \"Robert Sellier\",\"Bariton\": \"Ingolf Seidel\",\"Bass\": \"Johannes Schmidt\",\"-1\": \"Sinfoniechor Dresden\",\"-2\": \"Batzdorfer Hofkapelle\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "65",
+        "title": "MARIENVESPER\/DEUTSCHE MESSE",
+        "komponist": "Monteverdi\/Eccard\/Walther",
+        "ort": "Berliner Dom",
+        "datum": "2017-02-12 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Sopran\": \"Olivia Stahn\",\"Tenor\": \"Benedikt Kristi\u00e1nsson\",\"Tenor\": \"Robert Resch\",\"Bass\": \"Marcel Rapke\",\"Leitung\": \"Kai-Uwe Jirka\",\"-1\": \"Staats- und Domchor Berlin\",\"-2\": \"Singakademie Berlin\",\"-3\": \"Lautten Compagney\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "70",
+        "title": "SELVA MORALE E SPIRITUALE",
+        "komponist": "Monteverdi",
+        "ort": "M\u00fcPa Budapest",
+        "datum": "2017-03-02 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Ruben Dubrovsky\",\"Sopran\": \"Hanna Herfurtner, Soetk\u00edn Elbers\",\"Alt\": \"Oscar Verhaar, Terry Wey\",\"Tenor\": \"Markus Miesenberg, Jan Petryka\",\"Bass\": \"Joel Friederiksen, Uli Staber\",\"-2\": \"\",\"-1\": \"<br> Bach Consort Wien\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "44",
+        "title": "STABAT MATER",
+        "komponist": "<br>Dvo?\u00e1k",
+        "ort": "Nikolai-Kirche, Rostock",
+        "datum": "2017-03-11 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Markus Langer\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Stine Marie Fischer\",\"Tenor\": \"J\u00f6rg D\u00fcrm\u00fcller\",\"Bass\": \"Daniel Ochoa\",\"-1\": \"Figuralchor der St.-Johannis-Kirche\",\"-2\": \"Kantatenorchester St. Johannis\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "45",
+        "title": "DIE LETZTEN DINGE",
+        "komponist": "<br>Spohr",
+        "ort": "St. Martin, Leutkirch",
+        "datum": "2017-03-19 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Franz G\u00fcnthner\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Anna Lapkovskaja\",\"Tenor\": \"Michael Nowa\",\"Bass\": \"Franz Xaver Schlecht\",\"-1\": \"Kammerphilharmonie Bodensee\/Oberschwaben\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "46",
+        "title": "BAROCKE SCH\u00c4TZE - MUSICA SACRA",
+        "komponist": "Vivaldi",
+        "ort": "Basilika Stift Klosterneuburg",
+        "datum": "2017-04-06 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Ruben Dubrovsky\",\"Sopran\": \"Joowon Chung\",\"Altus\": \"Andreas Scholl\",\"-1\": \"Bach Consort Wien\",\"-2\": \"Salzburger Bachchor\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "47",
+        "title": "BROCKESPASSION",
+        "komponist": "<br>Telemann",
+        "ort": "Gethsemanekirche, Berlin",
+        "datum": "2017-04-14 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Kai-Uwe Jirka\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Hilke Andersen\",\"Tenor\": \"Johannes Gaubitz\",\"Bass\": \"Gyula Orendt\",\"-1\": \"Kammerchor der Sing-Akademie zu Berlin\",\"-2\": \"Lautten Compagney Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "48",
+        "title": "TRE VOLTI (UA)",
+        "komponist": "<br>Schl\u00fcnz\/Monteverdi",
+        "ort": "Festspiele Schwetzingen",
+        "datum": "2017-04-28 00:00:00",
+        "besetzung": "{ \"Musikalische Leitung\": \"\",\"&Konzeption\": \"Jeremias Schwarzer\",\"Regie\": \"Ingrid von Wantock Rekowski\",\"Chlora\/Clorinda\": \"Petra Hoffmann\",\"Tankred\/Tancredi\/Testo\": \"Dietrich Henschel\",\"Vokalquartett\": \"Hanna Herfurtner\/Olivia Stahl\",\"-1\": \"Lena Haselmann\/Amelie Saadia\",\"-2\": \"Concerto K\u00f6ln\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "49",
+        "title": "BROCKESPASSION",
+        "komponist": "<br>Telemann",
+        "ort": "Gethsemanekirche, Berlin",
+        "datum": "2017-04-30 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Kai-Uwe Jirka\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Hilke Andersen\",\"Tenor\": \"Johannes Gaubitz\",\"Bass\": \"Gyula Orendt\",\"-1\": \"Kammerchor der Sing-Akademie zu Berlin\",\"-2\": \"Lautten Compagney Berlin\" }",
+        "imageUrl": "",
+        "active": "0"
+    },
+    {
+        "id": "50",
+        "title": "VESPRO DELLA BEATA VERGINE",
+        "komponist": "<br>Monteverdi",
+        "ort": "St. Johannis, L\u00fcneburg",
+        "datum": "2017-05-13 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Joachim Vogels\u00e4nger\",\"Sopran\": \"Cornelia Samuelis\",\"Altus\": \"Henning Voss\",\"Tenor\": \"Georg Poplutz\",\"Bass\": \"Thilo Dahlmann\",\"-1\": \"Barockorchester L'Arco\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "52",
+        "title": "DON GIOVANNI",
+        "komponist": "Mozart",
+        "ort": "Mozartfest, W\u00fcrzburg",
+        "datum": "2017-06-23 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Don Giovanni\": \"Fr\u00e9d\u00e9ric Cornille\",\"Leporello\": \"Simon Robinson\",\"Donna Anna\": \"Erica Eloff\",\"Donna Elvira\": \"Nina Bernsteiner\",\"Don Ottavio\": \"Patrick Grahl\",\"Zerlina\": \"Hanna Herfurtner\",\"Masetto\/ Komtur\": \"Magnus Piontek\",\"-1\": \"Capella Angelica\",\"-2\": \"Lautten Compagney Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "53",
+        "title": "DON GIOVANNI",
+        "komponist": "Mozart",
+        "ort": "Mozartfest, W\u00fcrzburg",
+        "datum": "2017-06-24 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Don Giovanni\": \"Fr\u00e9d\u00e9ric Cornille\",\"Leporello\": \"Simon Robinson\",\"Donna Anna\": \"Erica Eloff\",\"Donna Elvira\": \"Nina Bernsteiner\",\"Don Ottavio\": \"Patrick Grahl\",\"Zerlina\": \"Hanna Herfurtner\",\"Masetto\/ Komtur\": \"Magnus Piontek\",\"-1\": \"Capella Angelica\",\"-2\": \"Lautten Compagney Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "54",
+        "title": "SAMSON",
+        "komponist": "H\u00e4ndel",
+        "ort": "Basilika, Birnau",
+        "datum": "2017-07-16 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Thomas Gropper\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Regine Jurda\",\"Tenor\": \"Christian Rathgeber\",\"Bass\": \"Martin Burgmair\",\"-1\": \"Birnauer Kantorei\",\"-2\": \"L\u00b4arpa festante\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "55",
+        "title": "JOSHUA",
+        "komponist": "H\u00e4ndel",
+        "ort": "Basilika St. Lorenz, Kempten",
+        "datum": "2017-07-23 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Benedikt Bonelli\",\"Sopran\": \"Hanna Herfurtner\",\"Altus\": \"Nicholas Hariades\",\"Tenor\": \"Roman Payer\",\"Bass\": \"Thomas Gropper\",\"-1\": \"Chor und Orchester der Basilika\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "56",
+        "title": "MONTEVERDI",
+        "komponist": "Monteverdi\/Grandi\/Cavalli",
+        "ort": "RheinVokal, St. Severus, Boppard",
+        "datum": "2017-08-19 00:00:00",
+        "besetzung": "{ \"Leitung und Laute\": \"Wolfgang Katschner\",\"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Lautten Compagney\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "62",
+        "title": "ALLA MAEST\u00c1 DEL RE",
+        "komponist": "Bononcini\/H\u00e4ndel\/Ariosti",
+        "ort": "Inselkirche, Hermannswerder, Potsdam",
+        "datum": "2017-09-09 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Ensemble Paper Kite\",\"Violine\": \"Antonio de Sarlo, Raffael Roth\",\"Cello\": \"Guillermo Turina\",\"Cembalo\": \"Felix Sch\u00f6nherr\" }",
+        "imageUrl": "images\/Paperkite_01.jpg",
+        "active": "1"
+    },
+    {
+        "id": "61",
+        "title": "ALLA MAEST\u00c0 DEL RE",
+        "komponist": "Bononcini\/H\u00e4ndel\/Ariosti",
+        "ort": "Evangelische Kirche Nikolassee",
+        "datum": "2017-09-10 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Ensemble Paper Kite\",\"Violine\": \"Antonio de Sarlo, Raffael Roth\",\"Cello\": \"Guillermo Turina\",\"Cembalo\": \"Felix Sch\u00f6nherr\" }",
+        "imageUrl": "images\/Paperkite_01.jpg",
+        "active": "1"
+    },
+    {
+        "id": "57",
+        "title": "MEMBRA JESU NOSTRI",
+        "komponist": "Buxtehude\/Bruhns\/Becker",
+        "ort": "Konzerthaus, Wien",
+        "datum": "2017-09-24 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Raimar Orlovsky\",\"Sopran 1\": \"Hanna Herfurtner\",\"Sopran 2\": \"Ina Siedlaczek\",\"Altus\": \"David Erler\",\"Tenor\": \"Jan Kobow\",\"Bass\": \"Ralf Grobe\",\"-1\": \"Concerto Melante\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "68",
+        "title": "THE DOWLAND REALBOOK",
+        "komponist": "Dowland",
+        "ort": "Museumssalon, Frankfurt",
+        "datum": "2017-10-25 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Gitarre, E-Gitarre\": \"Max Frankl\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "67",
+        "title": "PAULUS",
+        "komponist": "Mendelssohn",
+        "ort": "Thomaskirche, Leipzig",
+        "datum": "2017-10-31 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Fabian Enders\",\"Sopran\": \"Hanna Herfurtner\",\"Tenor\": \"N.N.\",\"Bass\": \"N.N.\",\"-1\": \"S\u00e4chsischer Kammerchor\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "66",
+        "title": "H-MOLL MESSE",
+        "komponist": "J. S. Bach",
+        "ort": "Herkulessaal, M\u00fcnchen",
+        "datum": "2017-11-12 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Nicolas Hariades\",\"Tenor\": \"Christian Rathgeber\",\"Bass\": \"Thomas Stimmel\",\"Leitung\": \"Thomas Gropper\",\"-1\": \"Arcis Vocalisten\",\"-2\": \"Larpa festante\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "71",
+        "title": "MARIENVESPER\/DEUTSCHE MESSE",
+        "komponist": "Monteverdi\/Eccard\/Walther",
+        "ort": "Berliner Dom",
+        "datum": "2017-12-02 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Kai-Uwe Jirka\",\"Sopran I\": \"Hanna Herfurtner\",\"Sopran II\": \"Olivia Stahn\",\"Tenor I\": \"Benedikt Kristj\u00e1nsson\",\"Tenor II\": \"Richard Resch\",\"Tenor III\": \"Stefan G\u00e4hler\",\"Bass I\": \"Manuel Nickert\",\"Bass II\": \"Marcel Raschke\",\"-1\": \"Staats- und Domchor Berlin\",\"-2\": \"Singakademie Berlin\",\"-3\": \"Lautten Compagney Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "72",
+        "title": "WEIHNACHTSORATORIUM I, IV-VI",
+        "komponist": "J.S. Bach",
+        "ort": "Paul-Gerhardt-Kirche, M\u00fcnchen",
+        "datum": "2017-12-10 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Ilse Kr\u00fcger\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Regine Jurda\",\"Tenor\": \"Tino Br\u00fctsch\",\"Bass\": \"Raphael Sigling\",\"-1\": \"Chor der Paul-Gerhardt-Kirche\",\"-2\": \"M\u00fcnchner Oratorienorchester\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "73",
+        "title": "MAGNIFICAT WEIHNACHTSORATORIUM I-III ",
+        "komponist": "J.S. Bach",
+        "ort": "Christuskirche, M\u00fcnchen-Neuhausen",
+        "datum": "2017-12-17 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Andreas Hantke\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Maria Helgath\",\"Tenor\": \"Stefan Sbonnik\",\"Bass\": \"Manuel Kundinger\",\"-1\": \"Chor der Christuskirche\",\"-2\": \"Seraphin-Ensemble M\u00fcnchen\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "74",
+        "title": "WEIHNACHTSORATORIUM ",
+        "komponist": "J.S. Bach",
+        "ort": "Resonanzraum, Hamburg",
+        "datum": "2017-12-19 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Poel\",\"Tenor\": \"Benjamin Glaubitz\",\"Bass\": \"Simon Schnorr\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwindt\",\"Vintage-Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "75",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "J.S. Bach",
+        "ort": "Resonanzraum, Hamburg",
+        "datum": "2017-12-20 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Poel\",\"Tenor\": \"Benjamin Glaubitz\",\"Bass\": \"Simon Schnorr\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwindt\",\"Vintage-Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "77",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "J.S. Bach",
+        "ort": "Resonanzraum, Hamburg",
+        "datum": "2017-12-21 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Poel\",\"Tenor\": \"Benjamin Glaubitz\",\"Bass\": \"Simon Schnorr\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwindt\",\"Vintage-Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "76",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "J.S. Bach",
+        "ort": "Resonanzraum, Hamburg",
+        "datum": "2017-12-22 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Poel\",\"Tenor\": \"Benjamin Glaubitz\",\"Bass\": \"Simon Schnorr\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwindt\",\"Vintage-Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "78",
+        "title": "H-MOLL MESSE",
+        "komponist": "J.S. Bach",
+        "ort": "Johanneskirche, M\u00fcnchen-Haidhausen",
+        "datum": "2017-12-31 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Andreas Hantke\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Jutta Neumann\",\"Tenor\": \"Alfons Brandl\",\"Bass\": \"Thomas Gropper\",\"-1\": \"Kantatenchor M\u00fcnchen\",\"-2\": \"Seraphin-Ensemble M\u00fcnchen\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "79",
+        "title": "SIEBEN WORTE JESU\/ DIXIT DOMINUS",
+        "komponist": "Sch\u00fctz\/H\u00e4ndel",
+        "ort": "St. Stephan, W\u00fcrzburg",
+        "datum": "2018-03-11 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Christian Heidecker\",\"Sopran\": \"Hanna Herfurtner\",\"Sopran\": \"Maria Bernius\",\"Alt\": \"Christian Rohrbach\",\"Tenor\": \"Jan Kobow\",\"Bass\": \"Johannes Weinhuber\",\"-1\": \"Camerata St. Stephan\",\"-2\": \"Capella St. Stephan\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "80",
+        "title": "JOHANNESPASSION",
+        "komponist": "J.S. Bach",
+        "ort": "St. Johannes, M\u00fcnchen",
+        "datum": "2018-03-30 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Andreas Hantke\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"\",\"Tenor\": \"\",\"Bass\": \"\",\"-1\": \"Kantatenchor M\u00fcnchen\",\"-2\": \"Seraphim Ensemble\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "81",
+        "title": "MATTH\u00c4USPASSION",
+        "komponist": "J.S. Bach",
+        "ort": "Christuskirche, M\u00fcnchen-Neuhausen",
+        "datum": "2018-03-30 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Andreas Hantke\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"\",\"Tenor\": \"\",\"Bass\": \"\",\"-1\": \"Chor der Christuskirche\",\"-2\": \"Serphin Ensemble\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "85",
+        "title": "PARNASSO IN FESTA",
+        "komponist": "H\u00e4ndel",
+        "ort": "Schlosstheater Fulda",
+        "datum": "2018-04-28 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie\": \"Sigrid T\u00b4Hooft\",\"Orfeo\": \"Margriet Buchberger\",\"Apollo\": \"Riccardo Angelo Strani\",\"Clio\": \"Hanna Herfurtner\",\"Calliope\": \"Julia B\u00f6hme\",\"Silvio\": \"Georg A.Bochow\",\"Euterpe\": \"Aur\u00e9lie Franck\",\"Marte\": \"Elias Benito Arranz\",\"-1\": \"Lautten Compagney\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "82",
+        "title": "PARNASSO IN FESTA - Premiere",
+        "komponist": "H\u00e4ndel",
+        "ort": "Goethe Theater, Bad Lauchst\u00e4dt",
+        "datum": "2018-05-26 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie\": \"Sigrid T\u00b4Hooft\",\"Orfeo\": \"Margriet Buchberger\",\"Apollo\": \"Riccardo Angelo Strani\",\"Clio\": \"Hanna Herfurtner\",\"Calliope\": \"Julia B\u00f6hme\",\"Silvio\": \"Georg A.Bochow\",\"Euterpe\": \"Aur\u00e9lie Franck\",\"Marte\": \"Elias Benito Arranz\",\"-1\": \"Lautten Compagney\",\"-2\": \"H\u00e4ndel Festspiele Halle\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "83",
+        "title": "PARNASSO IN FESTA",
+        "komponist": "H\u00e4ndel",
+        "ort": "Goethe Theater, Bad Lauchst\u00e4dt",
+        "datum": "2018-05-27 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie\": \"Sigrid T\u00b4Hooft\",\"Orfeo\": \"Margriet Buchberger\",\"Apollo\": \"Riccardo Angelo Strani\",\"Clio\": \"Hanna Herfurtner\",\"Calliope\": \"Julia B\u00f6hme\",\"Silvio\": \"Georg A.Bochow\",\"Euterpe\": \"Aur\u00e9lie Franck\",\"Marte\": \"Elias Benito Arranz\",\"-1\": \"Lautten Compagney\",\"-2\": \"H\u00e4ndel Festspiele Halle\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "84",
+        "title": "PARNASSO IN FESTA",
+        "komponist": "H\u00e4ndel",
+        "ort": "Goethe Theater, Bad Lauchst\u00e4dt",
+        "datum": "2018-05-28 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie\": \"Sigrid T\u00b4Hooft\",\"Orfeo\": \"Margriet Buchberger\",\"Apollo\": \"Riccardo Angelo Strani\",\"Clio\": \"Hanna Herfurtner\",\"Calliope\": \"Julia B\u00f6hme\",\"Silvio\": \"Georg A.Bochow\",\"Euterpe\": \"Aur\u00e9lie Franck\",\"Marte\": \"Elias Benito Arranz\",\"-1\": \"Lautten Compagney\",\"-2\": \"H\u00e4ndel Festspiele Halle\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "86",
+        "title": "DIE SCH\u00d6PFUNG",
+        "komponist": "Haydn",
+        "ort": "Marienkirche, Rostock",
+        "datum": "2018-07-01 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Markus Langer\",\"Sopran\": \"Hanna Herfurtner\",\"Tenor\": \"J\u00f6rg Durm\u00fcller\",\"Bass\": \"Daniel Ochoa\",\"-1\": \"\",\"-2\": \"St. Marienkantorei\",\"-3\": \"Kantorei Warnem\u00fcnde\",\"-4\": \"Kantorei Luther-St. Andreas\",\"-5\": \"Kantoreien Bad Doberan, Satow, Lichtenhagen Dorf\",\"-6\": \"\u00d6kumenischer Chor \u0084Cantate Domino\u0093\",\"-7\": \"Figuralchor St. Johannis\",\"-8\": \"Rostocker Motettenchor\",\"-9\": \"Norddeutsche Philharmonie Rostock\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "87",
+        "title": ":LOUNGE",
+        "komponist": "Dowland\/Purcell",
+        "ort": "Theater im Delphi",
+        "datum": "2018-09-11 00:00:00",
+        "besetzung": "{ \"Gesang\": \"Hanna Herfurtner\",\"Laute\": \"Wolfgang Katschner\",\"Saxophon\": \"Karola El\u00dfner\",\"Fl\u00f6te\": \"Martin Ripper\",\"Violine\": \"Andreas Pfaff\",\"Bass\": \"Annette Rheinfurth\",\"Schlagwerk\": \"Peter Bauer\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "88",
+        "title": "THE DOWLAND REALBOOK",
+        "komponist": "Dowland",
+        "ort": "Spitalkirche, Ochsenfurt",
+        "datum": "2018-09-21 00:00:00",
+        "besetzung": "{ \"Gesang\": \"Hanna Herfurtner\",\"E-Gitarre\": \"Max Frankl\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "89",
+        "title": "THE DOWLAND REALBOOK",
+        "komponist": "Dowland",
+        "ort": "Spitalkirche, Bad Windsheim",
+        "datum": "2018-09-22 00:00:00",
+        "besetzung": "{ \"Gesang\": \"Hanna Herfurtner\",\"E-Gitarre\": \"Max Frankl\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "90",
+        "title": "THE DOWLAND REALBOOK",
+        "komponist": "Dowland",
+        "ort": "Spitalkirche, R\u00f6ttingen",
+        "datum": "2018-09-23 00:00:00",
+        "besetzung": "{ \"Gesang\": \"Hanna Herfurtner\",\"E-Gitarre\": \"Max Frankl\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "91",
+        "title": "THE DOWLAND REALBOOK",
+        "komponist": "Dowland",
+        "ort": "Spitalkirche, Aub",
+        "datum": "2018-09-23 00:00:00",
+        "besetzung": "{ \"Gesang\": \"Hanna Herfurtner\",\"E-Gitarre\": \"Max Frankl\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "92",
+        "title": "SOLOMON",
+        "komponist": "H\u00e4ndel",
+        "ort": "Moskau",
+        "datum": "2018-10-06 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Alexander Willens\",\"Solomon\": \"Marian Dijkuizen\",\"Queen, Second Harlot\": \"Hanna Herfurtner\",\"Queen of Sheba, First Harlot\": \"Bethany Seymour\",\"Zadok\": \"Robert Reichinek\",\"-1\": \"K\u00f6lner Akademie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "93",
+        "title": "SOLOMON",
+        "komponist": "H\u00e4ndel",
+        "ort": "Perm",
+        "datum": "2018-10-07 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Alexander Willens\",\"Solomon\": \"Marian Dijkuizen\",\"Queen, Second Harlot\": \"Hanna Herfurtner\",\"Queen of Sheba, First Harlot\": \"Bethany Seymour\",\"Zadok\": \"Robert Reichinek\",\"-1\": \"K\u00f6lner Akademie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "94",
+        "title": "BIRNENBL\u00dcTENREGEN",
+        "komponist": "Chung",
+        "ort": "Villa Elisabeth, Berlin",
+        "datum": "2018-11-03 00:00:00",
+        "besetzung": "{ \"Ghisaeng\": \"Hanna Herfurtner\",\"Regie\": \"Winni Victor\",\"Ausstattung\": \"Petra St\u00fctzel\",\"Licht\": \"Jakobus St\u00fctzel\",\"-1\": \"Ensemble Phorminx\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "95",
+        "title": "DIE TAGEB\u00dcCHER DER ANNE FRANK",
+        "komponist": "Frid",
+        "ort": "Sandstein und Musik, Possendorf",
+        "datum": "2018-11-11 00:00:00",
+        "besetzung": "{ \"Anne Frank\": \"Hanna Herfurtner\",\"Piano\": \"stefanpaul\",\"Bass\": \"Dietmar Gr\u00e4ther\",\"Perkussion\": \"Kasia Kadlubowska\",\"Regie\": \"Winni Vicor\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "96",
+        "title": "A MONTEVERDI PROJECT",
+        "komponist": "Monteverdi u.a.",
+        "ort": "Apollosaal, Staatsoper u.d. Linden",
+        "datum": "2018-11-18 00:00:00",
+        "besetzung": "{ \"Musikalische Leitung\": \"Haggai Cohen-Milo\",\"Regie, Choreographie\": \"Saar Magal\",\"B\u00fchnenbild\": \"Sylvia Rieger\",\"Sopran\": \"Hanna Herfurtner, Olivia Stahn\",\"Mezzosopran\": \"Amelie Saadia\",\"Tenor\": \"Benjamin Popson\",\"Bass\": \"Philipp Meyer\",\"Tanz\": \"Adaya Berkovich, Gili Govermann, Olivia Lecomte, Sadagyul Mamedova, Erick Odriozola, Ichiro Sugae, Juan Jos\u00e9 Tirado\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "97",
+        "title": "A MONTEVERDI PROJECT",
+        "komponist": "Mon",
+        "ort": "Apollosaal, Staatsoper u.d. Linden",
+        "datum": "2018-11-20 00:00:00",
+        "besetzung": "{ \"Musikalische Leitung\": \"Haggai Cohen-Milo\",\"Regie, Choreographie\": \"Saar Magal\",\"B\u00fchnenbild\": \"Sylvia Rieger\",\"Sopran\": \"Hanna Herfurtner, Olivia Stahn\",\"Mezzosopran\": \"Amelie Saadia\",\"Tenor\": \"Benjamin Popson\",\"Bass\": \"Philipp Meyer\",\"Tanz\": \"Adaya Berkovich, Gili Govermann, Olivia Lecomte, Sadagyul Mamedova, Erick Odriozola, Ichiro Sugae, Juan Jos\u00e9 Tirado\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "98",
+        "title": "A MONTEVERDI PROJECT",
+        "komponist": "Monteverdi u.a.",
+        "ort": "Apollosaal, Staatsoper u.d. Linden",
+        "datum": "2018-11-23 00:00:00",
+        "besetzung": "{ \"Musikalische Leitung\": \"Haggai Cohen-Milo\",\"Regie, Choreographie\": \"Saar Magal\",\"B\u00fchnenbild\": \"Sylvia Rieger\",\"Sopran\": \"Hanna Herfurtner, Olivia Stahn\",\"Mezzosopran\": \"Amelie Saadia\",\"Tenor\": \"Benjamin Popson\",\"Bass\": \"Philipp Meyer\",\"Tanz\": \"Adaya Berkovich, Gili Govermann, Olivia Lecomte, Sadagyul Mamedova, Erick Odriozola, Ichiro Sugae, Juan Jos\u00e9 Tirado\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "99",
+        "title": "A MONTEVERDI PROJECT",
+        "komponist": "Monteverdi u.a.",
+        "ort": "Apollosaal, Staatsoper u.d. Linden",
+        "datum": "2018-11-26 00:00:00",
+        "besetzung": "{ \"Musikalische Leitung\": \"Haggai Cohen-Milo\",\"Regie, Choreographie\": \"Saar Magal\",\"B\u00fchnenbild\": \"Sylvia Rieger\",\"Sopran\": \"Hanna Herfurtner, Olivia Stahn\",\"Mezzosopran\": \"Amelie Saadia\",\"Tenor\": \"Benjamin Popson\",\"Bass\": \"Philipp Meyer\",\"Tanz\": \"Adaya Berkovich, Gili Govermann, Olivia Lecomte, Sadagyul Mamedova, Erick Odriozola, Ichiro Sugae, Juan Jos\u00e9 Tirado\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "100",
+        "title": "A MONTEVERDI PROJECT",
+        "komponist": "Monteverdi u.a.",
+        "ort": "Apollosaal, Staatsoper u.d. Linden",
+        "datum": "2018-11-30 00:00:00",
+        "besetzung": "{ \"Musikalische Leitung\": \"Haggai Cohen-Milo\",\"Regie, Choreographie\": \"Saar Magal\",\"B\u00fchnenbild\": \"Sylvia Rieger\",\"Sopran\": \"Hanna Herfurtner, Olivia Stahn\",\"Mezzosopran\": \"Amelie Saadia\",\"Tenor\": \"Benjamin Popson\",\"Bass\": \"Philipp Meyer\",\"Tanz\": \"Adaya Berkovich, Gili Govermann, Olivia Lecomte, Sadagyul Mamedova, Erick Odriozola, Ichiro Sugae, Juan Jos\u00e9 Tirado\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "101",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "Bach",
+        "ort": "Laeiszhalle, Hamburg",
+        "datum": "2018-12-15 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Pool\",\"Bass\": \"Dominik K\u00f6ninger\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwind\",\"Vintage Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "102",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "Bach",
+        "ort": "Laeiszhalle, Hamburg",
+        "datum": "2018-12-17 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Pool\",\"Bass\": \"Dominik K\u00f6ninger\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwind\",\"Vintage Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "103",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "Bach",
+        "ort": "Konzerthaus, Bleibach",
+        "datum": "2018-12-20 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Pool\",\"Bass\": \"Dominik K\u00f6ninger\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwind\",\"Vintage Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "104",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "Bach",
+        "ort": "Konzerthaus, Bleibach",
+        "datum": "2018-12-21 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Pool\",\"Bass\": \"Dominik K\u00f6ninger\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwind\",\"Vintage Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "105",
+        "title": "WEIHNACHTSORATORIUM",
+        "komponist": "Bach",
+        "ort": "Konzerthaus, Bleibach",
+        "datum": "2018-12-22 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Truike van der Pool\",\"Bass\": \"Dominik K\u00f6ninger\",\"E-Gitarre\": \"Johannes \u00d6llinger\",\"Trompete\": \"Markus Schwind\",\"Vintage Keyboards\": \"Michael Petermann\",\"-1\": \"Ensemble Resonanz\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "106",
+        "title": "WEIHNACHTEN MIT J.S. BACH",
+        "komponist": "Bach",
+        "ort": "Theater, Coesfeld",
+        "datum": "2018-12-23 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Michael Willens\",\"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Chor der K\u00f6lner Akademie\",\"-2\": \"K\u00f6lner Akademie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "108",
+        "title": "SAUL",
+        "komponist": "H\u00e4ndel",
+        "ort": "Kreuzkirche, Dresden",
+        "datum": "2019-01-27 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Christiane B\u00fcttig\",\"Michal\": \"Hanna Herfurtner\",\"Merab\": \"Linda van Coppenhagen\",\"David\": \"Georg Bochow\",\"Saul\": \"Martin-Jan Nijhof\",\"Jonathan\": \"Manuel Warwitz\",\"Witch\/Amalekiter\": \"Frank Bl\u00fcmel\",\"Ghost of Samuel\/Abner\": \"Johannes Schmidt\",\"-1\": \"Batzdorfer Hofkapelle\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "109",
+        "title": "SOLOMON",
+        "komponist": "H\u00e4ndel",
+        "ort": "Bologna",
+        "datum": "2019-03-20 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Alexander Willens\",\"Solomon\": \"Marian Dijkuizen\",\"Queen, Second Harlot\": \"Hanna Herfurtner\",\"Queen of Sheba, First Harlot\": \"Bethany Seymour\",\"Zadok\": \"Robert Reichinek\",\"-1\": \"K\u00f6lner Akademie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "110",
+        "title": "THE DOWLAND REALBOOK",
+        "komponist": "Dowland",
+        "ort": "Aequinox, Neuruppin",
+        "datum": "2019-03-22 00:00:00",
+        "besetzung": "{ \"Gesang\": \"Hanna Herfurtner\",\"E-Gitarre\": \"Max Frankl\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "111",
+        "title": "PASSIONSORATORIUM",
+        "komponist": "Wolf",
+        "ort": "Oslo",
+        "datum": "2019-03-25 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Michael Alexander Willens\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Marian Dijkuizen\",\"Tenor\": \"Gwiliym Bowen\",\"Bass\": \"Mauro Borgioni\",\"-1\": \"K\u00f6lner Akademie\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "117",
+        "title": "MEMBRA JESU NOSTRI",
+        "komponist": "Buxtehude",
+        "ort": "Philharmonie Stettin",
+        "datum": "2019-03-31 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Raimar Orlovsky\",\"-1\": \"Concerto Melante\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "118",
+        "title": "MEMBRA JESU NOSTRI",
+        "komponist": "Buxtehude",
+        "ort": "Schloss Raststadt,Raststadt",
+        "datum": "2019-04-14 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Raimar Orlovsky\",\"Sopran1\": \"Hanna Herfurtner\",\"Sopran2\": \"Joowon Chung\",\"Altus\": \"A.Schneider\",\"Tenor\": \"Johannes Gaubitz\",\"Bariton\": \"H.v.d.Kamp\",\"-1\": \"Concerto Melante\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "112",
+        "title": "DIE WAHRHEIT UND DAS LEBEN",
+        "komponist": "Bach\/ Berio",
+        "ort": "SWR-Festspiele, Schwetzingen",
+        "datum": "2019-05-07 00:00:00",
+        "besetzung": "{\n    \"Sopran 1\": \"Hanna Herfurtner\",\n    \"Alt 1\": \"Ida Aldrian\",\n    \"Tenor 1\": \"Mirko Ludwig\",\n    \"Bass 1\": \"N.N.\",\n    \"Sopran 2\": \"Oliva Stahn\",\n    \"Alt 2\": \"Amelie Saadia\",\n    \"Tenor 2\": \"Tim Karweick\",\n    \"Bass 2\": \"Felix Schwandtke\",\n    \"Cembalo\": \"Elina Albach\",\n    \"Laute\": \"Lee Santana\",\n    \"Gambe\": \"Marthe Perl\"\n}",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "113",
+        "title": "DON GIOVANNI",
+        "komponist": "Mozart",
+        "ort": "Mozartfest, W\u00fcrzburg",
+        "datum": "2019-06-08 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Don Giovanni\": \"Fr\u00e9d\u00e9ric Cornille\",\"Leporello\": \"Simon Robinson\",\"Donna Anna\": \"Erica Eloff\",\"Donna Elvira\": \"Nina Bernsteiner\",\"Don Ottavio\": \"Patrick Grahl\",\"Zerlina\": \"Hanna Herfurtner\",\"Masetto\/ Komtur\": \"Magnus Piontek\",\"-1\": \"Capella Angelica\",\"-2\": \"Lautten Compagney Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "114",
+        "title": "ALCINA",
+        "komponist": "H\u00e4ndel",
+        "ort": "H\u00e4ndelfestspiele Halle, Bad Lauchst\u00e4dt",
+        "datum": "2019-06-14 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie und Ausstattung\": \"Niels Badenhop\",\"Alcina\": \"Myrsini Margariti\",\"Morgana\": \"Hanna Herfurtner\",\"Bradamante\": \"Julia B\u00f6hme\",\"Ruggiero\": \"N.N.\",\"Oronte\": \"Andreas Post\",\"Melisso\": \"Elias Benito Arranz\",\"Oberto\": \"N.N.\",\"-1\": \"Lautten Compagney Berlin\",\"-2\": \"Ballett Baroque Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "115",
+        "title": "ALCINA",
+        "komponist": "H\u00e4ndel",
+        "ort": "H\u00e4ndelfestspiele Halle, Bad Lauchst\u00e4dt",
+        "datum": "2019-06-15 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie und Ausstattung\": \"Niels Badenhop\",\"Alcina\": \"Myrsini Margariti\",\"Morgana\": \"Hanna Herfurtner\",\"Bradamante\": \"Julia B\u00f6hme\",\"Ruggiero\": \"N.N.\",\"Oronte\": \"Andreas Post\",\"Melisso\": \"Elias Benito Arranz\",\"Oberto\": \"N.N.\",\"-1\": \"Lautten Compagney Berlin\",\"-2\": \"Ballett Baroque Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "116",
+        "title": "ALCINA",
+        "komponist": "H\u00e4ndel",
+        "ort": "H\u00e4ndelfestspiele Halle, Bad Lauchst\u00e4dt",
+        "datum": "2019-06-16 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Wolfgang Katschner\",\"Regie und Ausstattung\": \"Niels Badenhop\",\"Alcina\": \"Myrsini Margariti\",\"Morgana\": \"Hanna Herfurtner\",\"Bradamante\": \"Julia B\u00f6hme\",\"Ruggiero\": \"N.N.\",\"Oronte\": \"Andreas Post\",\"Melisso\": \"Elias Benito Arranz\",\"Oberto\": \"N.N.\",\"-1\": \"Lautten Compagney Berlin\",\"-2\": \"Ballett Baroque Berlin\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "119",
+        "title": "WETTSTREITE DER G\u00d6TTER",
+        "komponist": "Heinichen\/Bach",
+        "ort": "Bachfest, Haus Leipzig",
+        "datum": "2019-06-17 00:00:00",
+        "besetzung": "{ \"Leitung\": \"Robin Peter M\u00fcller\",\"Sopran\": \"Robin Johannsen\",\"Sopran\": \"Miriam Feuers\u00e4nger\",\"Sopran\": \"Hanna Herfurtner\",\"Alt\": \"Julia B\u00f6hme\",\"Alt\": \"Marie Henriette Reinhold\",\"Tenor\": \"Richard Resch\",\"Tenor\": \"Patrick Grahl\",\"Bass\": \"Tobias Berndt\",\"Bass\": \"Matthias Winckhler\",\"-1\": \"La Folia Barockorchester\" }",
+        "imageUrl": "",
+        "active": "1"
+    },
+    {
+        "id": "107",
+        "title": "IM PALAZZO DES KARDINALS",
+        "komponist": "H\u00e4ndel",
+        "ort": "H\u00e4ndelhaus, Halle",
+        "datum": "2020-01-18 00:00:00",
+        "besetzung": "{ \"Sopran\": \"Hanna Herfurtner\",\"-1\": \"Ensemble Castor\" }",
+        "imageUrl": "",
+        "active": "1"
+    }
+]

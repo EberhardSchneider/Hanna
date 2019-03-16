@@ -27,7 +27,7 @@ const routes = {
 		name: 'HOME',
 	},
 	'agenda': {	path: '/agenda',
-		name: 'AGENDA',
+		name: 'AGENDA!!!!',
 		component: <Agenda/>
 	},
 	'vita': {	path: '/vita',

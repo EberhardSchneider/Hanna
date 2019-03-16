@@ -50,8 +50,10 @@ var config = {
 
 gulp.task('browser-sync', function () {
     browserSync.init({
-        proxy: "localhost",
-        port: 80
+        port: 8080,
+        server: {
+            baseDir: "./dist"
+        }
     });
 });
 
@@ -102,7 +104,7 @@ gulp.task('js-watch', ['js'], function (done) {
 gulp.task('images', function () {
 
     return gulp.src(config.paths.images)
-        .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+        .pipe(imagemin([], { optimizationLevel: 5, progressive: true, interlaced: true }))
         .pipe(gulp.dest('dist/images/newportraits/'));
 });
 

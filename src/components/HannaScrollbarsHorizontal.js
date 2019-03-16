@@ -79,7 +79,7 @@ export default class HannaScrollbars extends Component {
             <Scrollbars
                 {...this.props}
                 onWheel={this.wheelHandler}
-                onUpdate={this.handleScroll}
+                // onUpdate={this.handleScroll}
                 ref="scrollbars"
                 thumbSize={64}
                 renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
@@ -119,10 +119,9 @@ export default class HannaScrollbars extends Component {
     }
 
     wheelHandler(e) {
-
         let scrollbars = this.refs.scrollbars;
         const normalized = normalizeWheel( e );
-        let left = parseInt( this.getCurrentTarget() );
+        let left = parseInt( this.getCurrentTarget() || 0);
         let delta = parseInt( normalized.pixelY, 10 );
         let newLeft = left + delta ;
         this.currentTarget = newLeft;

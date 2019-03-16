@@ -5,7 +5,7 @@ class VitaText extends Component {
 render() {
 return (
 <div className="vita-text">
-			<p>Hanna Herfurtner ist eine vielseitige Konzert­- und Opernsängerin.</p>
+			<p>Hanna HERFURTNER ist eine vielseitige Konzert­- und Opernsängerin.</p>
 
 <p>Bereits während des Studiums konnte sie sich ein breites Oratorienrepertoire erarbeiten, welches
 

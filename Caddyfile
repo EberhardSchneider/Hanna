@@ -1,0 +1,8 @@
+localhost
+gzip
+
+root ./dist/
+mime {
+  .js application/javascript
+  .css text/css
+}
