@@ -4,7 +4,6 @@ class SpinnerImage extends Component {
     constructor(props) {
         super(props);
         this.status = "loading";
-        console.log("Constructor");
         this.onLoadHandler = this.onLoadHandler.bind(this);
     }
 

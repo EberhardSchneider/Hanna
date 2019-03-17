@@ -4,7 +4,6 @@ import $ from 'jquery';
 class Zoom extends Component {
 
     constructor(props) {
-        console.log("Constructor...");
         super(props);
         this._imageStyle = { transition: 'opacity 0s', opacity: 0};
         this._imageLoading = false;
@@ -45,7 +44,6 @@ class Zoom extends Component {
 
 
     componentWillUnmount() {
-        console.log("Destructor...");
     }
 
     preloadImage() {
@@ -81,9 +79,6 @@ class Zoom extends Component {
             transform: 'scale(.90,.90)',
             opacity: 0
         };
-
-        console.log(this._imageLoaded ? "Rendering Image" : "Rendering Spinner");
-
 
 
         return (<div  className="zoom" style={style}>

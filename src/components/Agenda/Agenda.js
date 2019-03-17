@@ -13,10 +13,22 @@ class Agenda extends React.Component {
         this.state = { eventData: [] };
 
         // get events data
+        $.ajax({
+
+            url: "/testsite/phpincludes/db_events.php",
+            type: 'POST',
+
+            dataType: 'json',
+            context: this,
+            success: function (data) {
+                const events = Object.values(data);
+                this.setState({ eventData: events });
+            }
+        });
         // $.ajax({
 
-        //     url: "/testsite/phpincludes/db_events.php",
-        //     type: 'POST',
+        //     url: "/events.json",
+        //     type: 'GET',
 
         //     dataType: 'json',
         //     context: this,
@@ -26,44 +38,23 @@ class Agenda extends React.Component {
 
         //     }
         // });
-        $.ajax({
 
-            url: "/events.json",
-            type: 'GET',
-
-            dataType: 'json',
-            context: this,
-            success: function (data) {
-                const events = Object.values(data);
-                this.setState({ eventData: events });
-
-            }
-        });
-        
 
     }
 
     componentDidMount() {
-
         const fadeOutDiv = document.createElement('div');
         fadeOutDiv.className = "fadeOutArea";
         document.body.insertBefore(fadeOutDiv, document.getElementById('app'));
 
-
-
-    }
-
-
-    componentDidUpdate() {
-
-        // calculate width of event containers
-        $('<div class="event width-event" style="position: absolute; top: -9999"/>')
-            .appendTo($('body'));
-        const eventWidth = $('.event').outerWidth(true);
+        // // calculate width of event containers
+        // $('<div class="event width-event" style="position: absolute; top: -1000px"/>')
+        //     .appendTo($('body'));
+        // const eventWidth = $('.event').outerWidth(true);
+        const eventWidth = 348;
         // store width event
         this.eventWidth = eventWidth;
-        console.log(this.eventWidth);
-        $('.width-event').remove();
+        // $('.width-event').remove();
         // calculate width of complete timeline
         const numberOfEvents = this.state.eventData.length;
         const timelineLength = numberOfEvents * eventWidth + 10;
@@ -71,14 +62,50 @@ class Agenda extends React.Component {
         $('.scroll-container').css("width", timelineLength + "px");
 
         const today = new Date();
-        let upcoming;
-        // calculate upcoming event
-        this.state.eventData.map(function (event, index) {
-            if (new Date(event.datum) < today)
-                upcoming = index;
-        })
+        const upcoming = this.state.eventData.findIndex(event => {
+            const year = parseInt(event.datum.substr(0,4));
+            const month = parseInt(event.datum.substr(5,2));
+            const day = parseInt(event.datum.substr(8,2));
 
-        this.refs.scrollbars.scrollLeft((upcoming + 2) * eventWidth);
+            return new Date(year, month, day) >= today
+        });
+       
+    
+        this.refs.scrollbars.setScrollLeft((upcoming + 2) * eventWidth);
+
+        $(".flippable").click(function () {
+            $("div", this).toggleClass("flipped");
+        });
+    }
+
+
+    componentDidUpdate() {
+        // // calculate width of event containers
+        // $('<div class="event width-event" style="position: absolute; top: -1000px"/>')
+        //     .appendTo($('body'));
+        // const eventWidth = $('.event').outerWidth(true);
+        const eventWidth = 348;
+
+        // store width event
+        this.eventWidth = eventWidth;
+        // $('.width-event').remove();
+        // calculate width of complete timeline
+        const numberOfEvents = this.state.eventData.length;
+        const timelineLength = numberOfEvents * eventWidth + 10;
+
+        $('.scroll-container').css("width", timelineLength + "px");
+
+        const today = new Date();
+
+        const upcoming = this.state.eventData.findIndex(event => {
+            const year = parseInt(event.datum.substr(0,4));
+            const month = parseInt(event.datum.substr(5,2));
+            const day = parseInt(event.datum.substr(8,2));
+
+            return new Date(year, month, day) >= today
+        });
+     
+        this.refs.scrollbars.setScrollLeft((upcoming +) * eventWidth);
 
         $(".flippable").click(function () {
             $("div", this).toggleClass("flipped");

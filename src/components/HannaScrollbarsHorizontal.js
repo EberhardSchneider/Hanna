@@ -29,6 +29,11 @@ export default class HannaScrollbars extends Component {
       this.spring = undefined;
     }
 
+    setScrollLeft(left) {
+        this.currentTarget = left;
+        this.scrollLeft(left);
+    }
+
     getScrollLeft() {
         return this.refs.scrollbars.getScrollLeft();
     }
@@ -56,7 +61,7 @@ export default class HannaScrollbars extends Component {
         const scrollLeft = scrollbars.getScrollLeft();
         const scrollWidth = scrollbars.getScrollWidth();
         const val = MathUtil.mapValueInRange(left, 0, scrollWidth,
-          scrollWidth * 0.05, scrollWidth * 0.95);
+          0, scrollWidth);
       
 
 

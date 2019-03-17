@@ -30,15 +30,15 @@ var config = {
     }
 }
 
-// // start local server
-// gulp.task('connect', function() {
-//  connect.server({
-//      root: ['dist'],
-//      port: config.port,
-//      base: config.devBaseUrl,
-//      livereload: true
-//  });
-// });
+// start local server
+gulp.task('connect', function() {
+ connect.server({
+     root: ['dist'],
+     port: config.port,
+     base: config.devBaseUrl,
+     livereload: true
+ });
+});
 
 
 // gulp.task('open',
